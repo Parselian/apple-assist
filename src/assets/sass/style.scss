@@ -1,0 +1,79 @@
+@import "variables";
+
+body {
+  font-family: 'Open sans', sans-serif, --apple-system;
+  overflow-x: hidden;
+}
+
+.section {
+  &__title {
+    position: relative;
+    font-size: 28px;
+    font-weight: 600;
+    &_tail {
+      margin-bottom: 40px;
+      &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: -15px;
+        width: 45px;
+        height: 2px;
+        background-color: $action-color;
+      }
+    }
+  }
+}
+
+.logo {
+  width: 180px;
+  height: 60px;
+}
+
+.text_accent {
+  color: $accent-color;
+}
+
+.line-break {
+  display: block;
+}
+
+.callback-button {
+  color: $alt-text-color;
+  background-color: $action-color;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.form {
+  &__input {
+    &s {
+      display: flex;
+      align-items: center;
+    }
+    padding: 10px 25px;
+    font-size: 16px;
+    text-align: center;
+    background-color: $input-bg-color;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+  &__button {
+    padding: 10px 20px;
+  }
+  &__footnote {
+    margin-top: 10px;
+    font-size: 12px;
+    color: $inactive-text-color;
+    &-link {
+      color: #f47b61;
+    }
+  }
+}
+
+@import "header";
+@import "promo";
+@import "features";
+@import "media";
