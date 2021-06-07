@@ -341,5 +341,21 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		</span>
 	</div>
 </section>
+
+<section class="gift">
+	<div class="container gift__wrap">
+		<h2 class="gift__title"></h2>
+		<div class="gift__subtitle"></div>
+		<form action="" class="form gift__form">
+			<div class="form__inputs"><input type="text" class="form__input gift__form-input">
+				<button class="callback-button form__button gift__form-button"></button>
+			</div>
+		</form>
+		<picture>
+			<source srcset="./assets/images/webp/gift.webp" type="image/webp">
+			<img src="./assets/images/gift.png" alt="подарок" class="gift__img">
+		</picture>
+	</div>
+</section>
 </body>
 </html>
