@@ -161,5 +161,185 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		</div>
 	</div>
 </section>
+
+<section class="prices">
+	<div class="prices__collage prices__collage_left">
+		<div class="prices__collage_left-rect"></div>
+	</div>
+	<div class="prices__collage prices__collage_right">
+		<div class="prices__collage_right-circle"></div>
+	</div>
+	<div class="container prices__wrap">
+		<div class="prices__collage prices__collage_right"></div>
+		<h2 class="section__title prices__title">Выберите ваше устройство</h2>
+
+		<div class="prices__devices">
+			<div class="prices__device" data-device="iphone">
+				<svg class="prices__device-icon">
+					<use xlink:href="./assets/stack/sprite.svg#iphone-icon"></use>
+				</svg>
+				<div class="prices__device-name">iPhone</div>
+			</div>
+
+			<div class="prices__device prices__device_active" data-device="ipad">
+				<svg class="prices__device-icon">
+					<use xlink:href="./assets/stack/sprite.svg#ipad-icon"></use>
+				</svg>
+				<div class="prices__device-name">iPad</div>
+			</div>
+
+			<div class="prices__device" data-device="macbook">
+				<svg class="prices__device-icon">
+					<use xlink:href="./assets/stack/sprite.svg#macbook-icon"></use>
+				</svg>
+				<div class="prices__device-name">MacBook</div>
+			</div>
+
+			<div class="prices__device" data-device="imac">
+				<svg class="prices__device-icon">
+					<use xlink:href="./assets/stack/sprite.svg#imac-icon"></use>
+				</svg>
+				<div class="prices__device-name">iMac</div>
+			</div>
+
+			<div class="prices__device" data-device="watch">
+				<svg class="prices__device-icon">
+					<use xlink:href="./assets/stack/sprite.svg#apple-watch-icon"></use>
+				</svg>
+				<div class="prices__device-name">Watch</div>
+			</div>
+		</div>
+
+		<div class="prices__models">
+			<div class="prices__model">
+				<picture>
+					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
+					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
+				</picture>
+				<div class="prices__model-name">iPhone 11 Pro Max</div>
+				<button class="prices__model-button">Выбрать</button>
+			</div>
+			<div class="prices__model">
+				<picture>
+					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
+					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
+				</picture>
+				<div class="prices__model-name">iPhone 11 Pro Max</div>
+				<button class="prices__model-button">Выбрать</button>
+			</div>
+			<div class="prices__model">
+				<picture>
+					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
+					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
+				</picture>
+				<div class="prices__model-name">iPhone 11 Pro Max</div>
+				<button class="prices__model-button">Выбрать</button>
+			</div>
+			<div class="prices__model">
+				<picture>
+					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
+					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
+				</picture>
+				<div class="prices__model-name">iPhone 11 Pro Max</div>
+				<button class="prices__model-button">Выбрать</button>
+			</div>
+			<div class="prices__model">
+				<picture>
+					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
+					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
+				</picture>
+				<div class="prices__model-name">iPhone 11 Pro Max</div>
+				<button class="prices__model-button">Выбрать</button>
+			</div>
+			<div class="prices__model">
+				<picture>
+					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
+					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
+				</picture>
+				<div class="prices__model-name">iPhone 11 Pro Max</div>
+				<button class="prices__model-button">Выбрать</button>
+			</div>
+			<div class="prices__model">
+				<picture>
+					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
+					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
+				</picture>
+				<div class="prices__model-name">iPhone 11 Pro Max</div>
+				<button class="prices__model-button">Выбрать</button>
+			</div>
+			<div class="prices__model">
+				<picture>
+					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
+					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
+				</picture>
+				<div class="prices__model-name">iPhone 11 Pro Max</div>
+				<button class="prices__model-button">Выбрать</button>
+			</div>
+			<div class="prices__model">
+				<picture>
+					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
+					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
+				</picture>
+				<div class="prices__model-name">iPhone 11 Pro Max</div>
+				<button class="prices__model-button">Выбрать</button>
+			</div>
+		</div>
+
+		<table class="prices__pricelist" cellpadding="15">
+			<thead class="prices__pricelist-headings">
+				<th>Услуга</th>
+				<th>Сроки</th>
+				<th>Цена</th>
+				<th></th>
+			</thead>
+		</table>
+		<div class="prices__pricelist-scroll">
+			<table class="prices__pricelist" cellpadding="10">
+			<tr class="prices__pricelist-row" data-service="Замена заднего стекла">
+				<td class="prices__pricelist-servicename">Замена заднего стекла</td>
+				<td class="prices__pricelist-time">от 20 мин.</td>
+				<td class="prices__pricelist-price">4 990 руб.</td>
+				<td> <button class="callback-button prices__pricelist-button">Вызвать мастера</button> </td>
+			</tr>
+			<tr class="prices__pricelist-row">
+				<td class="prices__pricelist-servicename">Замена заднего стекла</td>
+				<td class="prices__pricelist-time">от 20 мин.</td>
+				<td class="prices__pricelist-price">4 990 руб.</td>
+				<td> <button class="callback-button prices__pricelist-button">Вызвать мастера</button> </td>
+			</tr>
+			<tr class="prices__pricelist-row">
+				<td class="prices__pricelist-servicename">Замена заднего стекла</td>
+				<td class="prices__pricelist-time">от 20 мин.</td>
+				<td class="prices__pricelist-price">4 990 руб.</td>
+				<td> <button class="callback-button prices__pricelist-button">Вызвать мастера</button> </td>
+			</tr>
+			<tr class="prices__pricelist-row" data-service="Замена заднего стекла">
+				<td class="prices__pricelist-servicename">Замена заднего стекла</td>
+				<td class="prices__pricelist-time">от 20 мин.</td>
+				<td class="prices__pricelist-price">4 990 руб.</td>
+				<td> <button class="callback-button prices__pricelist-button">Вызвать мастера</button> </td>
+			</tr>
+			<tr class="prices__pricelist-row">
+				<td class="prices__pricelist-servicename">Замена заднего стекла</td>
+				<td class="prices__pricelist-time">от 20 мин.</td>
+				<td class="prices__pricelist-price">4 990 руб.</td>
+				<td> <button class="callback-button prices__pricelist-button">Вызвать мастера</button> </td>
+			</tr>
+			<tr class="prices__pricelist-row">
+				<td class="prices__pricelist-servicename">Замена заднего стекла</td>
+				<td class="prices__pricelist-time">от 20 мин.</td>
+				<td class="prices__pricelist-price">4 990 руб.</td>
+				<td> <button class="callback-button prices__pricelist-button">Вызвать мастера</button> </td>
+			</tr>
+			</table>
+		</div>
+		<span class="prices__pricelist-unroll">
+			<div class="prices__pricelist-unroll-text">Развернуть прайс-лист</div>
+			<svg class="prices__pricelist-unroll-icon">
+				<use xlink:href="./assets/stack/sprite.svg#pricelist-arrow"></use>
+			</svg>
+		</span>
+	</div>
+</section>
 </body>
 </html>

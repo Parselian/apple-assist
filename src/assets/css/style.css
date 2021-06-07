@@ -226,3 +226,165 @@ body {
     .features__collage-wrap {
       right: 0;
       position: absolute; }
+
+.prices {
+  padding-bottom: 80px;
+  position: relative; }
+  .prices__title {
+    margin-bottom: 60px;
+    text-align: center; }
+  .prices__device {
+    position: relative;
+    padding: 0 40px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%; }
+    .prices__devices {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+      border-bottom: 2px solid #989898; }
+    .prices__device:after {
+      position: absolute;
+      content: '';
+      bottom: -2px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      opacity: 0;
+      border-bottom: 2px solid #A4DF59;
+      transition: opacity .3s; }
+    .prices__device:hover {
+      cursor: pointer; }
+      .prices__device:hover .prices__device-icon {
+        filter: grayscale(0); }
+      .prices__device:hover .prices__device-name {
+        color: #000; }
+    .prices__device_active:after {
+      opacity: 1; }
+    .prices__device_active .prices__device-icon {
+      filter: grayscale(0); }
+    .prices__device_active .prices__device-name {
+      color: #000; }
+    .prices__device-icon {
+      width: 35px;
+      height: 35px;
+      margin-bottom: 5px;
+      transition: .3s;
+      filter: grayscale(1); }
+    .prices__device-name {
+      font-size: 18px;
+      text-align: center;
+      font-weight: 600;
+      color: #989898;
+      transition: .3s; }
+  .prices__model {
+    position: relative;
+    margin-bottom: 50px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 19%;
+    cursor: pointer; }
+    .prices__models {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+    .prices__model:hover .prices__model-button {
+      opacity: 1; }
+    .prices__model:not(:nth-child(5n)) {
+      margin-right: 1%; }
+    .prices__model-img {
+      width: 100%;
+      max-width: 80px;
+      margin-bottom: 15px; }
+    .prices__model-name {
+      margin-bottom: 10px;
+      font-size: 18px; }
+    .prices__model-button {
+      padding: 3px 13px;
+      color: #FFF;
+      background-color: #A4DF59;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      opacity: 0;
+      transition: .2s;
+      border: 2px solid transparent; }
+      .prices__model-button:hover {
+        color: #A4DF59;
+        background-color: transparent;
+        border-color: #A4DF59; }
+  .prices__pricelist {
+    position: relative;
+    border-collapse: collapse;
+    width: 100%; }
+    .prices__pricelist-headings {
+      text-align: left;
+      background-color: #E5E5E5; }
+      .prices__pricelist-headings th:first-child {
+        width: 42%; }
+      .prices__pricelist-headings th:nth-child(2) {
+        width: 21%; }
+    .prices__pricelist-row {
+      cursor: pointer; }
+      .prices__pricelist-row:hover .prices__pricelist-button {
+        opacity: 1; }
+      .prices__pricelist-row td {
+        border-bottom: 1px solid #989898; }
+        .prices__pricelist-row td:last-child {
+          width: 17%; }
+    .prices__pricelist-button {
+      padding: 5px 15px;
+      opacity: 0;
+      transition: .3s; }
+    .prices__pricelist-unroll {
+      padding: 15px 80px;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      background-color: #E5E5E5;
+      border-bottom-right-radius: 15px;
+      border-bottom-left-radius: 15px;
+      cursor: pointer; }
+      .prices__pricelist-unroll-icon {
+        width: 10px;
+        height: 14px; }
+      .prices__pricelist-unroll-text {
+        margin-right: 10px;
+        font-size: 14px;
+        font-weight: 600; }
+  .prices__collage {
+    position: absolute;
+    content: '';
+    z-index: -1; }
+    .prices__collage_left {
+      left: -20vw;
+      top: 5vw; }
+      .prices__collage_left-rect {
+        width: 825px;
+        width: 40vw;
+        height: 40vw;
+        background: #E5E5E5;
+        -webkit-border-radius: 45px;
+        -moz-border-radius: 45px;
+        border-radius: 45px;
+        transform: rotate(50deg);
+        opacity: .4; }
+    .prices__collage_right {
+      right: -12vw;
+      bottom: -4vw; }
+      .prices__collage_right-circle {
+        width: 25vw;
+        height: 25vw;
+        border: 30px solid rgba(244, 123, 97, 0.1);
+        -webkit-border-radius: 1000px;
+        -moz-border-radius: 1000px;
+        border-radius: 1000px; }
