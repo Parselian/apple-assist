@@ -1,4 +1,28 @@
 @media (max-width: 1200px) {
+  .promo {
+    margin-bottom: 100px;
+    &__collage {
+      &_left {
+        top: -140%;
+        left: -60%;
+      }
+      &_right {
+        top: -230%;
+        right: -55%;
+      }
+    }
+    &__wrap {
+      &:after {
+        bottom: 0;
+      }
+    }
+    &__col {
+      width: 70%;
+    }
+    &__man {
+      top: 0;
+    }
+  }
   .footer {
     &__logo {
       width: 210px;
@@ -17,6 +41,30 @@
 }
 
 @media (max-width: 992px) {
+  .header {
+    &__menu {
+      display: none;
+    }
+  }
+  .promo {
+    &__collage {
+      &_right {
+        top: -250%;
+        right: -85%;
+        transform: rotate(342deg);
+      }
+    }
+    &__col {
+      margin-bottom: 80px;
+    }
+    &__man {
+      position: absolute;
+      top: 0px;
+      right: -10px;
+      z-index: -1;
+      width: 470px;
+    }
+  }
   .footer {
     &__col {
       &:first-child {
@@ -32,6 +80,44 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    margin-bottom: 60px;
+  }
+  .promo {
+    text-align: center;
+    &__collage {
+      &_left {
+        top: 30%;
+        left: -50%;
+        &-circle {
+          width: 300px;
+          height: 300px;
+        }
+      }
+      &_right {
+        top: -80%;
+        right: -245%;
+        transform: rotate(150deg);
+        &-square {
+          -webkit-border-radius: 90px;
+          -moz-border-radius: 90px;
+          border-radius: 90px;
+        }
+      }
+    }
+    &__col {
+      width: 100%;
+    }
+    &__list {
+      margin-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__man {
+      display: none;
+    }
+  }
   .footer {
     &__wrap {
       flex-direction: column;
@@ -53,6 +139,29 @@
       }
       display: flex;
       flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .promo {
+    &__wrap {
+      &:after {
+        width: 95%;
+      }
+    }
+  }
+}
+
+@media (max-width: 405px) {
+  .promo {
+    &__title {
+      font-size: 38px;
+    }
+    &__list {
+      &-item {
+        font-size: 20px;
+      }
     }
   }
 }

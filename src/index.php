@@ -158,9 +158,12 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<source srcset="./assets/images/webp/features-iphone.webp" type="image/webp">
 				<img src="./assets/images/features-iphone.png" alt="iPhone" class="features__iphone">
 			</picture>
-			<svg class="features__collage">
-				<use xlink:href="./assets/stack/sprite.svg#features-collage"></use>
-			</svg>
+			<picture>
+				<source srcset="./assets/images/webp/features-collage.webp" type="image/webp">
+				<img src="./assets/images/features-collage.png" alt="pattern" class="features__collage"></picture>
+<!--			<svg class="features__collage">-->
+<!--				<use xlink:href="./assets/stack/sprite.svg#features-collage"></use>-->
+<!--			</svg>-->
 		</div>
 	</div>
 </section>
@@ -391,6 +394,90 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	</div>
 </section>
 
+<section class="common">
+	<div class="common__bg"></div>
+	<div class="container common__wrap">
+		<div class="common__col common__filter">
+			<h2 class="section__title section__title_tail common__title">Типовые неисправности iPhone</h2>
+			<div class="common__blocks">
+				<div class="common__block">
+					<svg class="common__block-icon">
+						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
+					</svg>
+					<div class="common__block-text">
+						<h4 class="common__block-title">Аккумулятор</h4>
+						Замена аккумулятора
+					</div>
+				</div>
+				<div class="common__block common__block_active">
+					<svg class="common__block-icon">
+						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
+					</svg>
+					<div class="common__block-text">
+						<h4 class="common__block-title">Аккумулятор</h4>
+						Замена аккумулятора
+					</div>
+				</div>
+				<div class="common__block">
+					<svg class="common__block-icon">
+						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
+					</svg>
+					<div class="common__block-text">
+						<h4 class="common__block-title">Аккумулятор</h4>
+						Замена аккумулятора
+					</div>
+				</div>
+				<div class="common__block">
+					<svg class="common__block-icon">
+						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
+					</svg>
+					<div class="common__block-text">
+						<h4 class="common__block-title">Аккумулятор</h4>
+						Замена аккумулятора
+					</div>
+				</div>
+				<div class="common__block">
+					<svg class="common__block-icon">
+						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
+					</svg>
+					<div class="common__block-text">
+						<h4 class="common__block-title">Аккумулятор</h4>
+						Замена аккумулятора
+					</div>
+				</div>
+				<div class="common__block">
+					<svg class="common__block-icon">
+						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
+					</svg>
+					<div class="common__block-text">
+						<h4 class="common__block-title">Аккумулятор</h4>
+						Замена аккумулятора
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="common__col common__info">
+			<p class="common__info-text">
+				Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
+				Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
+				рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше, должна
+				быть произведена ее замена.
+			</p>
+			<div class="common__info-row">
+				<div class="common__info-price">
+					от <span class="text_accent text_bold">1 470 руб.</span>
+				</div>
+				<button class="callback-button common__info-button">Вызвать мастера</button>
+			</div>
+		</div>
+
+		<picture>
+			<source srcset="./assets/images/webp/iphone_front.webp" type="image/webp">
+			<img src="./assets/images/iphone_front.png" alt="iPhone" class="common__img">
+		</picture>
+	</div>
+</section>
+
 <section class="about-us">
 	<div class="container about-us__wrap">
 		<div class="about-us__col">
@@ -539,84 +626,6 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<source srcset="./assets/images/webp/steps-img.webp" type="image/webp">
 				<img src="./assets/images/steps-img.png" alt="фото" class="steps__img">
 			</picture>
-		</div>
-	</div>
-</section>
-
-<section class="common">
-	<div class="container common__wrap">
-		<div class="common__col common__filter">
-			<h2 class="section__title section__title_tail common__title">Типовые неисправности iPhone</h2>
-			<div class="common__blocks">
-				<div class="common__block">
-					<svg class="common__block-icon">
-						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
-					</svg>
-					<div class="common__block-text">
-						<h4 class="common__block-title">Аккумулятор</h4>
-						Замена аккумулятора
-					</div>
-				</div>
-				<div class="common__block common__block_active">
-					<svg class="common__block-icon">
-						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
-					</svg>
-					<div class="common__block-text">
-						<h4 class="common__block-title">Аккумулятор</h4>
-						Замена аккумулятора
-					</div>
-				</div>
-				<div class="common__block">
-					<svg class="common__block-icon">
-						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
-					</svg>
-					<div class="common__block-text">
-						<h4 class="common__block-title">Аккумулятор</h4>
-						Замена аккумулятора
-					</div>
-				</div>
-				<div class="common__block">
-					<svg class="common__block-icon">
-						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
-					</svg>
-					<div class="common__block-text">
-						<h4 class="common__block-title">Аккумулятор</h4>
-						Замена аккумулятора
-					</div>
-				</div>
-				<div class="common__block">
-					<svg class="common__block-icon">
-						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
-					</svg>
-					<div class="common__block-text">
-						<h4 class="common__block-title">Аккумулятор</h4>
-						Замена аккумулятора
-					</div>
-				</div>
-				<div class="common__block">
-					<svg class="common__block-icon">
-						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
-					</svg>
-					<div class="common__block-text">
-						<h4 class="common__block-title">Аккумулятор</h4>
-						Замена аккумулятора
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="common__col common__info">
-			<p class="common__info-text">
-				Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
-				Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
-				рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше, должна
-				быть произведена ее замена.
-			</p>
-			<div class="common__info-row">
-				<div class="common__info-price">
-					от <span class="text_accent text_bold">1 470 руб.</span>
-				</div>
-				<button class="callback-button common__info-button">Вызвать мастера</button>
-			</div>
 		</div>
 	</div>
 </section>
