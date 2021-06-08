@@ -719,3 +719,65 @@ body {
     .common__block-title {
       font-size: 16px;
       font-weight: 700; }
+
+.faq {
+  position: relative;
+  padding: 150px 0; }
+  .faq__bg {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #D6D6D6;
+    opacity: 0.45;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%); }
+  .faq__wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .faq__collage {
+    position: absolute;
+    z-index: -1; }
+    .faq__collage_left {
+      bottom: -90px;
+      left: -40px; }
+      .faq__collage_left-question {
+        width: 165px;
+        height: 165px;
+        fill: #FFF;
+        opacity: 0.3;
+        transform: rotate(10deg); }
+    .faq__collage_right {
+      top: -120px;
+      right: -60px; }
+      .faq__collage_right-message {
+        width: 300px;
+        height: 300px;
+        fill: #FFF;
+        opacity: 0.3; }
+  .faq__title {
+    margin-bottom: 20px;
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center; }
+  .faq__subtitle {
+    margin-bottom: 80px;
+    font-size: 18px;
+    text-align: center; }
+  .faq__form-input {
+    margin-right: 15px;
+    padding: 15px 40px;
+    max-width: 260px;
+    font-size: 20px;
+    background-color: #FFF; }
+  .faq__form-button {
+    padding: 11px 40px;
+    font-size: 22px;
+    background-color: #A4DF59;
+    border-color: #A4DF59; }
+    .faq__form-button:hover {
+      color: #A4DF59; }

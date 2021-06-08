@@ -617,5 +617,34 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		</div>
 	</div>
 </section>
+
+<section class="faq">
+	<div class="faq__bg"></div>
+	<div class="container faq__wrap">
+		<div class="faq__collage faq__collage_left">
+			<svg class="faq__collage_left-question">
+				<use xlink:href="./assets/stack/sprite.svg#question"></use>
+			</svg>
+		</div>
+		<div class="faq__collage faq__collage_right">
+			<svg class="faq__collage_right-message">
+				<use xlink:href="./assets/stack/sprite.svg#chat"></use>
+			</svg>
+		</div>
+
+		<h2 class="faq__title">Остались вопросы?</h2>
+		<div class="faq__subtitle">
+			Оставьте свой номер телефона.
+			<span class="line-break"></span>
+			Наш менеджер свяжется с вами через 2 минуты
+		</div>
+		<form action="" class="faq__form">
+			<div class="form__inputs">
+				<input type="text" class="form__input faq__form-input" placeholder="+7 (999) 999-99-99">
+				<button class="callback-button form__button faq__form-button">Перезвоните мне</button>
+			</div>
+		</form>
+	</div>
+</section>
 </body>
 </html>
