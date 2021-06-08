@@ -3,6 +3,7 @@
 body {
   font-family: 'Open sans', sans-serif, --apple-system;
   overflow-x: hidden;
+  background-color: $main-bg-color;
 }
 
 .section {
@@ -30,51 +31,66 @@ body {
   height: 60px;
 }
 
-.text_accent {
-  color: $accent-color;
+.text {
+  &_accent {
+    color: $accent-color;
+  }
+  &_underline {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 2px;
+      left: 0;
+      bottom: -2px;
+      background-color: $accent-color;
+    }
+  }
 }
 
 .line-break {
-  display: block;
-}
+    display: block;
+  }
 
 .callback-button {
-  color: $alt-text-color;
-  background-color: $action-color;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-}
-
-.form {
-  &__input {
-    &s {
-      display: flex;
-      align-items: center;
-    }
-    padding: 10px 25px;
-    font-size: 16px;
-    text-align: center;
-    background-color: $input-bg-color;
+    color: $alt-text-color;
+    background-color: $action-color;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-  }
-  &__button {
-    padding: 10px 20px;
-  }
-  &__footnote {
-    margin-top: 10px;
-    font-size: 12px;
-    color: $inactive-text-color;
-    &-link {
-      color: #f47b61;
-    }
-  }
 }
 
-@import "header";
-@import "promo";
-@import "features";
-@import "pricelist";
-@import "media";
+.form {
+    &__input {
+      &s {
+        display: flex;
+        align-items: center;
+      }
+      padding: 10px 25px;
+      font-size: 16px;
+      text-align: center;
+      background-color: $input-bg-color;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+    }
+    &__button {
+      padding: 10px 20px;
+    }
+    &__footnote {
+      margin-top: 10px;
+      font-size: 12px;
+      color: $inactive-text-color;
+      &-link {
+        color: #f47b61;
+      }
+    }
+}
+
+  @import "header";
+  @import "promo";
+  @import "features";
+  @import "pricelist";
+  @import "gift-form";
+  @import "media";

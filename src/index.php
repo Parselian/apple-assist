@@ -344,17 +344,35 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 <section class="gift">
 	<div class="container gift__wrap">
-		<h2 class="gift__title"></h2>
-		<div class="gift__subtitle"></div>
-		<form action="" class="form gift__form">
-			<div class="form__inputs"><input type="text" class="form__input gift__form-input">
-				<button class="callback-button form__button gift__form-button"></button>
+		<div class="gift__border gift__border_top"></div>
+		<div class="gift__border gift__border_top-right"></div>
+		<div class="gift__border gift__border_bottom"></div>
+		<div class="gift__border gift__border_bottom-left"></div>
+
+		<h2 class="gift__title">
+			Дарим <span class="text_accent">скидку</span>
+			<span class="line-break"></span>
+			на <span class="text_underline">первый</span> ремонт
+		</h2>
+		<div class="gift__subtitle">
+			Оставьте свой номер телефона
+			<span class="line-break"></span>
+			и наш менеджер свяжется с вами через 2 минуты
+		</div>
+
+		<form action="#" method="POST" class="form gift__form">
+			<div class="form__inputs">
+				<input type="text" class="form__input gift__form-input" placeholder="+7 (999) 999-99-99">
+				<button class="callback-button form__button gift__form-button">Вызвать мастера</button>
 			</div>
 		</form>
-		<picture>
-			<source srcset="./assets/images/webp/gift.webp" type="image/webp">
-			<img src="./assets/images/gift.png" alt="подарок" class="gift__img">
-		</picture>
+
+		<div class="gift__img-wrap">
+			<picture>
+				<source srcset="./assets/images/webp/gift.webp" type="image/webp">
+				<img src="./assets/images/gift.png" alt="подарок" class="gift__img">
+			</picture>
+		</div>
 	</div>
 </section>
 </body>
