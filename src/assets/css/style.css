@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   font-family: 'Open sans', sans-serif, --apple-system;
   overflow-x: hidden;
@@ -48,9 +49,14 @@ body {
 .callback-button {
   color: #FFF;
   background-color: #CF5389;
+  border: 2px solid #CF5389;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  border-radius: 5px; }
+  border-radius: 5px;
+  transition: .2s; }
+  .callback-button:hover {
+    color: #CF5389;
+    background-color: transparent; }
 
 .form__input {
   padding: 10px 25px;
@@ -638,3 +644,78 @@ body {
         display: block;
         font-size: 22px;
         font-weight: 600; }
+
+.common {
+  margin-bottom: 80px; }
+  .common__wrap {
+    display: flex; }
+  .common__filter {
+    width: 45%;
+    margin-right: 60px; }
+  .common__info {
+    margin-top: 75px;
+    width: 55%; }
+    .common__info-text {
+      position: relative;
+      font-size: 16px;
+      margin-bottom: 60px; }
+      .common__info-text:after {
+        position: absolute;
+        content: '';
+        bottom: -25px;
+        left: 0;
+        width: 80px;
+        height: 2px;
+        background-color: #E5E5E5; }
+    .common__info-row {
+      display: flex;
+      align-items: flex-end; }
+    .common__info-price {
+      position: relative;
+      margin-right: 35px;
+      font-size: 22px;
+      color: #989898; }
+      .common__info-price:before {
+        position: absolute;
+        content: 'Цена:';
+        top: -15px;
+        left: 0;
+        font-size: 14px;
+        font-weight: 300; }
+    .common__info-button {
+      margin-bottom: 5px;
+      padding: 6px 20px;
+      font-size: 18px; }
+  .common__block {
+    padding: 16px 20px 16px 15px;
+    width: 49%;
+    display: flex;
+    align-items: center;
+    border: 2px solid #A4DF59;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s; }
+    .common__blocks {
+      display: flex;
+      flex-wrap: wrap; }
+    .common__block:hover, .common__block_active {
+      background-color: #A4DF59;
+      color: #FFF; }
+    .common__block:not(:nth-child(2n)) {
+      margin-right: 2%; }
+    .common__block:not(:nth-last-child(-n+2)) {
+      margin-bottom: 20px; }
+    .common__block-icon {
+      margin-right: 10px;
+      width: 25px;
+      height: 25px;
+      min-width: 25px;
+      min-height: 25px; }
+    .common__block-text {
+      font-size: 14px;
+      font-weight: 300; }
+    .common__block-title {
+      font-size: 16px;
+      font-weight: 700; }
