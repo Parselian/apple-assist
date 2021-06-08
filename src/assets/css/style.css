@@ -7,6 +7,9 @@ body {
   position: relative;
   font-size: 28px;
   font-weight: 600; }
+  .section__title_alt {
+    font-size: 44px;
+    font-weight: 400; }
   .section__title_tail {
     margin-bottom: 40px; }
     .section__title_tail:after {
@@ -24,6 +27,9 @@ body {
 
 .text_accent {
   color: #A4DF59; }
+
+.text_bold {
+  font-weight: 700; }
 
 .text_underline {
   position: relative; }
@@ -403,6 +409,7 @@ body {
         border-radius: 1000px; }
 
 .gift {
+  margin-bottom: 120px;
   padding-bottom: 80px; }
   .gift__wrap {
     position: relative; }
@@ -430,9 +437,7 @@ body {
         width: 200px;
         transform: rotate(-90deg); }
   .gift__title {
-    margin-bottom: 35px;
-    font-size: 44px;
-    font-weight: 400; }
+    margin-bottom: 35px; }
     .gift__title .text_accent {
       font-weight: 700; }
   .gift__subtitle {
@@ -456,3 +461,45 @@ body {
   .gift__form-input {
     margin-right: 20px;
     width: 190px; }
+
+.about-us {
+  padding-bottom: 140px; }
+  .about-us__wrap {
+    display: flex;
+    align-items: center; }
+  .about-us__col {
+    position: relative;
+    width: 55%; }
+  .about-us__info {
+    width: 45%; }
+  .about-us__blob {
+    position: absolute;
+    top: 0;
+    right: 80px;
+    width: 160px; }
+    .about-us__blob:before {
+      position: absolute;
+      content: '';
+      top: 53%;
+      left: 43%;
+      z-index: -1;
+      width: 200px;
+      height: 200px;
+      background-color: #FFF;
+      -webkit-border-radius: 180px;
+      -moz-border-radius: 180px;
+      border-radius: 180px;
+      transform: translate(-50%, -50%); }
+    .about-us__blob-title {
+      font-size: 14px; }
+    .about-us__blob-subtitle {
+      margin-bottom: 12px;
+      font-size: 12px;
+      font-weight: 300;
+      color: #A4DF59; }
+    .about-us__blob-text {
+      font-size: 14px; }
+  .about-us__img {
+    width: 400px; }
+  .about-us__title {
+    margin-bottom: 20px; }

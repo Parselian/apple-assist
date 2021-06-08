@@ -349,7 +349,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		<div class="gift__border gift__border_bottom"></div>
 		<div class="gift__border gift__border_bottom-left"></div>
 
-		<h2 class="gift__title">
+		<h2 class="section__title_alt gift__title">
 			Дарим <span class="text_accent">скидку</span>
 			<span class="line-break"></span>
 			на <span class="text_underline">первый</span> ремонт
@@ -372,6 +372,47 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<source srcset="./assets/images/webp/gift.webp" type="image/webp">
 				<img src="./assets/images/gift.png" alt="подарок" class="gift__img">
 			</picture>
+		</div>
+	</div>
+</section>
+
+<section class="about-us">
+	<div class="container about-us__wrap">
+		<div class="about-us__col">
+			<picture>
+				<source srcset="./assets/images/webp/about-us-man.webp" type="image/webp">
+				<img class="about-us__img" src="./assets/images/about-us-man.png" alt="Руководитель сервисного центра">
+			</picture>
+			<div class="about-us__blob">
+				<h4 class="about-us__blob-title">Евгений Пригожин</h4>
+				<div class="about-us__blob-subtitle">Основатель <?= $company_name;?></div>
+				<div class="about-us__blob-text">
+					“кратко расписать самое главное преимущество”
+				</div>
+			</div>
+		</div>
+		<div class="about-us__col about-us__info">
+			<h2 class="section__title_alt about-us__title">
+				Знаем <span class="text_accent text_bold">всё</span>
+				<span class="line-break"></span>
+				о ремонте <span class="text_accent text_bold">Apple</span>
+			</h2>
+			<p class="about-us__text">
+				Принимаем Macbook в любом виде: залитые, с трещинами на корпусе или разбитым экраном.
+				<br>
+				<br>
+				Устраняем любые механические поломки: от залипшей кнопки до разбитой матрицы.
+				<br>
+				<br>
+				Удаляем вирусы, ликвидируем программные неполадки.
+				<br>
+				<br>
+				Устанавливаем все версии macOS и лицензионное ПО
+				Бесплатно проконсультируем, если Macbook у вас недавно.
+				<br>
+				<br>
+				Работаем 7 дней в неделю, без праздников и выходных.
+			</p>
 		</div>
 	</div>
 </section>

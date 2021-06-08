@@ -11,6 +11,10 @@ body {
     position: relative;
     font-size: 28px;
     font-weight: 600;
+    &_alt {
+      font-size: 44px;
+      font-weight: 400;
+    }
     &_tail {
       margin-bottom: 40px;
       &:after {
@@ -34,6 +38,9 @@ body {
 .text {
   &_accent {
     color: $accent-color;
+  }
+  &_bold {
+    font-weight: 700;
   }
   &_underline {
     position: relative;
@@ -93,4 +100,5 @@ body {
   @import "features";
   @import "pricelist";
   @import "gift-form";
+  @import "about-us";
   @import "media";
