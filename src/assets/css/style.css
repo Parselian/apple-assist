@@ -781,3 +781,93 @@ body {
     border-color: #A4DF59; }
     .faq__form-button:hover {
       color: #A4DF59; }
+
+.footer {
+  padding: 30px 0; }
+  .footer__wrap {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .footer__col {
+    display: flex;
+    align-items: center; }
+  .footer__nav-link {
+    margin-right: 40px;
+    color: #000;
+    font-family: 'Open Sans', sans-serif, --apple-system;
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none; }
+    .footer__nav-link:last-child {
+      margin-right: 0; }
+  .footer__logo {
+    margin-right: 20px; }
+  .footer__billing {
+    width: 90px;
+    height: 26px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    object-fit: contain; }
+    .footer__billings {
+      width: 200px;
+      display: flex;
+      flex-wrap: wrap; }
+    .footer__billing:nth-child(odd) {
+      margin-right: 10px; }
+    .footer__billing:nth-last-child(-n+2) {
+      margin-top: 10px;
+      padding: 3px; }
+  .footer__contacts {
+    flex-direction: column;
+    align-items: center; }
+  .footer__phone {
+    display: block;
+    font-weight: 600;
+    font-size: 23px;
+    text-decoration: none;
+    color: #000; }
+  .footer__worktime {
+    margin-top: -5px;
+    font-size: 14px;
+    color: #989898; }
+  .footer__footnote {
+    font-size: 12px;
+    font-weight: 300;
+    text-align: center;
+    color: #000;
+    opacity: 0.5; }
+
+@media (max-width: 1200px) {
+  .footer__logo {
+    width: 210px; }
+  .footer__nav-link:nth-last-child(-n+2) {
+    display: none; }
+  .footer__nav-link:nth-child(2) {
+    margin-right: 0; } }
+
+@media (max-width: 992px) {
+  .footer__col:first-child {
+    flex-direction: column;
+    align-items: center; }
+  .footer__logo {
+    margin-right: 0;
+    margin-bottom: 30px; } }
+
+@media (max-width: 768px) {
+  .footer__wrap {
+    flex-direction: column; }
+  .footer__col {
+    margin-bottom: 40px; }
+  .footer__nav {
+    display: flex;
+    flex-wrap: wrap; }
+    .footer__nav-link {
+      width: 48%;
+      margin-bottom: 20px;
+      margin-right: 0;
+      font-size: 20px;
+      text-align: center; }
+      .footer__nav-link:nth-last-child(-n+2) {
+        display: block;
+        margin-bottom: 0; } }

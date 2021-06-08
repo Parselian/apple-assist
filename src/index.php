@@ -397,7 +397,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			</picture>
 			<div class="about-us__blob">
 				<h4 class="about-us__blob-title">Евгений Пригожин</h4>
-				<div class="about-us__blob-subtitle">Основатель <?= $company_name; ?></div>
+				<div class="about-us__blob-subtitle">Основатель <?= $company_name ?></div>
 				<div class="about-us__blob-text">
 					“кратко расписать самое главное преимущество”
 				</div>
@@ -554,7 +554,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						Замена аккумулятора
 					</div>
 				</div>
-				<div class="common__block">
+				<div class="common__block common__block_active">
 					<svg class="common__block-icon">
 						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
 					</svg>
@@ -638,7 +638,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			<span class="line-break"></span>
 			Наш менеджер свяжется с вами через 2 минуты
 		</div>
-		<form action="" class="faq__form">
+		<form action="#" method="POST" class="faq__form">
 			<div class="form__inputs">
 				<input type="text" class="form__input faq__form-input" placeholder="+7 (999) 999-99-99">
 				<button class="callback-button form__button faq__form-button">Перезвоните мне</button>
@@ -646,5 +646,32 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		</form>
 	</div>
 </section>
+
+<footer class="footer">
+    <div class="container footer__wrap">
+      <div class="footer__col">
+        <img src="./assets/svg/logo.svg" alt="logo" class="footer__logo">
+        <div class="footer__billings">
+          <img src="./assets/svg/visa.svg" alt="visa" class="footer__billing">
+          <img src="./assets/svg/mastercard.svg" alt="mastercard" class="footer__billing">
+          <img src="./assets/images/sber.png" alt="sberbank" class="footer__billing">
+          <img src="./assets/images/rub.png" alt="cash" class="footer__billing">
+        </div>
+      </div>
+      <nav class="footer__col footer__nav">
+        <a href="#about" class="footer__nav-link">О нас</a>
+        <a href="#prices" class="footer__nav-link">Цены</a>
+        <a href="#faq" class="footer__nav-link">FAQ</a>
+        <a href="#contacts" class="footer__nav-link">Контакты</a>
+      </nav>
+      <div class="footer__col footer__contacts">
+        <a href="tel:<?= $phone_link?>" class="footer__phone"><?= $phone_format?></a>
+        <div class="footer__worktime">C 8:00 до 23:00 без выходных</div>
+      </div>
+    </div>
+    <div class="container footer__footnote">
+      Компания <?= $company_name?>. Все права защищены. Apple, Mac, Mac OS, MacBook, MacBook Pro, iPhone, iPad, iPad Air и их логотипы являются зарегистрированными товарными знаками Apple Inc. в США и других странах. Информация опубликованная на сайте не является публичной офертой, определяемой положениями Статьи 437 ГК РФ. Цены указаны за услугу, запчасти в эту стоимость не входят.
+    </div>
+  </footer>
 </body>
 </html>
