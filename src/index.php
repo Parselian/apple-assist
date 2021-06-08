@@ -483,5 +483,59 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 	<button class="callback-button reviews__button">Вызвать мастера</button>
 </section>
+
+<section class="steps">
+	<div class="container steps__wrap">
+		<div class="steps__col">
+			<h2 class="section__title section__title_tail steps__title">Как происходит ремонт?</h2>
+
+			<ul class="steps__list">
+				<li class="steps__list-item">
+					<svg class="steps__list-item-icon">
+						<use xlink:href="./assets/stack/sprite.svg#call"></use>
+					</svg>
+					<div class="steps__list-item-text">
+						<span class="steps__list-item-title">Заявка</span>
+						Вы оставляете заявку на выезд мастера или выезд курьера для доставки техники к нам в сервис
+					</div>
+				</li>
+				<li class="steps__list-item steps__list-item_active">
+					<svg class="steps__list-item-icon">
+						<use xlink:href="./assets/stack/sprite.svg#search"></use>
+					</svg>
+					<div class="steps__list-item-text">
+						<span class="steps__list-item-title">Диагностика</span>
+						Мы проводим диагностику, после которой станут известны сроки и стоимость работ
+					</div>
+				</li>
+				<li class="steps__list-item">
+					<svg class="steps__list-item-icon">
+						<use xlink:href="./assets/stack/sprite.svg#gear"></use>
+					</svg>
+					<div class="steps__list-item-text">
+						<span class="steps__list-item-title">Ремонт</span>
+						Оповещаем Вас и после вашего подтверждения проводим ремонт
+					</div>
+				</li>
+				<li class="steps__list-item">
+					<svg class="steps__list-item-icon">
+						<use xlink:href="./assets/stack/sprite.svg#guarantee"></use>
+					</svg>
+					<div class="steps__list-item-text">
+						<span class="steps__list-item-title">Гарантия</span>
+						Вы забираете свой гаджет и получаете пожизненную гарантию
+					</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="steps__col">
+			<picture>
+				<source srcset="./assets/images/webp/steps-img.webp" type="image/webp">
+				<img src="./assets/images/steps-img.png" alt="фото" class="steps__img">
+			</picture>
+		</div>
+	</div>
+</section>
 </body>
 </html>

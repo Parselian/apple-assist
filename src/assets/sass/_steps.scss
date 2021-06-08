@@ -1,0 +1,60 @@
+.steps {
+  margin-bottom: 80px;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__col {
+    width: 50%;
+  }
+  &__title {
+    &:after {
+      background-color: $accent-color;
+    }
+  }
+  &__list {
+    max-width: 400px;
+    &-item {
+      display: flex;
+      cursor: pointer;
+      &_active {
+        .steps {
+          &__list {
+            &-item {
+              &-icon {
+                fill: $accent-color;
+              }
+              &-text {
+                color: $main-text-color;
+              }
+            }
+          }
+        }
+      }
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      &-icon {
+        margin-top: 10px;
+        margin-right: 10px;
+        min-width: 30px;
+        min-height: 30px;
+        width: 30px;
+        height: 30px;
+        fill: $inactive-text-color;
+        transition: .3s;
+      }
+      &-text {
+        font-size: 16px;
+        color: $inactive-text-color;
+        transition: .3s;
+      }
+      &-title {
+        display: block;
+        font-size: 22px;
+        font-weight: 600;
+      }
+    }
+  }
+}
