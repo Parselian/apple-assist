@@ -14,6 +14,9 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 	<title>Apple Assist | Ремонт iPhone в СПб</title>
+
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+	</script>
 </head>
 <body>
 <section class="promo">
@@ -618,6 +621,48 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	</div>
 </section>
 
+<section class="contacts">
+	<div class="container contacts__wrap">
+		<div class="contacts__block">
+			<div class="section__title_alt contacts__block-title">
+				Ремонт <span class="text_accent text_bold">iPhone</span> в
+				<span class="line-break"></span>
+                <?= $company_name ?>
+			</div>
+			<p class="contacts__block-text">
+				Команда Apple Assist работает с 2009 года. Мы всегда делаем все возможносе, чтобы в случае неудачи вы могли недорого
+				починить своё устройство. Мы любим технику Apple, но еще больше любим свою работу, поэтому всё делаем на совесть.
+				<span class="line-break"></span>
+				80% наших клиентов приходят по рекомендации от друзей.
+			</p>
+
+			<div class="contacts__block-worktime">
+				12 сервисных центров в СПБ
+				<span class="line-break"></span>
+				Работаем с 8:00 до 23:00 <span class="text_accent text_bold">Без выходных</span>
+			</div>
+
+			<a href="tel: <?= $phone_link?>" class="contacts__block-phone"><?= $phone_format?></a>
+			<button class="callback-button contacts__block-button">Вызвать мастера</button>
+			<!--<ul class="contacts__block-list">
+				<li class="contacts__block-list-item">
+					<span class="text_bold">Адрес:</span> 190005, Санкт - Петербург, Московский проспект д.7 (ст. м. Садовая)
+				</li>
+				<li class="contacts__block-list-item">
+					<span class="text_bold">Телефон:</span>
+					<a href="tel: <? /*= $phone_link */ ?>" class="contacts__block-phone"><? /*= $phone_format */ ?></a>
+				</li>
+				<li class="contacts__block-list-item">
+					<span class="text_bold">Время работы:</span>
+					с 8:00 до 23:00 без выходных
+				</li>
+			</ul>-->
+		</div>
+	</div>
+
+	<div id="map" class="contacts__map"></div>
+</section>
+
 <section class="faq">
 	<div class="faq__bg"></div>
 	<div class="container faq__wrap">
@@ -648,30 +693,50 @@ require_once(__DIR__ . '/assets/configs/config.php');
 </section>
 
 <footer class="footer">
-    <div class="container footer__wrap">
-      <div class="footer__col">
-        <img src="./assets/svg/logo.svg" alt="logo" class="footer__logo">
-        <div class="footer__billings">
-          <img src="./assets/svg/visa.svg" alt="visa" class="footer__billing">
-          <img src="./assets/svg/mastercard.svg" alt="mastercard" class="footer__billing">
-          <img src="./assets/images/sber.png" alt="sberbank" class="footer__billing">
-          <img src="./assets/images/rub.png" alt="cash" class="footer__billing">
-        </div>
-      </div>
-      <nav class="footer__col footer__nav">
-        <a href="#about" class="footer__nav-link">О нас</a>
-        <a href="#prices" class="footer__nav-link">Цены</a>
-        <a href="#faq" class="footer__nav-link">FAQ</a>
-        <a href="#contacts" class="footer__nav-link">Контакты</a>
-      </nav>
-      <div class="footer__col footer__contacts">
-        <a href="tel:<?= $phone_link?>" class="footer__phone"><?= $phone_format?></a>
-        <div class="footer__worktime">C 8:00 до 23:00 без выходных</div>
-      </div>
-    </div>
-    <div class="container footer__footnote">
-      Компания <?= $company_name?>. Все права защищены. Apple, Mac, Mac OS, MacBook, MacBook Pro, iPhone, iPad, iPad Air и их логотипы являются зарегистрированными товарными знаками Apple Inc. в США и других странах. Информация опубликованная на сайте не является публичной офертой, определяемой положениями Статьи 437 ГК РФ. Цены указаны за услугу, запчасти в эту стоимость не входят.
-    </div>
-  </footer>
+	<div class="container footer__wrap">
+		<div class="footer__col">
+			<img src="./assets/svg/logo.svg" alt="logo" class="footer__logo">
+			<div class="footer__billings">
+				<img src="./assets/svg/visa.svg" alt="visa" class="footer__billing">
+				<img src="./assets/svg/mastercard.svg" alt="mastercard" class="footer__billing">
+				<img src="./assets/images/sber.png" alt="sberbank" class="footer__billing">
+				<img src="./assets/images/rub.png" alt="cash" class="footer__billing">
+			</div>
+		</div>
+		<nav class="footer__col footer__nav">
+			<a href="#about" class="footer__nav-link">О нас</a>
+			<a href="#prices" class="footer__nav-link">Цены</a>
+			<a href="#faq" class="footer__nav-link">FAQ</a>
+			<a href="#contacts" class="footer__nav-link">Контакты</a>
+		</nav>
+		<div class="footer__col footer__contacts">
+			<a href="tel:<?= $phone_link ?>" class="footer__phone"><?= $phone_format ?></a>
+			<div class="footer__worktime">C 8:00 до 23:00 без выходных</div>
+		</div>
+	</div>
+	<div class="container footer__footnote">
+		Компания <?= $company_name ?>. Все права защищены. Apple, Mac, Mac OS, MacBook, MacBook Pro, iPhone, iPad, iPad Air и их логотипы
+		являются зарегистрированными товарными знаками Apple Inc. в США и других странах. Информация опубликованная на сайте не является
+		публичной офертой, определяемой положениями Статьи 437 ГК РФ. Цены указаны за услугу, запчасти в эту стоимость не входят.
+	</div>
+</footer>
+
+<script>
+    ymaps.ready(init);
+
+    function init() {
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.76, 37.64],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 7
+        });
+    }
+</script>
 </body>
 </html>
