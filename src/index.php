@@ -287,50 +287,62 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 		<table class="prices__pricelist" cellpadding="15">
 			<thead class="prices__pricelist-headings">
-				<th>Услуга</th>
-				<th>Сроки</th>
-				<th>Цена</th>
-				<th></th>
+			<th>Услуга</th>
+			<th>Сроки</th>
+			<th>Цена</th>
+			<th></th>
 			</thead>
 		</table>
 		<div class="prices__pricelist-scroll">
 			<table class="prices__pricelist" cellpadding="10">
-			<tr class="prices__pricelist-row" data-service="Замена заднего стекла">
-				<td class="prices__pricelist-servicename">Замена заднего стекла</td>
-				<td class="prices__pricelist-time">от 20 мин.</td>
-				<td class="prices__pricelist-price">4 990 руб.</td>
-				<td> <button class="callback-button prices__pricelist-button">Вызвать мастера</button> </td>
-			</tr>
-			<tr class="prices__pricelist-row">
-				<td class="prices__pricelist-servicename">Замена заднего стекла</td>
-				<td class="prices__pricelist-time">от 20 мин.</td>
-				<td class="prices__pricelist-price">4 990 руб.</td>
-				<td> <button class="callback-button prices__pricelist-button">Вызвать мастера</button> </td>
-			</tr>
-			<tr class="prices__pricelist-row">
-				<td class="prices__pricelist-servicename">Замена заднего стекла</td>
-				<td class="prices__pricelist-time">от 20 мин.</td>
-				<td class="prices__pricelist-price">4 990 руб.</td>
-				<td> <button class="callback-button prices__pricelist-button">Вызвать мастера</button> </td>
-			</tr>
-			<tr class="prices__pricelist-row" data-service="Замена заднего стекла">
-				<td class="prices__pricelist-servicename">Замена заднего стекла</td>
-				<td class="prices__pricelist-time">от 20 мин.</td>
-				<td class="prices__pricelist-price">4 990 руб.</td>
-				<td> <button class="callback-button prices__pricelist-button">Вызвать мастера</button> </td>
-			</tr>
-			<tr class="prices__pricelist-row">
-				<td class="prices__pricelist-servicename">Замена заднего стекла</td>
-				<td class="prices__pricelist-time">от 20 мин.</td>
-				<td class="prices__pricelist-price">4 990 руб.</td>
-				<td> <button class="callback-button prices__pricelist-button">Вызвать мастера</button> </td>
-			</tr>
-			<tr class="prices__pricelist-row">
-				<td class="prices__pricelist-servicename">Замена заднего стекла</td>
-				<td class="prices__pricelist-time">от 20 мин.</td>
-				<td class="prices__pricelist-price">4 990 руб.</td>
-				<td> <button class="callback-button prices__pricelist-button">Вызвать мастера</button> </td>
-			</tr>
+				<tr class="prices__pricelist-row" data-service="Замена заднего стекла">
+					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
+					<td class="prices__pricelist-time">от 20 мин.</td>
+					<td class="prices__pricelist-price">4 990 руб.</td>
+					<td>
+						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
+					</td>
+				</tr>
+				<tr class="prices__pricelist-row">
+					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
+					<td class="prices__pricelist-time">от 20 мин.</td>
+					<td class="prices__pricelist-price">4 990 руб.</td>
+					<td>
+						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
+					</td>
+				</tr>
+				<tr class="prices__pricelist-row">
+					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
+					<td class="prices__pricelist-time">от 20 мин.</td>
+					<td class="prices__pricelist-price">4 990 руб.</td>
+					<td>
+						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
+					</td>
+				</tr>
+				<tr class="prices__pricelist-row" data-service="Замена заднего стекла">
+					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
+					<td class="prices__pricelist-time">от 20 мин.</td>
+					<td class="prices__pricelist-price">4 990 руб.</td>
+					<td>
+						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
+					</td>
+				</tr>
+				<tr class="prices__pricelist-row">
+					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
+					<td class="prices__pricelist-time">от 20 мин.</td>
+					<td class="prices__pricelist-price">4 990 руб.</td>
+					<td>
+						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
+					</td>
+				</tr>
+				<tr class="prices__pricelist-row">
+					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
+					<td class="prices__pricelist-time">от 20 мин.</td>
+					<td class="prices__pricelist-price">4 990 руб.</td>
+					<td>
+						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
+					</td>
+				</tr>
 			</table>
 		</div>
 		<span class="prices__pricelist-unroll">
@@ -385,7 +397,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			</picture>
 			<div class="about-us__blob">
 				<h4 class="about-us__blob-title">Евгений Пригожин</h4>
-				<div class="about-us__blob-subtitle">Основатель <?= $company_name;?></div>
+				<div class="about-us__blob-subtitle">Основатель <?= $company_name; ?></div>
 				<div class="about-us__blob-text">
 					“кратко расписать самое главное преимущество”
 				</div>
@@ -415,6 +427,61 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			</p>
 		</div>
 	</div>
+</section>
+
+<section class="reviews">
+	<div class="reviews__bg"></div>
+
+	<div class="container reviews__wrap">
+		<div class="reviews__collage reviews__collage_left">
+			<svg class="reviews__collage_left-quote">
+				<use xlink:href="./assets/stack/sprite.svg#quote"></use>
+			</svg>
+		</div>
+
+		<div class="reviews__collage reviews__collage_right">
+			<svg class="reviews__collage_right-quote">
+				<use xlink:href="./assets/stack/sprite.svg#quote"></use>
+			</svg>
+		</div>
+		<div class="reviews__col">
+			<h2 class="section__title_alt reviews__title">Клиенты <span class="text_accent text_bold">доверяют</span> нам</h2>
+
+			<div class="reviews__slider">
+				<div class="reviews__slide">
+					<div class="reviews__slide-row">
+						<div class="reviews__slide-col">
+							<picture>
+								<source srcset="./assets/images/webp/reviewer.webp" type="image/webp">
+								<img src="./assets/images/reviewer.jpg" alt="фото клиента" class="reviews__slide-photo">
+							</picture>
+							<div class="reviews__slide-reviewer">
+								Евгения В.
+								<span class="reviews__slide-problem">
+									Замена стекла iPhone
+								</span>
+							</div>
+						</div>
+						<div class="reviews__slide-rating">4.8</div>
+					</div>
+					<div class="reviews__slide-text">
+						После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами до
+						фин. результата), была приятно удивлена оперативностью и качеством работы - за 15 минут уверенно поменяли экран, прямо
+						"не отходя от кассы", все перед тобой ) Спасибо!
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="reviews__col">
+			<picture>
+				<source srcset="./assets/images/webp/" type="image/webp">
+				<img src="./assets/images/" alt="фото" class="reviews__img">
+			</picture>
+		</div>
+	</div>
+
+	<button class="callback-button reviews__button">Вызвать мастера</button>
 </section>
 </body>
 </html>

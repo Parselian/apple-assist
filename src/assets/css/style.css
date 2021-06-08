@@ -503,3 +503,98 @@ body {
     width: 400px; }
   .about-us__title {
     margin-bottom: 20px; }
+
+.reviews {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 75px; }
+  .reviews__wrap {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  .reviews__col {
+    width: 60%; }
+    .reviews__col:last-child {
+      width: 40%; }
+  .reviews__bg {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    background-color: #D6D6D6;
+    opacity: 0.4;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0% 100%); }
+  .reviews__collage {
+    position: absolute;
+    z-index: -1; }
+    .reviews__collage_left {
+      bottom: -50px;
+      left: -100px; }
+      .reviews__collage_left-quote {
+        width: 275px;
+        height: 275px;
+        fill: #FFFFFF;
+        opacity: 0.35; }
+    .reviews__collage_right {
+      top: 0;
+      right: -100px; }
+      .reviews__collage_right-quote {
+        width: 240px;
+        height: 240px;
+        fill: #FFFFFF;
+        opacity: 0.35;
+        transform: rotate(180deg); }
+  .reviews__title {
+    margin-bottom: 55px; }
+  .reviews__slider {
+    margin-right: 120px;
+    margin-bottom: 75px; }
+  .reviews__slide-row {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .reviews__slide-col {
+    display: flex;
+    align-items: center; }
+  .reviews__slide-photo {
+    margin-right: 20px;
+    -webkit-border-radius: 10000px;
+    -moz-border-radius: 10000px;
+    border-radius: 10000px; }
+  .reviews__slide-reviewer {
+    font-weight: 700;
+    font-size: 18px; }
+  .reviews__slide-problem {
+    display: block;
+    font-size: 14px;
+    font-weight: 300; }
+  .reviews__slide-rating {
+    position: relative;
+    margin-right: 20px;
+    font-size: 28px;
+    color: #FFF; }
+    .reviews__slide-rating:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 50%;
+      z-index: -1;
+      width: 75px;
+      height: 45px;
+      background-color: #A4DF59;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      border-radius: 20px;
+      transform: translate(-50%, -50%); }
+  .reviews__button {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 25px;
+    display: block;
+    width: fit-content;
+    font-size: 22px; }
