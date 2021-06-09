@@ -809,19 +809,21 @@ body {
     margin-bottom: 80px;
     font-size: 18px;
     text-align: center; }
-  .faq__form-input {
-    margin-right: 15px;
-    padding: 12px 40px;
-    max-width: 260px;
-    font-size: 20px;
-    background-color: #FFF; }
-  .faq__form-button {
-    padding: 11px 40px;
-    font-size: 22px;
-    background-color: #A4DF59;
-    border-color: #A4DF59; }
-    .faq__form-button:hover {
-      color: #A4DF59; }
+  .faq__form {
+    max-width: 100%; }
+    .faq__form-input {
+      margin-right: 15px;
+      padding: 12px 40px;
+      max-width: 260px;
+      font-size: 20px;
+      background-color: #FFF; }
+    .faq__form-button {
+      padding: 11px 40px;
+      font-size: 22px;
+      background-color: #A4DF59;
+      border-color: #A4DF59; }
+      .faq__form-button:hover {
+        color: #A4DF59; }
 
 .contacts {
   padding: 60px 0 30px 0;
@@ -1145,6 +1147,10 @@ body {
     width: 100%;
     top: 95%;
     right: 0; }
+  .faq {
+    padding: 120px 0; }
+    .faq__bg {
+      clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%); }
   .footer__col:first-child {
     flex-direction: column;
     align-items: center; }
@@ -1275,6 +1281,18 @@ body {
       .contacts__block-phone:before {
         left: 50%;
         transform: translateX(-50%); }
+  .faq {
+    padding: 90px 0; }
+    .faq__bg {
+      clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%); }
+    .faq__form-input {
+      margin-right: 0;
+      margin-bottom: 20px;
+      max-width: 100%; }
+      .faq__form-inputs {
+        flex-direction: column; }
+    .faq__form-button {
+      width: 100%; }
   .footer__wrap {
     flex-direction: column; }
   .footer__col {
@@ -1343,7 +1361,9 @@ body {
       .steps__list-item:nth-child(3) {
         order: 3; }
       .steps__list-item:last-child {
-        order: 4; } }
+        order: 4; }
+  .faq__bg {
+    clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%); } }
 
 @media (max-width: 480px) {
   .features__form-input {
@@ -1417,7 +1437,12 @@ body {
     margin-right: 0;
     max-width: 370px; }
   .contacts__title .line-break {
-    display: inline; } }
+    display: inline; }
+  .faq__title {
+    font-size: 36px; }
+  .faq__subtitle {
+    margin-bottom: 40px;
+    font-size: 16px; } }
 
 @media (max-width: 350px) {
   .section__title_alt {
@@ -1425,4 +1450,6 @@ body {
   .gift__title {
     font-size: 36px; }
   .about-us__blob {
-    right: -30px; } }
+    right: -30px; }
+  .faq {
+    padding: 60px 0; } }

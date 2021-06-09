@@ -697,7 +697,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			Наш менеджер свяжется с вами через 2 минуты
 		</div>
 		<form action="#" method="POST" class="faq__form">
-			<div class="form__inputs">
+			<div class="form__inputs faq__form-inputs">
 				<input type="text" class="form__input faq__form-input" placeholder="+7 (999) 999-99-99">
 				<button class="callback-button form__button faq__form-button">Перезвоните мне</button>
 			</div>
