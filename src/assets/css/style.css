@@ -1057,8 +1057,23 @@ body {
         margin-bottom: 0; } }
 
 @media (max-width: 576px) {
-  .promo__wrap:after {
-    width: 95%; }
+  .promo {
+    overflow-y: visible;
+    overflow-x: visible; }
+    .promo__collage_left {
+      top: 70%;
+      left: -30vw; }
+      .promo__collage_left-circle {
+        width: 50vw;
+        height: 50vw; }
+    .promo__collage_right {
+      top: -65vw;
+      right: -250vw; }
+      .promo__collage_right-square {
+        width: 250vw;
+        min-height: 210vw; }
+    .promo__wrap:after {
+      width: 95%; }
   .features__collage {
     width: 100%; }
   .features__iphone {

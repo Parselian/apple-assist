@@ -214,6 +214,26 @@
 
 @media (max-width: 576px) {
   .promo {
+    overflow-y: visible;
+    overflow-x: visible;
+    &__collage {
+      &_left {
+        top: 70%;
+        left: -30vw;
+        &-circle {
+          width: 50vw;
+          height: 50vw;
+        }
+      }
+      &_right {
+        top: -65vw;
+        right: -250vw;
+        &-square {
+          width: 250vw;
+          min-height: 210vw;
+        }
+      }
+    }
     &__wrap {
       &:after {
         width: 95%;
