@@ -60,6 +60,9 @@ body {
   &_bold {
     font-weight: 700;
   }
+  &_alert {
+    color: $alert_color;
+  }
   &_underline {
     position: relative;
     &:after {
@@ -138,4 +141,5 @@ body {
   @import "faq";
   @import "contacts";
   @import "footer";
+  @import "popups";
   @import "media";
