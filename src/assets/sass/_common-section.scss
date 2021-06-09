@@ -48,6 +48,7 @@
       margin-right: 35px;
       font-size: 22px;
       color: $inactive-text-color;
+      text-shadow: 0 0 6px white;
       &:before {
         position: absolute;
         content: 'Цена:';
@@ -105,11 +106,21 @@
       font-weight: 700;
     }
   }
+  &__select {
+    display: none;
+    width: 100%;
+    padding: 10px 25px;
+    background: transparent;
+    border: 2px solid $accent-color;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+  }
   &__img {
     position: absolute;
     width: 380px;
     bottom: -60%;
-    right: 20%;
+    right: 10%;
     z-index: -1;
     filter: grayscale(1);
     opacity: .1;

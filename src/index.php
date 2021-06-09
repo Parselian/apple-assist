@@ -395,10 +395,14 @@ require_once(__DIR__ . '/assets/configs/config.php');
 </section>
 
 <section class="common">
-	<div class="common__bg"></div>
 	<div class="container common__wrap">
+		<div class="common__bg"></div>
 		<div class="common__col common__filter">
 			<h2 class="section__title section__title_tail common__title">Типовые неисправности iPhone</h2>
+			<select name="common_problems_list" id="" class="common__select">
+				<option value="замена аккумулятора" selected>Замена аккумулятора</option>
+				<option value="замена экрана">Замена экрана</option>
+			</select>
 			<div class="common__blocks">
 				<div class="common__block">
 					<svg class="common__block-icon">

@@ -694,7 +694,8 @@ body {
       position: relative;
       margin-right: 35px;
       font-size: 22px;
-      color: #989898; }
+      color: #989898;
+      text-shadow: 0 0 6px white; }
       .common__info-price:before {
         position: absolute;
         content: 'Цена:';
@@ -739,11 +740,20 @@ body {
     .common__block-title {
       font-size: 16px;
       font-weight: 700; }
+  .common__select {
+    display: none;
+    width: 100%;
+    padding: 10px 25px;
+    background: transparent;
+    border: 2px solid #A4DF59;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px; }
   .common__img {
     position: absolute;
     width: 380px;
     bottom: -60%;
-    right: 20%;
+    right: 10%;
     z-index: -1;
     filter: grayscale(1);
     opacity: .1; }
@@ -932,6 +942,10 @@ body {
     color: #000;
     opacity: 0.5; }
 
+@media (max-width: 1400px) {
+  .common__img {
+    right: 0; } }
+
 @media (max-width: 1200px) {
   .promo {
     margin-bottom: 100px; }
@@ -951,6 +965,11 @@ body {
     width: 350px; }
   .features__collage {
     width: 430px; }
+  .common__filter {
+    width: 50%;
+    margin-right: 40px; }
+  .common__info {
+    width: 45%; }
   .footer__logo {
     width: 210px; }
   .footer__nav-link:nth-last-child(-n+2) {
@@ -1016,6 +1035,29 @@ body {
     .gift__img-wrap {
       top: 75%;
       right: 10px; }
+  .common {
+    margin-bottom: 100px; }
+    .common__bg {
+      clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%); }
+    .common__wrap {
+      flex-direction: column; }
+    .common__filter, .common__info {
+      width: 100%; }
+    .common__filter {
+      margin-right: 0; }
+    .common__info {
+      margin-top: 40px; }
+    .common__block {
+      width: fit-content;
+      max-width: 32%; }
+      .common__block:not(:nth-child(2n)) {
+        margin-right: unset; }
+      .common__block:not(:nth-child(3n)) {
+        margin-right: 1%; }
+      .common__block:not(:nth-last-child(-n+2)) {
+        margin-bottom: unset; }
+      .common__block:not(:nth-last-child(-n+3)) {
+        margin-bottom: 20px; }
   .footer__col:first-child {
     flex-direction: column;
     align-items: center; }
@@ -1081,6 +1123,32 @@ body {
     top: -60px; }
     .gift__border_top-right {
       top: 40px; }
+  .common {
+    padding: 80px 0; }
+    .common__bg {
+      clip-path: polygon(0 3%, 100% 0, 100% 100%, 0% 100%); }
+    .common__block {
+      width: fit-content;
+      max-width: 49%; }
+      .common__blocks {
+        justify-content: center; }
+      .common__block:not(:nth-child(3n)) {
+        margin-right: unset; }
+      .common__block:not(:nth-child(2n)) {
+        margin-right: 1%; }
+      .common__block:not(:nth-last-child(-n+3)) {
+        margin-bottom: unset; }
+      .common__block:not(:nth-last-child(-n+2)) {
+        margin-bottom: 20px; }
+    .common__info {
+      text-align: center; }
+      .common__info-text:after {
+        left: 50%;
+        transform: translateX(-50%); }
+      .common__info-row {
+        justify-content: center; }
+    .common__img {
+      top: 60%; }
   .footer__wrap {
     flex-direction: column; }
   .footer__col {
@@ -1120,6 +1188,8 @@ body {
     width: 100%; }
   .features__iphone {
     width: 85%; }
+  .common__bg {
+    clip-path: polygon(0 5vw, 100% 0, 100% 100%, 0% 100%); }
   .gift {
     margin-bottom: 80px; }
     .gift__img-wrap {
@@ -1154,13 +1224,27 @@ body {
     .gift__form-inputs {
       flex-direction: column; }
   .gift__form-button {
-    width: 100%; } }
+    width: 100%; }
+  .common__blocks {
+    display: none; }
+  .common__select {
+    display: block; } }
 
 @media (max-width: 405px) {
   .promo__title {
     font-size: 38px; }
   .promo__list-item {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .common {
+    padding-bottom: 60px; }
+    .common__info-row {
+      text-align: center;
+      flex-direction: column;
+      align-items: center; }
+    .common__info-price {
+      margin-right: 0;
+      margin-bottom: 20px;
+      font-size: 30px; } }
 
 @media (max-width: 350px) {
   .gift__title {
