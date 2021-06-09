@@ -571,8 +571,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 		<div class="reviews__col">
 			<picture>
-				<source srcset="./assets/images/webp/" type="image/webp">
-				<img src="./assets/images/" alt="фото" class="reviews__img">
+				<source srcset="./assets/images/webp/about-us-man.webp" type="image/webp">
+				<img src="./assets/images/about-us-man.png" alt="фото" class="reviews__img">
 			</picture>
 		</div>
 	</div>
