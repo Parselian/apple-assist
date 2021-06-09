@@ -9,6 +9,20 @@ body {
   background-color: $main-bg-color;
 }
 
+.freezed {
+  overflow-y: hidden;
+  &:before {
+    position: fixed;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background-color: $alt-text-color;
+    opacity: .8;
+  }
+}
 
 .section {
   &__title {
@@ -111,6 +125,7 @@ body {
     }
 }
 
+  @import "burger";
   @import "header";
   @import "promo";
   @import "features";

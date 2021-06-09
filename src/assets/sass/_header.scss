@@ -55,5 +55,13 @@
       font-weight: 300;
       line-height: 1;
     }
+    .burger {
+      &-btn {
+        display: none;
+        &:before, &:after, & div {
+          background-color: $main-text-color;
+        }
+      }
+    }
   }
 }

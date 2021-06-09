@@ -10,7 +10,7 @@
     bottom: 0;
     left: 0;
     z-index: -1;
-    background-color: $alt-bg-color;
+    background-color: darken($alt-bg-color, 5%);
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
   }
   &__wrap {

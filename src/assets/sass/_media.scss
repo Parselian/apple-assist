@@ -81,6 +81,15 @@
     &__menu {
       display: none;
     }
+    &__contacts {
+
+      .burger {
+        &-btn {
+          margin-left: 15px;
+          display: block;
+        }
+      }
+    }
   }
   .promo {
     &__collage {
@@ -351,6 +360,13 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    &__contacts {
+      &-btn {
+        display: none;
+      }
+    }
+  }
   .section {
     &__title {
       text-align: center;
@@ -648,6 +664,18 @@
 }
 
 @media (max-width: 576px) {
+  .burger {
+    &-menu {
+      max-width: 300px;
+      &:before {
+        max-width: 300px;
+      }
+      &__list {
+        top: 25%;
+        right: -40%;
+      }
+    }
+  }
   .promo {
     overflow-y: visible;
     overflow-x: visible;
@@ -764,6 +792,13 @@
 }
 
 @media (max-width: 480px) {
+  .header {
+    &__contacts {
+      &-col {
+        display: none;
+      }
+    }
+  }
   .features {
     &__form {
       &-input {
@@ -852,6 +887,7 @@
 }
 
 @media (max-width: 405px) {
+
   .promo {
     &__title {
       font-size: 38px;
@@ -937,6 +973,20 @@
 }
 
 @media (max-width: 350px) {
+  .burger {
+    &-menu {
+      max-width: 200px;
+      &:before {
+        max-width: 200px;
+      }
+      &__list {
+        right: -30%;
+        &-link {
+          font-size: 18px;
+        }
+      }
+    }
+  }
   .section {
     &__title {
       &_alt {

@@ -19,6 +19,18 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	</script>
 </head>
 <body>
+
+<div class="burger-menu">
+	<div class="burger-btn">
+		<div></div>
+	</div>
+	<nav class="burger-menu__list">
+		<a href="#" class="burger-menu__list-link">О нас</a>
+		<a href="#" class="burger-menu__list-link">Цены</a>
+		<a href="#" class="burger-menu__list-link">Отзывы</a>
+		<a href="#" class="burger-menu__list-link">Контакты</a>
+	</nav>
+</div>
 <section class="promo">
 	<header class="header">
 		<div class="container header__wrap">
@@ -35,6 +47,9 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<div class="header__contacts-col">
 					<a href="tel: <?= $phone_link ?>" class="header__contacts-phone"><?= $phone_format ?></a>
 					<div class="header__contacts-worktime">8:00 — 23:00 Без выходных</div>
+				</div>
+				<div class="burger-btn">
+					<div></div>
 				</div>
 			</div>
 		</div>
