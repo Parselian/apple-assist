@@ -2,6 +2,7 @@
   margin-bottom: 120px;
   padding-bottom: 80px;
   &__wrap {
+    padding-left: 80px;
     position: relative;
   }
   &__border {
@@ -12,10 +13,10 @@
     &_top {
       width: 150px;
       top: -100px;
-      right: 0;
+      right: 10px;
       &-right {
         top: 0;
-        right: -99px;
+        right: -90px;
         width: 200px;
         transform: rotate(90deg);
       }
@@ -23,10 +24,10 @@
     &_bottom {
       width: 150px;
       bottom: -80px;
-      left: -51px;
+      left: 14px;
       &-left {
         bottom: 20px;
-        left: -150px;
+        left: -85px;
         width: 200px;
         transform: rotate(-90deg);
       }
@@ -46,7 +47,7 @@
     &-wrap {
       position: absolute;
       top: 50%;
-      right: 0;
+      right: 30px;
       transform: translateY(-50%);
       z-index: -1;
       &:after {

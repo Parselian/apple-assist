@@ -379,7 +379,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		</div>
 
 		<form action="#" method="POST" class="form gift__form">
-			<div class="form__inputs">
+			<div class="form__inputs gift__form-inputs">
 				<input type="text" class="form__input gift__form-input" placeholder="+7 (999) 999-99-99">
 				<button class="callback-button form__button gift__form-button">Вызвать мастера</button>
 			</div>
