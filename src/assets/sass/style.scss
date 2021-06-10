@@ -5,6 +5,23 @@ body, html {
   overflow-x: hidden;
 }
 
+html {
+  &:before {
+    position: fixed;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    z-index: 999991;
+    background-color: $alt-text-color;
+    opacity: .8;
+    clip-path: polygon(0 0, 84% 0, 100% 100%, 0 100%);
+    transition: .3s;
+  }
+}
+
 body {
   font-family: 'Open sans', sans-serif, --apple-system;
   background-color: $main-bg-color;
@@ -13,16 +30,8 @@ body {
 .freezed {
   overflow-y: hidden;
   &:before {
-    position: fixed;
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 999991;
-    background-color: $alt-text-color;
-    opacity: .8;
-    transition: .3s;
+    width: 100%;
+    transition: .8s;
   }
 }
 

@@ -54,6 +54,10 @@ $(window).on('load', function() {
             $('.common__info-slider').slick('slickGoTo', curBtn.data('problem-btn') - 1)
         }
 
+        if (e.target.closest('.prices__pricelist-unroll')) {
+            $('.prices__pricelist-scroll').slideDown().toggleClass('prices__pricelist-scroll_unrolled')
+        }
+
         if (e.target.closest('.burger-menu__list-link')) {
             $('html').removeClass('freezed');
             $('.burger-btn').removeClass('burger-btn_active');

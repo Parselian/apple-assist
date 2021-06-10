@@ -140,6 +140,14 @@
     position: relative;
     border-collapse: collapse;
     width: 100%;
+    &-scroll {
+      height: 20%;
+      overflow-y: auto;
+      transition: .3s;
+      &_unrolled {
+
+      }
+    }
     &-headings {
       text-align: left;
       background-color: $input-bg-color;

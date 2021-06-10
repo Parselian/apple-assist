@@ -10,7 +10,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="<?= './assets/css/bootstrap-grid.min.css' ?>">
 	<link rel="stylesheet" href="<?= './assets/css/reset.css' ?>">
-	<link rel="stylesheet" href="<?= './assets/css/style.css' ?>">
+	<link rel="stylesheet" href="<?= './assets/css/style.css?' . time() ?>">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
@@ -25,6 +25,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	</script>
 </head>
 <body>
+
+<div class="overlay"></div>
 
 <div class="burger-menu">
 	<div class="burger-btn">
@@ -203,7 +205,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		<div class="prices__collage prices__collage_right"></div>
 		<h2 class="section__title prices__title">Выберите ваше устройство</h2>
 
-		<div class="prices__devices">
+		<!--<div class="prices__devices">
 			<div class="prices__device" data-device="iphone">
 				<svg class="prices__device-icon">
 					<use xlink:href="./assets/stack/sprite.svg#iphone-icon"></use>
@@ -238,7 +240,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				</svg>
 				<div class="prices__device-name">Watch</div>
 			</div>
-		</div>
+		</div>-->
 
 		<div class="prices__models">
 			<div class="prices__model">
