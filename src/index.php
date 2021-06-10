@@ -22,8 +22,9 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 <div class="burger-menu">
 	<div class="burger-btn">
-		<div></div>
-	</div>
+					<div class="burger-btn-center"></div>
+					<div class="burger-btn__bg"></div>
+				</div>
 	<nav class="burger-menu__list">
 		<a href="#" class="burger-menu__list-link">О нас</a>
 		<a href="#" class="burger-menu__list-link">Цены</a>
@@ -49,7 +50,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 					<div class="header__contacts-worktime">8:00 — 23:00 Без выходных</div>
 				</div>
 				<div class="burger-btn">
-					<div></div>
+					<div class="burger-btn-center"></div>
+					<div class="burger-btn__bg"></div>
 				</div>
 			</div>
 		</div>
@@ -749,8 +751,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	</div>
 </footer>
 
-<div class="popups">
-	<div class="popup">
+<div class="popups popups_hidden">
+	<div class="popup popup_close">
 		<div class="popup__form-close">
 			<svg class="popup__form-close-icon">
 				<use xlink:href="./assets/stack/sprite.svg#close"></use>

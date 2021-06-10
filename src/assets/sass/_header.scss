@@ -1,6 +1,16 @@
 .header {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
   margin-bottom: 140px;
   padding-top: 16px;
+  padding-bottom: 16px;
+  &_scrolled {
+    background-color: $alt-text-color;
+    -webkit-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.15);
+    -moz-box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.15);
+  }
   &__wrap {
     display: flex;
     justify-content: space-between;
@@ -58,8 +68,8 @@
     .burger {
       &-btn {
         display: none;
-        &:before, &:after, & div {
-          background-color: $main-text-color;
+        &:before, &:after, &-center {
+          background-color: $alt-text-color;
         }
       }
     }
