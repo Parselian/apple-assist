@@ -583,6 +583,16 @@
     &__slide {
       &r {
         margin-right: 0;
+        &-arrow {
+          &_prev {
+            left: 50%;
+            transform: translateX(calc(-50% - 30px));
+          }
+          &_next {
+            left: 50%;
+            transform: translateX(calc(-50% + 30px)) rotate(180deg);
+          }
+        }
       }
       &-text {
         text-align: center;

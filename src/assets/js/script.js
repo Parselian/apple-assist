@@ -8,6 +8,23 @@ $(window).on('load', function() {
         fade: true
     })
 
+    $('.reviews__slider').slick({
+        arrows: true,
+        dots: false,
+        fade: true,
+        adaptiveHeight: true,
+        prevArrow: `
+            <svg class="reviews__slider-arrow reviews__slider-arrow_prev">
+                <use xlink:href="./assets/stack/sprite.svg#slider-arrow"></use>
+            </svg>
+        `,
+        nextArrow: `
+            <svg class="reviews__slider-arrow reviews__slider-arrow_next">
+                <use xlink:href="./assets/stack/sprite.svg#slider-arrow"></use>
+            </svg>
+        `
+    })
+
 
     $(window).on('scroll', function() {
         if ($(window).scrollTop() > 50) {
@@ -43,9 +60,6 @@ $(window).on('load', function() {
                 $('html').removeClass('freezed');
                 $('.popups').fadeOut().addClass('popups_hidden');
                 $('.popup-call-master').fadeOut().addClass('popup_close');
-            case e.target.closest('.common__block'):
-                console.log(5)
-                break;
             default:
                 return;
         }

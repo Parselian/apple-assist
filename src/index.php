@@ -661,6 +661,54 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						"не отходя от кассы", все перед тобой ) Спасибо!
 					</div>
 				</div>
+				<div class="reviews__slide">
+					<div class="reviews__slide-row">
+						<div class="reviews__slide-col">
+							<picture>
+								<source srcset="./assets/images/webp/reviewer.webp" type="image/webp">
+								<img src="./assets/images/reviewer.jpg" alt="фото клиента" class="reviews__slide-photo">
+							</picture>
+							<div class="reviews__slide-reviewer">
+								Евгения В.
+								<span class="reviews__slide-problem">
+									Замена стекла iPhone
+								</span>
+							</div>
+						</div>
+						<div class="reviews__slide-rating">4.8</div>
+					</div>
+					<div class="reviews__slide-text">
+						После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами
+						до
+						фин. результата), была приятно удивлена оперативностью и качеством работы - за 15 минут уверенно поменяли экран,
+						прямо
+						"не отходя от кассы", все перед тобой ) Спасибо!
+					</div>
+				</div>
+				<div class="reviews__slide">
+					<div class="reviews__slide-row">
+						<div class="reviews__slide-col">
+							<picture>
+								<source srcset="./assets/images/webp/reviewer.webp" type="image/webp">
+								<img src="./assets/images/reviewer.jpg" alt="фото клиента" class="reviews__slide-photo">
+							</picture>
+							<div class="reviews__slide-reviewer">
+								Евгения В.
+								<span class="reviews__slide-problem">
+									Замена стекла iPhone
+								</span>
+							</div>
+						</div>
+						<div class="reviews__slide-rating">4.8</div>
+					</div>
+					<div class="reviews__slide-text">
+						После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами
+						до
+						фин. результата), была приятно удивлена оперативностью и качеством работы - за 15 минут уверенно поменяли экран,
+						прямо
+						"не отходя от кассы", все перед тобой ) Спасибо!
+					</div>
+				</div>
 			</div>
 		</div>
 
