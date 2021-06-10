@@ -13,6 +13,12 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	<link rel="stylesheet" href="<?= './assets/css/style.css' ?>">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+		  integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+		  crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+		  integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+		  crossorigin="anonymous" referrerpolicy="no-referrer"/>
 	<title>Apple Assist | Ремонт iPhone в СПб</title>
 
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
@@ -406,7 +412,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<option value="замена экрана">Замена экрана</option>
 			</select>
 			<div class="common__blocks">
-				<div class="common__block">
+				<div class="common__block common__block_active" data-problem-btn="1">
 					<svg class="common__block-icon">
 						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
 					</svg>
@@ -415,7 +421,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						Замена аккумулятора
 					</div>
 				</div>
-				<div class="common__block common__block_active">
+				<div class="common__block" data-problem-btn="2">
 					<svg class="common__block-icon">
 						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
 					</svg>
@@ -424,7 +430,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						Замена аккумулятора
 					</div>
 				</div>
-				<div class="common__block">
+				<div class="common__block" data-problem-btn="3">
 					<svg class="common__block-icon">
 						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
 					</svg>
@@ -433,7 +439,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						Замена аккумулятора
 					</div>
 				</div>
-				<div class="common__block">
+				<div class="common__block" data-problem-btn="4">
 					<svg class="common__block-icon">
 						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
 					</svg>
@@ -442,7 +448,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						Замена аккумулятора
 					</div>
 				</div>
-				<div class="common__block">
+				<div class="common__block" data-problem-btn="5">
 					<svg class="common__block-icon">
 						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
 					</svg>
@@ -451,7 +457,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						Замена аккумулятора
 					</div>
 				</div>
-				<div class="common__block">
+				<div class="common__block" data-problem-btn="6">
 					<svg class="common__block-icon">
 						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
 					</svg>
@@ -463,17 +469,104 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			</div>
 		</div>
 		<div class="common__col common__info">
-			<p class="common__info-text">
-				Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
-				Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
-				рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше, должна
-				быть произведена ее замена.
-			</p>
-			<div class="common__info-row">
-				<div class="common__info-price">
-					от <span class="text_accent text_bold">1 470 руб.</span>
+			<div class="common__info-slider">
+				<div class="common__info-slide" data-problem-info="Замена аккумулятора">
+					<p class="common__info-text">
+						1Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к
+						розетке?
+						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
+						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
+						должна
+						быть произведена ее замена.
+					</p>
+
+					<div class="common__info-row">
+						<div class="common__info-price">
+							от <span class="text_accent text_bold">1 470 руб.</span>
+						</div>
+						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
+					</div>
 				</div>
-				<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
+				<div class="common__info-slide" data-problem-info="Замена стекла">
+					<p class="common__info-text" data-problem-info="Замена стекла">
+						2Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
+						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
+						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
+						должна
+						быть произведена ее замена.
+					</p>
+
+					<div class="common__info-row">
+						<div class="common__info-price">
+							от <span class="text_accent text_bold">1 470 руб.</span>
+						</div>
+						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
+					</div>
+				</div>
+				<div class="common__info-slide" data-problem-info="Замена дисплея">
+					<p class="common__info-text">
+						3Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
+						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
+						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
+						должна
+						быть произведена ее замена.
+					</p>
+
+					<div class="common__info-row">
+						<div class="common__info-price">
+							от <span class="text_accent text_bold">1 470 руб.</span>
+						</div>
+						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
+					</div>
+				</div>
+				<div class="common__info-slide" data-problem-info="Замена заднего стекла">
+					<p class="common__info-text">
+						4Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
+						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
+						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
+						должна
+						быть произведена ее замена.
+					</p>
+
+					<div class="common__info-row">
+						<div class="common__info-price">
+							от <span class="text_accent text_bold">1 470 руб.</span>
+						</div>
+						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
+					</div>
+				</div>
+				<div class="common__info-slide" data-problem-info="Ремонт после залития">
+					<p class="common__info-text">
+						5Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
+						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
+						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
+						должна
+						быть произведена ее замена.
+					</p>
+
+					<div class="common__info-row">
+						<div class="common__info-price">
+							от <span class="text_accent text_bold">1 470 руб.</span>
+						</div>
+						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
+					</div>
+				</div>
+				<div class="common__info-slide" data-problem-info="Не включается">
+					<p class="common__info-text">
+						6Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
+						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
+						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
+						должна
+						быть произведена ее замена.
+					</p>
+
+					<div class="common__info-row">
+						<div class="common__info-price">
+							от <span class="text_accent text_bold">1 470 руб.</span>
+						</div>
+						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
+					</div>
+				</div>
 			</div>
 		</div>
 
@@ -780,7 +873,9 @@ require_once(__DIR__ . '/assets/configs/config.php');
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
 		integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous"
 		referrerpolicy="no-referrer"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+		integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
 <script src="./assets/js/script.js"></script>
 <script>
     ymaps.ready(init);

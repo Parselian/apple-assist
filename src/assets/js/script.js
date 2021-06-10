@@ -1,10 +1,32 @@
 'use-strict'
 
 $(window).on('load', function() {
-    $(document).on('click', function(e) {
-        const target = $(e.target);
 
-        console.log(target);
+    $('.common__info-slider').slick({
+        arrows: false,
+        dots: false,
+        fade: true
+    })
+
+
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > 50) {
+            $('header').addClass('header_scrolled')
+        } else {
+            $('header').removeClass('header_scrolled')
+        }
+    })
+
+    $(document).on('click', function(e) {
+        let target = $(e.target);
+
+        if (e.target.closest('.common__block')) {
+            const curBtn = $(e.target).closest('.common__block');
+
+            $('.common__block').removeClass('common__block_active');
+            curBtn.addClass('common__block_active');
+            $('.common__info-slider').slick('slickGoTo', curBtn.data('problem-btn') - 1)
+        }
 
         switch(true) {
             case target.is('.burger-menu__list-link'):
@@ -21,6 +43,9 @@ $(window).on('load', function() {
                 $('html').removeClass('freezed');
                 $('.popups').fadeOut().addClass('popups_hidden');
                 $('.popup-call-master').fadeOut().addClass('popup_close');
+            case e.target.closest('.common__block'):
+                console.log(5)
+                break;
             default:
                 return;
         }
