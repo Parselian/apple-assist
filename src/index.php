@@ -489,7 +489,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				</div>
 				<div class="common__info-slide" data-problem-info="Замена стекла">
 					<p class="common__info-text" data-problem-info="Замена стекла">
-						2Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
+						2Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к
+						розетке?
 						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
 						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
 						должна
@@ -505,7 +506,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				</div>
 				<div class="common__info-slide" data-problem-info="Замена дисплея">
 					<p class="common__info-text">
-						3Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
+						3Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к
+						розетке?
 						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
 						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
 						должна
@@ -521,7 +523,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				</div>
 				<div class="common__info-slide" data-problem-info="Замена заднего стекла">
 					<p class="common__info-text">
-						4Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
+						4Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к
+						розетке?
 						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
 						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
 						должна
@@ -537,7 +540,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				</div>
 				<div class="common__info-slide" data-problem-info="Ремонт после залития">
 					<p class="common__info-text">
-						5Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
+						5Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к
+						розетке?
 						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
 						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
 						должна
@@ -553,7 +557,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				</div>
 				<div class="common__info-slide" data-problem-info="Не включается">
 					<p class="common__info-text">
-						6Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к розетке?
+						6Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к
+						розетке?
 						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
 						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
 						должна
@@ -729,7 +734,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			<h2 class="section__title section__title_tail steps__title">Как происходит ремонт?</h2>
 
 			<ul class="steps__list">
-				<li class="steps__list-item">
+				<li class="steps__list-item" data-step="request">
 					<svg class="steps__list-item-icon">
 						<use xlink:href="./assets/stack/sprite.svg#call"></use>
 					</svg>
@@ -738,7 +743,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						Вы оставляете заявку на выезд мастера или выезд курьера для доставки техники к нам в сервис
 					</div>
 				</li>
-				<li class="steps__list-item steps__list-item_active">
+				<li class="steps__list-item steps__list-item_active" data-step="diagnostics">
 					<svg class="steps__list-item-icon">
 						<use xlink:href="./assets/stack/sprite.svg#search"></use>
 					</svg>
@@ -747,7 +752,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						Мы проводим диагностику, после которой станут известны сроки и стоимость работ
 					</div>
 				</li>
-				<li class="steps__list-item">
+				<li class="steps__list-item" data-step="repair">
 					<svg class="steps__list-item-icon">
 						<use xlink:href="./assets/stack/sprite.svg#gear"></use>
 					</svg>
@@ -756,7 +761,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						Оповещаем Вас и после вашего подтверждения проводим ремонт
 					</div>
 				</li>
-				<li class="steps__list-item">
+				<li class="steps__list-item" data-step="warranty">
 					<svg class="steps__list-item-icon">
 						<use xlink:href="./assets/stack/sprite.svg#guarantee"></use>
 					</svg>
@@ -768,10 +773,27 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			</ul>
 		</div>
 
-		<div class="steps__col">
+		<div class="steps__col steps__img-wrap">
 			<picture>
 				<source srcset="./assets/images/webp/steps-img.webp" type="image/webp">
 				<img src="./assets/images/steps-img.png" alt="фото" class="steps__img">
+			</picture>
+			<picture>
+				<source srcset="./assets/images/webp/steps-img.webp" type="image/webp">
+				<img src="./assets/images/steps-img.png" alt="Заявка на ремонт" class="steps__img steps__img_hidden"
+					 data-step-img="request">
+			</picture>
+			<picture>
+				<source srcset="./assets/images/webp/steps-img.webp" type="image/webp">
+				<img src="./assets/images/steps-img.png" alt="Диагностика" class="steps__img" data-step-img="diagnostics">
+			</picture>
+			<picture>
+				<source srcset="./assets/images/webp/steps-img.webp" type="image/webp">
+				<img src="./assets/images/steps-img.png" alt="Ремонт" class="steps__img steps__img_hidden" data-step-img="repair">
+			</picture>
+			<picture>
+				<source srcset="./assets/images/webp/steps-img.webp" type="image/webp">
+				<img src="./assets/images/steps-img.png" alt="Гарантия" class="steps__img steps__img_hidden" data-step-img="warranty">
 			</picture>
 		</div>
 	</div>

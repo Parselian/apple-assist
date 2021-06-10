@@ -25,6 +25,13 @@ $(window).on('load', function() {
         `
     })
 
+    const toggleStepsCards = (target) => {
+        $('.steps__list-item').removeClass('steps__list-item_active')
+        $(target).addClass('steps__list-item_active')
+
+        $('.steps__img').fadeOut().addClass('steps__img_hidden');
+        $(`.steps__img[data-step-img="${$(target).data('step')}"]`).fadeIn().removeClass('steps__img_hidden');
+    };
 
     $(window).on('scroll', function() {
         if ($(window).scrollTop() > 50) {
@@ -35,7 +42,9 @@ $(window).on('load', function() {
     })
 
     $(document).on('click', function(e) {
-        let target = $(e.target);
+        if (e.target.closest('.steps__list-item')) {
+            toggleStepsCards(e.target.closest('.steps__list-item'));
+        }
 
         if (e.target.closest('.common__block')) {
             const curBtn = $(e.target).closest('.common__block');
@@ -45,23 +54,22 @@ $(window).on('load', function() {
             $('.common__info-slider').slick('slickGoTo', curBtn.data('problem-btn') - 1)
         }
 
-        switch(true) {
-            case target.is('.burger-menu__list-link'):
-                $('html').removeClass('freezed');
-                $('.burger-btn').removeClass('burger-btn_active');
-                $('.burger-menu').removeClass('burger-menu_active');
-                break;
-            case target.is('.open-popup-call-master'):
-                $('html').toggleClass('freezed');
-                $('.popups').fadeIn().removeClass('popups_hidden');
-                $('.popup-call-master').fadeIn().removeClass('popup_close');
-                break;
-            case target.is('.popup__form-close, svg, use, .popups'):
-                $('html').removeClass('freezed');
-                $('.popups').fadeOut().addClass('popups_hidden');
-                $('.popup-call-master').fadeOut().addClass('popup_close');
-            default:
-                return;
+        if (e.target.closest('.burger-menu__list-link')) {
+            $('html').removeClass('freezed');
+            $('.burger-btn').removeClass('burger-btn_active');
+            $('.burger-menu').removeClass('burger-menu_active');
+        }
+
+        if (e.target.closest('.open-popup-call-master')) {
+            $('html').toggleClass('freezed');
+            $('.popups').fadeIn().removeClass('popups_hidden');
+            $('.popup-call-master').fadeIn().removeClass('popup_close');
+        }
+
+        if (e.target.closest('.popup__form-close, .popups')) {
+            $('html').removeClass('freezed');
+            $('.popups').fadeOut().addClass('popups_hidden');
+            $('.popup-call-master').fadeOut().addClass('popup_close');
         }
     })
 
