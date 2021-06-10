@@ -22,9 +22,9 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 <div class="burger-menu">
 	<div class="burger-btn">
-					<div class="burger-btn-center"></div>
-					<div class="burger-btn__bg"></div>
-				</div>
+		<div class="burger-btn-center"></div>
+		<div class="burger-btn__bg"></div>
+	</div>
 	<nav class="burger-menu__list">
 		<a href="#" class="burger-menu__list-link">О нас</a>
 		<a href="#" class="burger-menu__list-link">Цены</a>
@@ -178,9 +178,9 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			<picture>
 				<source srcset="./assets/images/webp/features-collage.webp" type="image/webp">
 				<img src="./assets/images/features-collage.png" alt="pattern" class="features__collage"></picture>
-<!--			<svg class="features__collage">-->
-<!--				<use xlink:href="./assets/stack/sprite.svg#features-collage"></use>-->
-<!--			</svg>-->
+			<!--			<svg class="features__collage">-->
+			<!--				<use xlink:href="./assets/stack/sprite.svg#features-collage"></use>-->
+			<!--			</svg>-->
 		</div>
 	</div>
 </section>
@@ -672,7 +672,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				Работаем с 8:00 до 23:00 <span class="text_accent text_bold">Без выходных</span>
 			</div>
 
-			<a href="tel: <?= $phone_link?>" class="contacts__block-phone"><?= $phone_format?></a>
+			<a href="tel: <?= $phone_link ?>" class="contacts__block-phone"><?= $phone_format ?></a>
 			<button class="callback-button contacts__block-button">Вызвать мастера</button>
 			<!--<ul class="contacts__block-list">
 				<li class="contacts__block-list-item">
@@ -765,7 +765,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<div class="popup__form-inputs">
 					<div class="popup__form-input-wrap">
 						<label for="popup-call-master_name" class="popup__form-input-label">Ваше имя:</label>
-						<input id="popup-call-master_name" type="text" class="form__input popup__form-input" placeholder="+7 (999) 999-99-99">
+						<input id="popup-call-master_name" type="text" class="form__input popup__form-input"
+							   placeholder="+7 (999) 999-99-99">
 					</div>
 					<div class="popup__form-input-wrap">
 						<label for="popup-call-master_phone" class="popup__form-input-label">Ваш телефон: <span class="text_alert">*</span></label>
@@ -786,6 +787,16 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	</div>
 </div>
 
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
+		integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+
+<script src="./assets/js/script.js"></script>
 <script>
     ymaps.ready(init);
 

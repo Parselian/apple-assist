@@ -28,35 +28,46 @@
     }
     &_active {
       &:before {
-        transform: translateY(12px) rotate(135deg);
+        transform: translateY(6px) rotate(135deg);
       }
       &:after {
-        transform: translateY(-12px) rotate(-135deg);
+        transform: translateY(-5px) rotate(-135deg);
       }
-      & div {
-        transform: scale(0);
+      .burger {
+        &-btn {
+          &-center {
+            transform: scale(0);
+          }
+        }
       }
     }
   }
   &-menu {
     position: fixed;
-    display: none;
-    right: 0;
+    right: -100%;
     z-index: 999999;
     width: 100%;
     max-width: 400px;
     height: 100%;
+    transition: .5s;
     &:before {
       position: fixed;
       content: '';
       top: 0;
-      right: 0;
+      right: -100%;
       bottom: 0;
       z-index: -1;
       width: 100%;
       max-width: 400px;
       background-color: $alt-bg-color;
       clip-path: polygon(0 0, 100% 0, 100% 100%, 16% 100%);
+      transition: .5s;
+    }
+    &_active {
+      right: 0;
+          &:before {
+            right: 0;
+          }
     }
     .burger {
       &-btn {

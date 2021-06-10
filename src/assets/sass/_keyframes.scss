@@ -1,0 +1,8 @@
+@keyframes do-levitation {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) skew(-4deg, 0);
+  }
+  100% {
+    transform: translate(-50%, calc(-50%  + 0.5em)) rotate(0deg) skew(-4deg, 3deg);
+  }
+}
