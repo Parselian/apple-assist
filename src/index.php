@@ -32,6 +32,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		<a href="#" class="burger-menu__list-link">Контакты</a>
 	</nav>
 </div>
+
 <section class="promo">
 	<header class="header">
 		<div class="container header__wrap">
@@ -44,7 +45,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<a href="#" class="header__menu-item">Контакты</a>
 			</nav>
 			<div class="header__contacts">
-				<button class="callback-button header__contacts-btn">Нужна консультация</button>
+				<button class="callback-button header__contacts-btn open-popup-call-master">Нужна консультация</button>
 				<div class="header__contacts-col">
 					<a href="tel: <?= $phone_link ?>" class="header__contacts-phone"><?= $phone_format ?></a>
 					<div class="header__contacts-worktime">8:00 — 23:00 Без выходных</div>
@@ -91,7 +92,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				</li>
 			</ul>
 
-			<button class="callback-button promo__button">Вызвать инженера</button>
+			<button class="callback-button promo__button open-popup-call-master">Вызвать инженера</button>
 		</div>
 
 
@@ -318,7 +319,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		</table>
 		<div class="prices__pricelist-scroll">
 			<table class="prices__pricelist" cellpadding="10">
-				<tr class="prices__pricelist-row" data-service="Замена заднего стекла">
+				<tr class="prices__pricelist-row open-popup-call-master" data-service="Замена заднего стекла">
 					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
 					<td class="prices__pricelist-time">от 20 мин.</td>
 					<td class="prices__pricelist-price">4 990 руб.</td>
@@ -326,7 +327,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
 					</td>
 				</tr>
-				<tr class="prices__pricelist-row">
+				<tr class="prices__pricelist-row open-popup-call-master" data-service="Замена заднего стекла">
 					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
 					<td class="prices__pricelist-time">от 20 мин.</td>
 					<td class="prices__pricelist-price">4 990 руб.</td>
@@ -334,7 +335,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
 					</td>
 				</tr>
-				<tr class="prices__pricelist-row">
+				<tr class="prices__pricelist-row open-popup-call-master" data-service="Замена заднего стекла">
 					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
 					<td class="prices__pricelist-time">от 20 мин.</td>
 					<td class="prices__pricelist-price">4 990 руб.</td>
@@ -342,23 +343,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
 					</td>
 				</tr>
-				<tr class="prices__pricelist-row" data-service="Замена заднего стекла">
-					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
-					<td class="prices__pricelist-time">от 20 мин.</td>
-					<td class="prices__pricelist-price">4 990 руб.</td>
-					<td>
-						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
-					</td>
-				</tr>
-				<tr class="prices__pricelist-row">
-					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
-					<td class="prices__pricelist-time">от 20 мин.</td>
-					<td class="prices__pricelist-price">4 990 руб.</td>
-					<td>
-						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
-					</td>
-				</tr>
-				<tr class="prices__pricelist-row">
+				<tr class="prices__pricelist-row open-popup-call-master" data-service="Замена заднего стекла">
 					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
 					<td class="prices__pricelist-time">от 20 мин.</td>
 					<td class="prices__pricelist-price">4 990 руб.</td>
@@ -488,7 +473,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<div class="common__info-price">
 					от <span class="text_accent text_bold">1 470 руб.</span>
 				</div>
-				<button class="callback-button common__info-button">Вызвать мастера</button>
+				<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
 			</div>
 		</div>
 
@@ -594,7 +579,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		</div>
 	</div>
 
-	<button class="callback-button reviews__button">Вызвать мастера</button>
+	<button class="callback-button reviews__button open-popup-call-master">Вызвать мастера</button>
 </section>
 
 <section class="steps">
@@ -673,7 +658,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			</div>
 
 			<a href="tel: <?= $phone_link ?>" class="contacts__block-phone"><?= $phone_format ?></a>
-			<button class="callback-button contacts__block-button">Вызвать мастера</button>
+			<button class="callback-button contacts__block-button open-popup-call-master">Вызвать мастера</button>
 			<!--<ul class="contacts__block-list">
 				<li class="contacts__block-list-item">
 					<span class="text_bold">Адрес:</span> 190005, Санкт - Петербург, Московский проспект д.7 (ст. м. Садовая)
@@ -752,7 +737,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 </footer>
 
 <div class="popups popups_hidden">
-	<div class="popup popup_close">
+	<div class="popup popup-call-master popup_close">
 		<div class="popup__form-close">
 			<svg class="popup__form-close-icon">
 				<use xlink:href="./assets/stack/sprite.svg#close"></use>
