@@ -751,23 +751,23 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 <div class="popups">
 	<div class="popup">
+		<div class="popup__form-close">
+			<svg class="popup__form-close-icon">
+				<use xlink:href="./assets/stack/sprite.svg#close"></use>
+			</svg>
+		</div>
 		<div class="popup__wrap">
 			<form action="#" method="POST" class="popup__form">
-				<div class="popup__form-close">
-					<svg class="popup__form-close-icon">
-						<use xlink:href="./assets/stack/sprite.svg#close"></use>
-					</svg>
-				</div>
-				<h2 class="popup__title">Вызвать мастера</h2>
-				<div class="popup__subtitle">Оставьте ваши контактные данные и мы свяжемся с вами через 2 минуты</div>
+				<h2 class="popup__form-title">Вызвать <span class="text_accent text_bold">мастера</span></h2>
+				<div class="popup__form-subtitle">Оставьте ваши контактные данные и мы свяжемся с вами через 2 минуты</div>
 				<div class="popup__form-inputs">
 					<div class="popup__form-input-wrap">
-						<label for="popup-call-master_name" class="popup__form-label">Ваше имя:</label>
-						<input id="popup-call-master_name" type="text" class="popup__form-input" placeholder="+7 (999) 999-99-99">
+						<label for="popup-call-master_name" class="popup__form-input-label">Ваше имя:</label>
+						<input id="popup-call-master_name" type="text" class="form__input popup__form-input" placeholder="+7 (999) 999-99-99">
 					</div>
 					<div class="popup__form-input-wrap">
-						<label for="popup-call-master_phone" class="popup__form-label">Ваш телефон: <span class="text_alert">*</span></label>
-						<input id="popup-call-master_phone" type="text" class="popup__form-input" placeholder="Ваше имя:">
+						<label for="popup-call-master_phone" class="popup__form-input-label">Ваш телефон: <span class="text_alert">*</span></label>
+						<input id="popup-call-master_phone" type="text" class="form__input popup__form-input" placeholder="Ваше имя:">
 					</div>
 				</div>
 				<button class="popup__form-button">Отправить</button>
