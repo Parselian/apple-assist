@@ -33,11 +33,13 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		<div class="burger-btn-center"></div>
 		<div class="burger-btn__bg"></div>
 	</div>
+
 	<nav class="burger-menu__list">
-		<a href="#" class="burger-menu__list-link">О нас</a>
-		<a href="#" class="burger-menu__list-link">Цены</a>
-		<a href="#" class="burger-menu__list-link">Отзывы</a>
-		<a href="#" class="burger-menu__list-link">Контакты</a>
+		<a href="#features" class="burger-menu__list-link">Преимущества</a>
+		<a href="#prices" class="burger-menu__list-link">Цены</a>
+		<a href="#about" class="burger-menu__list-link">О нас</a>
+		<a href="#reviews" class="burger-menu__list-link">Отзывы</a>
+		<a href="#contacts" class="burger-menu__list-link">Контакты</a>
 	</nav>
 </div>
 
@@ -48,9 +50,9 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<use xlink:href="<?= './assets/stack/sprite.svg#logo' ?>"></use>
 			</svg>
 			<nav class="header__menu">
-				<a href="#" class="header__menu-item">О нас</a>
-				<a href="#" class="header__menu-item">Услуги</a>
-				<a href="#" class="header__menu-item">Контакты</a>
+				<a href="#about" class="header__menu-item">О нас</a>
+				<a href="#prices" class="header__menu-item">Услуги</a>
+				<a href="#contacts" class="header__menu-item">Контакты</a>
 			</nav>
 			<div class="header__contacts">
 				<button class="callback-button header__contacts-btn open-popup-call-master">Нужна консультация</button>
@@ -111,7 +113,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	</div>
 </section>
 
-<section class="features">
+<section id="features" class="features">
 	<div class="container features__wrap">
 		<div class="features__col">
 			<h2 class="section__title section__title_tail features__title">
@@ -194,7 +196,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	</div>
 </section>
 
-<section class="prices">
+<section id="prices" class="prices">
 	<div class="prices__collage prices__collage_left">
 		<div class="prices__collage_left-rect"></div>
 	</div>
@@ -557,7 +559,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	</div>
 </section>
 
-<section class="about-us">
+<section id="about" class="about-us">
 	<div class="container about-us__wrap">
 		<div class="about-us__col">
 			<picture>
@@ -598,7 +600,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	</div>
 </section>
 
-<section class="reviews">
+<section id="reviews" class="reviews">
 	<div class="reviews__bg"></div>
 
 	<div class="container reviews__wrap">
@@ -774,7 +776,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	</div>
 </section>
 
-<section class="contacts">
+<section id="contacts" class="contacts">
 	<div class="container contacts__wrap">
 		<div class="contacts__block">
 			<div class="section__title_alt contacts__block-title">
@@ -859,7 +861,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		<nav class="footer__col footer__nav">
 			<a href="#about" class="footer__nav-link">О нас</a>
 			<a href="#prices" class="footer__nav-link">Цены</a>
-			<a href="#faq" class="footer__nav-link">FAQ</a>
+			<a href="#reviews" class="footer__nav-link">Отзывы</a>
 			<a href="#contacts" class="footer__nav-link">Контакты</a>
 		</nav>
 		<div class="footer__col footer__contacts">

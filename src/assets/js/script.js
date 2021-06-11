@@ -1,6 +1,8 @@
 'use-strict'
 
 $(window).on('load', function () {
+    $('input[name="user_phone"]').mask('+7 (999) 999-99-99');
+
     $('.common__info-slider').slick({
         arrows: false,
         dots: false,
@@ -146,6 +148,17 @@ $(window).on('load', function () {
         $('.steps__img').fadeOut().addClass('steps__img_hidden');
         $(`.steps__img[data-step-img="${$(target).data('step')}"]`).fadeIn().removeClass('steps__img_hidden');
     };
+
+    const smoothScroll = () => {
+        $('a[href^="#"]').click(function() {
+            let link = $(this).attr('href');
+            $('html, body').animate({
+                scrollTop: $(link).offset().top -120
+            }, 700);
+            return false;
+        });
+    }
+    smoothScroll();
 
     $(window).on('scroll', function () {
         if ($(window).scrollTop() > 50) {
