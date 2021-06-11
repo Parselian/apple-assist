@@ -1,10 +1,17 @@
 <?php
-
     require_once(__DIR__ . '/db-cfg.php');
 
-    $get_prices_data = mysqli_query($connect, 'SELECT * FROM devices')
+    $selected_device = $_GET['selected_device'];
+//    $selected_device = 'iphone 4';
+    $prices_data_arr = [];
+
+    $get_prices_data = mysqli_query($connect, "SELECT * FROM device_problems WHERE DEVICE_NAME='".$selected_device."'")
         or die('Get prices data failed! ' . mysqli_error($connect));
 
-    foreach ( as $get_prices_data => $item) {
-        print_r(mysqli_fetch_row($get_prices_data));
+
+    foreach (mysqli_fetch_all($get_prices_data) as $item) {
+        array_push($prices_data_arr, $item);
     }
+
+    print_r(json_encode($prices_data_arr));
+    die();

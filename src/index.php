@@ -317,56 +317,29 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			</div>
 		</div>
 
-		<table class="prices__pricelist" cellpadding="15">
-			<thead class="prices__pricelist-headings">
-			<th>Услуга</th>
-			<th>Сроки</th>
-			<th>Цена</th>
-			<th></th>
-			</thead>
-		</table>
-		<div class="prices__pricelist-scroll">
-			<table class="prices__pricelist" cellpadding="10">
-				<tr class="prices__pricelist-row open-popup-call-master" data-service="Замена заднего стекла">
-					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
-					<td class="prices__pricelist-time">от 20 мин.</td>
-					<td class="prices__pricelist-price">4 990 руб.</td>
-					<td>
-						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
-					</td>
-				</tr>
-				<tr class="prices__pricelist-row open-popup-call-master" data-service="Замена заднего стекла">
-					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
-					<td class="prices__pricelist-time">от 20 мин.</td>
-					<td class="prices__pricelist-price">4 990 руб.</td>
-					<td>
-						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
-					</td>
-				</tr>
-				<tr class="prices__pricelist-row open-popup-call-master" data-service="Замена заднего стекла">
-					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
-					<td class="prices__pricelist-time">от 20 мин.</td>
-					<td class="prices__pricelist-price">4 990 руб.</td>
-					<td>
-						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
-					</td>
-				</tr>
-				<tr class="prices__pricelist-row open-popup-call-master" data-service="Замена заднего стекла">
-					<td class="prices__pricelist-servicename">Замена заднего стекла</td>
-					<td class="prices__pricelist-time">от 20 мин.</td>
-					<td class="prices__pricelist-price">4 990 руб.</td>
-					<td>
-						<button class="callback-button prices__pricelist-button">Вызвать мастера</button>
-					</td>
-				</tr>
+		<button class="button prices__models-button">Показать все</button>
+
+		<div class="prices__pricelist-wrap">
+			<table class="prices__pricelist" cellpadding="15">
+				<thead class="prices__pricelist-headings">
+				<th>Услуга</th>
+				<th>Сроки</th>
+				<th>Цена</th>
+				<th></th>
+				</thead>
 			</table>
+			<div class="prices__pricelist-scroll">
+				<table class="prices__pricelist" cellpadding="10">
+				</table>
+			</div>
+			<span class="prices__pricelist-unroll">
+				<div class="prices__pricelist-unroll-text">Развернуть прайс-лист</div>
+				<div class="prices__pricelist-unroll-text prices__pricelist-unroll-text_excerpt">Свернуть прайс-лист</div>
+				<svg class="prices__pricelist-unroll-icon">
+					<use xlink:href="./assets/stack/sprite.svg#pricelist-arrow"></use>
+				</svg>
+			</span>
 		</div>
-		<span class="prices__pricelist-unroll">
-			<div class="prices__pricelist-unroll-text">Развернуть прайс-лист</div>
-			<svg class="prices__pricelist-unroll-icon">
-				<use xlink:href="./assets/stack/sprite.svg#pricelist-arrow"></use>
-			</svg>
-		</span>
 	</div>
 </section>
 

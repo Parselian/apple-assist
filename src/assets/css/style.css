@@ -467,6 +467,26 @@ body {
       display: flex;
       justify-content: center;
       flex-wrap: wrap; }
+      .prices__models-button {
+        padding: 10px 25px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        font-size: 18px;
+        color: #FFF;
+        background-color: #A4DF59;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        transition: .2s;
+        border: 2px solid transparent; }
+        .prices__models-button:hover {
+          color: #A4DF59;
+          background-color: transparent;
+          border-color: #A4DF59; }
+    .prices__model_hidden {
+      display: none; }
     .prices__model:hover .prices__model-button {
       opacity: 1; }
     .prices__model:not(:nth-child(5n)) {
@@ -499,10 +519,15 @@ body {
     position: relative;
     border-collapse: collapse;
     width: 100%; }
+    .prices__pricelist-wrap {
+      display: none; }
     .prices__pricelist-scroll {
-      height: 20%;
       overflow-y: auto;
-      transition: .3s; }
+      transition: ease-in-out .3s; }
+      .prices__pricelist-scroll_rolled {
+        max-height: 320px; }
+      .prices__pricelist-scroll_unrolled {
+        max-height: 100%; }
     .prices__pricelist-headings {
       text-align: left;
       background-color: #E5E5E5; }
@@ -537,13 +562,23 @@ body {
       border-bottom-right-radius: 15px;
       border-bottom-left-radius: 15px;
       cursor: pointer; }
+      .prices__pricelist-unroll_active .prices__pricelist-unroll-text {
+        display: none; }
+        .prices__pricelist-unroll_active .prices__pricelist-unroll-text_excerpt {
+          display: block; }
+      .prices__pricelist-unroll_active .prices__pricelist-unroll-icon {
+        transform: rotate(180deg); }
       .prices__pricelist-unroll-icon {
         width: 10px;
-        height: 14px; }
+        height: 14px;
+        transition: .3s; }
       .prices__pricelist-unroll-text {
+        content: 'Развернуть прайс-лист';
         margin-right: 10px;
         font-size: 14px;
         font-weight: 600; }
+        .prices__pricelist-unroll-text_excerpt {
+          display: none; }
   .prices__collage {
     position: absolute;
     content: '';

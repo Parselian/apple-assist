@@ -85,6 +85,26 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      &-button {
+        padding: 10px 25px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        font-size: 18px;
+        color: $alt-text-color;
+        background-color: $accent-color;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        transition: .2s;
+        border: 2px solid transparent;
+        &:hover {
+          color: $accent-color;
+          background-color: transparent;
+          border-color: $accent-color;
+        }
+      }
     }
 
     position: relative;
@@ -94,6 +114,9 @@
     align-items: center;
     width: 19%;
     cursor: pointer;
+    &_hidden {
+      display: none;
+    }
     &:hover {
       .prices {
         &__model {
@@ -137,15 +160,21 @@
   }
 
   &__pricelist {
+    //max-height: 100%;
     position: relative;
     border-collapse: collapse;
     width: 100%;
+    &-wrap {
+      display: none;
+    }
     &-scroll {
-      height: 20%;
       overflow-y: auto;
-      transition: .3s;
+      transition: ease-in-out .3s;
+      &_rolled {
+        max-height: 320px;
+      }
       &_unrolled {
-
+        max-height: 100%;
       }
     }
     &-headings {
@@ -202,14 +231,36 @@
       border-bottom-right-radius: 15px;
       border-bottom-left-radius: 15px;
       cursor: pointer;
+      &_active {
+        .prices {
+          &__pricelist {
+            &-unroll {
+              &-text {
+                display: none;
+                &_excerpt {
+                  display: block;
+                }
+              }
+              &-icon {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
       &-icon {
         width: 10px;
         height: 14px;
+        transition: .3s;
       }
       &-text {
+        content: 'Развернуть прайс-лист';
         margin-right: 10px;
         font-size: 14px;
         font-weight: 600;
+        &_excerpt {
+          display: none;
+        }
       }
     }
   }
