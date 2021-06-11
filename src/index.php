@@ -171,7 +171,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 			<form action="#" method="POST" class="form features__form">
 				<div class="form__inputs features__form-inputs">
-					<input type="text" class="form__input features__form-input" placeholder="+7 (999) 999-99-99">
+					<input type="text" class="form__input features__form-input" name="user_phone" placeholder="+7 (999) 999-99-99" required>
 					<button class="callback-button form__button features__form-button">Вызвать мастера</button>
 				</div>
 				<div class="form__footnote features__form-footnote">
@@ -365,7 +365,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 		<form action="#" method="POST" class="form gift__form">
 			<div class="form__inputs gift__form-inputs">
-				<input type="text" class="form__input gift__form-input" placeholder="+7 (999) 999-99-99">
+				<input type="text" class="form__input gift__form-input" name="user_phone" placeholder="+7 (999) 999-99-99" required>
 				<button class="callback-button form__button gift__form-button">Вызвать мастера</button>
 			</div>
 		</form>
@@ -840,7 +840,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		</div>
 		<form action="#" method="POST" class="faq__form">
 			<div class="form__inputs faq__form-inputs">
-				<input type="text" class="form__input faq__form-input" placeholder="+7 (999) 999-99-99">
+				<input type="text" class="form__input faq__form-input" name="user_phone" placeholder="+7 (999) 999-99-99" required>
 				<button class="callback-button form__button faq__form-button">Перезвоните мне</button>
 			</div>
 		</form>
@@ -890,12 +890,12 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<div class="popup__form-inputs">
 					<div class="popup__form-input-wrap">
 						<label for="popup-call-master_name" class="popup__form-input-label">Ваше имя:</label>
-						<input id="popup-call-master_name" type="text" class="form__input popup__form-input"
+						<input id="popup-call-master_name" type="text" name="user_name" class="form__input popup__form-input"
 							   placeholder="+7 (999) 999-99-99">
 					</div>
 					<div class="popup__form-input-wrap">
 						<label for="popup-call-master_phone" class="popup__form-input-label">Ваш телефон: <span class="text_alert">*</span></label>
-						<input id="popup-call-master_phone" type="text" class="form__input popup__form-input" placeholder="Ваше имя:">
+						<input id="popup-call-master_phone" type="text" name="user_phone" class="form__input popup__form-input" placeholder="+7 (999) 999-99-99" required>
 					</div>
 				</div>
 				<button class="popup__form-button">Отправить</button>
@@ -907,6 +907,22 @@ require_once(__DIR__ . '/assets/configs/config.php');
 					<source srcset="./assets/images/webp/iphone_front.webp" type="image/webp">
 					<img src="./assets/images/iphone_front.png" alt="iPhone" class="popup__form-img">
 				</picture>
+			</form>
+		</div>
+	</div>
+
+	<div class="popup popup-thanks popup_close">
+		<div class="popup__form-close">
+			<svg class="popup__form-close-icon">
+				<use xlink:href="./assets/stack/sprite.svg#close"></use>
+			</svg>
+		</div>
+		<div class="popup__wrap">
+			<form action="#" method="POST" class="popup__form">
+				<h2 class="popup__form-title">Спасибо!</h2>
+				<div class="popup__form-subtitle">Наш оператор скоро с вами свяжется</div>
+
+				<button class="popup__form-button popup-thanks__button">Закрыть</button>
 			</form>
 		</div>
 	</div>

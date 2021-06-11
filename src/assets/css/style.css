@@ -1184,6 +1184,11 @@ body {
       z-index: -1;
       background-color: #000;
       opacity: 0.4; }
+  .popup-thanks__button {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: fit-content; }
   .popup_close {
     display: none; }
   .popup__wrap {

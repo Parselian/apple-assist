@@ -3,6 +3,23 @@
 $(window).on('load', function () {
     $('input[name="user_phone"]').mask('+7 (999) 999-99-99');
 
+    $('form').on('submit', function(e) {
+        e.preventDefault();
+        $.ajax({
+            url: './assets/configs/mail.php',
+            method: 'POST',
+            data: {
+                user_phone: $(this).find('input[name="user_phone"]').val(),
+                user_name: $(this).find('input[name="user_name"]').val()
+            },
+            success() {
+                $('.popup').fadeOut(0).addClass('popup_close');
+                $('.popup-thanks').fadeIn().removeClass('popup_close');
+                return;
+            }
+        })
+    })
+
     $('.common__info-slider').slick({
         arrows: false,
         dots: false,
@@ -193,7 +210,8 @@ $(window).on('load', function () {
             $('.popup-call-master').fadeIn().removeClass('popup_close');
         }
 
-        if (e.target.closest('.popup__form-close, .popups')) {
+        if ($(e.target).is('.popup__form-close,.popup__form-close svg,.popup__form-close use, .popups,' +
+            ' .popup-thanks__button')) {
             $('html').removeClass('freezed');
             $('.popups').fadeOut().addClass('popups_hidden');
             $('.popup-call-master').fadeOut().addClass('popup_close');
