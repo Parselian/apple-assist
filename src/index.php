@@ -21,8 +21,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		  crossorigin="anonymous" referrerpolicy="no-referrer"/>
 	<title>Apple Assist | Ремонт iPhone в СПб</title>
 
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
-	</script>
+<!--	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">-->
+<!--	</script>-->
 </head>
 <body>
 
@@ -944,21 +944,311 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"
 		referrerpolicy="no-referrer"></script>
 <script src="./assets/js/script.js"></script>
-<script>
-    ymaps.ready(init);
+<script defer>
+    // ymaps.ready(init);
+
+	setTimeout(() => {
+      let elem = document.createElement('script');
+
+
+      elem.src =
+        'https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init';
+      document.getElementsByTagName('body')[0].appendChild(elem);
+    }, 2000);
+
+	$('#map').on('click', function() {
+
+	})
 
     function init() {
+        let mainCoords = [59.924826, 30.487046];
+
+        if ($(window).width() < 992) {
+            mainCoords = [59.936726, 30.317046]
+		}
         // Создание карты.
         var myMap = new ymaps.Map("map", {
             // Координаты центра карты.
             // Порядок по умолчанию: «широта, долгота».
             // Чтобы не определять координаты центра карты вручную,
             // воспользуйтесь инструментом Определение координат.
-            center: [55.76, 37.64],
+            center: mainCoords,
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
-            zoom: 7
+            zoom: 10
         });
+
+        // Создаем многоугольник, используя вспомогательный класс Polygon.
+        var myPolygon = new ymaps.Polygon([
+            // Указываем координаты вершин многоугольника.
+            // Координаты вершин внешнего контура.
+            [
+                [59.975078, 30.213659],
+
+                [60.000106, 30.047842],
+                [60.014200, 29.966648],
+                [60.036775, 29.963400],
+                [60.056372, 30.143077],
+
+                [60.081397, 30.194957],
+                [60.098313, 30.264708],
+                [60.096300, 30.315510],
+                [60.093280, 30.358650],
+                [60.061147, 30.388284],
+                [60.043755, 30.432434],
+                [60.006572, 30.477096],
+                [59.983363, 30.495044],
+                [59.964115, 30.554315],
+                [59.865345, 30.523754],
+                [59.818923, 30.389350],
+                [59.813037, 30.325070],
+                [59.833424, 30.276234],
+                [59.801127, 30.164747],
+                [59.815430, 30.094513],
+                [59.862060, 30.098249],
+                [59.868447, 30.155781],
+                [59.897364, 30.209577],
+                [59.926478, 30.209815],
+                [59.930095, 30.192667],
+                [59.941011, 30.181521],
+                [59.954137, 30.185927],
+                [59.960333, 30.211879],
+                [59.975078, 30.213659],
+            ]
+        ], {
+            // Описываем свойства геообъекта.
+            // Содержимое балуна.
+        }, {
+            // Задаем опции геообъекта.
+            // Цвет заливки.
+            fillColor: '#B3FEBFA0',
+            // Ширина обводки.
+            strokeWidth: 1,
+            strokeColor: '#26CF41FF'
+        });
+
+        // Добавляем многоугольник на карту.
+        myMap.geoObjects.add(myPolygon);
+
+        const glyphServicesParams = {
+            iconLayout: 'default#image',
+            iconImageHref: './assets/svg/placeholder.svg',
+            iconImageSize: [35, 35]
+        }
+
+        // const glyphEngineersParams = {
+        //     iconLayout: 'default#image',
+        //     // iconImageHref: './img/placeholder-engineer.png',
+        //     iconImageHref: './img/ifixit-engineer-placeholder.svg',
+        //     iconImageSize: [40, 40]
+        // }
+
+        let servicePlacemarks = {
+            sadovaya: new ymaps.Placemark([59.924726, 30.317046], {
+                balloonContentHeader: '<?=$company_name?> на м. Садовая',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            gorkovskaya: new ymaps.Placemark([59.957081, 30.319257], {
+                balloonContentHeader: '<?=$company_name?> на м. Горьковская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            petrogradskaya: new ymaps.Placemark([59.965483, 30.313301], {
+                balloonContentHeader: '<?=$company_name?> на м. Петроградская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            gostinyDvor: new ymaps.Placemark([59.935262, 30.335110], {
+                balloonContentHeader: '<?=$company_name?> на м. Гостиный двор',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            vosstaniya: new ymaps.Placemark([59.927122, 30.359359], {
+                balloonContentHeader: '<?=$company_name?> на м. Площадь Восстания',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            vasileostrovskaya: new ymaps.Placemark([59.940976, 30.280436], {
+                balloonContentHeader: '<?=$company_name?> на м. Василеостровская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            technolozhka: new ymaps.Placemark([59.915926, 30.312586], {
+                balloonContentHeader: '<?=$company_name?> на м. Технологический Институт',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            narvskaya: new ymaps.Placemark([59.899923, 30.273741], {
+                balloonContentHeader: '<?=$company_name?> на м. Нарвская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            mezhdunarodnaya: new ymaps.Placemark([59.875975, 30.376100], {
+                balloonContentHeader: '<?=$company_name?> на м. Международная',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            moskovskaya: new ymaps.Placemark([59.859279, 30.320540], {
+                balloonContentHeader: '<?=$company_name?> на м. Московская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            novocherkasskaya: new ymaps.Placemark([59.930182, 30.416796], {
+                balloonContentHeader: '<?=$company_name?> на м. Новочеркасская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            bolshevikov: new ymaps.Placemark([59.917443, 30.473776], {
+                balloonContentHeader: '<?=$company_name?> на м. Проспект Большевиков',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            muzhestva: new ymaps.Placemark([59.999980, 30.352904], {
+                balloonContentHeader: '<?=$company_name?> на м. Площадь Мужества',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            lenina: new ymaps.Placemark([59.960110, 30.345721], {
+                balloonContentHeader: '<?=$company_name?> на м. Площадь Ленина',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            energetikov: new ymaps.Placemark([59.959632, 30.436838], {
+                balloonContentHeader: '<?=$company_name?> на пр. Энергетиков',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            pionerskaya: new ymaps.Placemark([60.001014, 30.299878], {
+                balloonContentHeader: '<?=$company_name?> на м. Пионерская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            komendantskiy: new ymaps.Placemark([60.014319, 30.252404], {
+                balloonContentHeader: '<?=$company_name?> на м. Комендантский проспект',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            ozerki: new ymaps.Placemark([60.039802, 30.324872], {
+                balloonContentHeader: '<?=$company_name?> на м. Озерки',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            avtovo: new ymaps.Placemark([59.866627, 30.264984], {
+                balloonContentHeader: '<?=$company_name?> на м. Автово',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            zvezdnaya: new ymaps.Placemark([59.832183, 30.363087], {
+                balloonContentHeader: '<?=$company_name?> на м. Звёздная',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            proletarskaya: new ymaps.Placemark([59.869139, 30.460047], {
+                balloonContentHeader: '<?=$company_name?> на м. Пролетарская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            begovaya: new ymaps.Placemark([59.989656, 30.205812], {
+                balloonContentHeader: '<?=$company_name?> на м. Беговая',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            primorskaya: new ymaps.Placemark([59.947552, 30.239507], {
+                balloonContentHeader: '<?=$company_name?> на м. Приморская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            dibenko: new ymaps.Placemark([59.900370, 30.486519], {
+                balloonContentHeader: '<?=$company_name?> на м. Дыбенко',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            elizarovskaya: new ymaps.Placemark([59.889285, 30.426827], {
+                balloonContentHeader: '<?=$company_name?> на м. Елизаровская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            grazhdanka: new ymaps.Placemark([60.038807, 30.402445], {
+                balloonContentHeader: '<?=$company_name?> на м. Гражданский проспект',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            kondratievskiy: new ymaps.Placemark([59.973282, 30.389281], {
+                balloonContentHeader: '<?=$company_name?> на Кондратьевском пр.',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            moskVorota: new ymaps.Placemark([59.888972, 30.327267], {
+                balloonContentHeader: '<?=$company_name?> на м. Московские ворота',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            parnas: new ymaps.Placemark([60.058574, 30.337453], {
+                balloonContentHeader: '<?=$company_name?> на м. Парнас',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            obvodnyKanal: new ymaps.Placemark([59.908715, 30.346258], {
+                balloonContentHeader: '<?=$company_name?> на м. Обводный канал',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            krestOstrov: new ymaps.Placemark([59.972065, 30.273265], {
+                balloonContentHeader: '<?=$company_name?> на м. Крестовский остров',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            akademicheskaya: new ymaps.Placemark([60.010809, 30.398610], {
+                balloonContentHeader: '<?=$company_name?> на м. Академическая',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            dunayskaya: new ymaps.Placemark([59.846634, 30.406242], {
+                balloonContentHeader: '<?=$company_name?> на м. Дунайская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            frunzenskaya: new ymaps.Placemark([59.904083, 30.323250], {
+                balloonContentHeader: '<?=$company_name?> на м. Фрунзенская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            chkalovskaya: new ymaps.Placemark([59.959321, 30.290739], {
+                balloonContentHeader: '<?=$company_name?> на м. Чкаловская',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            udelnaya: new ymaps.Placemark([60.014788, 30.323675], {
+                balloonContentHeader: '<?=$company_name?> на м. Удельная',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            lesnaya: new ymaps.Placemark([59.988010, 30.353747], {
+                balloonContentHeader: '<?=$company_name?> на м. Лесная',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+            petergof: new ymaps.Placemark([59.848085, 30.148520], {
+                balloonContentHeader: '<?=$company_name?> на Петергофском ш.',
+                balloonContentBody: 'Для ремонта запишитесь по телефону: <a href="tel:<?=$phone_link?>"><?=$phone_format?></a>'
+            }, glyphServicesParams),
+        };
+
+        myMap.geoObjects.add(servicePlacemarks['sadovaya']);
+        myMap.geoObjects.add(servicePlacemarks['gorkovskaya']);
+        myMap.geoObjects.add(servicePlacemarks['petrogradskaya']);
+        myMap.geoObjects.add(servicePlacemarks['gostinyDvor']);
+        myMap.geoObjects.add(servicePlacemarks['vosstaniya']);
+        myMap.geoObjects.add(servicePlacemarks['vasileostrovskaya']);
+        myMap.geoObjects.add(servicePlacemarks['technolozhka']);
+        myMap.geoObjects.add(servicePlacemarks['narvskaya']);
+        myMap.geoObjects.add(servicePlacemarks['mezhdunarodnaya']);
+        myMap.geoObjects.add(servicePlacemarks['moskovskaya']);
+        myMap.geoObjects.add(servicePlacemarks['novocherkasskaya']);
+        myMap.geoObjects.add(servicePlacemarks['bolshevikov']);
+        myMap.geoObjects.add(servicePlacemarks['muzhestva']);
+        myMap.geoObjects.add(servicePlacemarks['lenina']);
+        myMap.geoObjects.add(servicePlacemarks['energetikov']);
+        myMap.geoObjects.add(servicePlacemarks['pionerskaya']);
+        myMap.geoObjects.add(servicePlacemarks['komendantskiy']);
+        myMap.geoObjects.add(servicePlacemarks['ozerki']);
+        myMap.geoObjects.add(servicePlacemarks['avtovo']);
+        myMap.geoObjects.add(servicePlacemarks['zvezdnaya']);
+        myMap.geoObjects.add(servicePlacemarks['proletarskaya']);
+        myMap.geoObjects.add(servicePlacemarks['begovaya']);
+        myMap.geoObjects.add(servicePlacemarks['primorskaya']);
+        myMap.geoObjects.add(servicePlacemarks['dibenko']);
+        myMap.geoObjects.add(servicePlacemarks['elizarovskaya']);
+        myMap.geoObjects.add(servicePlacemarks['grazhdanka']);
+        myMap.geoObjects.add(servicePlacemarks['kondratievskiy']);
+        myMap.geoObjects.add(servicePlacemarks['moskVorota']);
+        myMap.geoObjects.add(servicePlacemarks['parnas']);
+        myMap.geoObjects.add(servicePlacemarks['obvodnyKanal']);
+        myMap.geoObjects.add(servicePlacemarks['krestOstrov']);
+        myMap.geoObjects.add(servicePlacemarks['akademicheskaya']);
+        myMap.geoObjects.add(servicePlacemarks['dunayskaya']);
+        myMap.geoObjects.add(servicePlacemarks['frunzenskaya']);
+        myMap.geoObjects.add(servicePlacemarks['chkalovskaya']);
+        myMap.geoObjects.add(servicePlacemarks['udelnaya']);
+        myMap.geoObjects.add(servicePlacemarks['lesnaya']);
+        myMap.geoObjects.add(servicePlacemarks['petergof']);
+
+        myMap.events.add('click', () => {
+            for (let placemark in servicePlacemarks) {
+                servicePlacemarks[placemark].balloon.close();
+            }
+            for (let placemark in engineerPlacemarks) {
+                engineerPlacemarks[placemark].balloon.close();
+            }
+        });
+
+        if (document.documentElement.clientWidth < 992) {
+            myMap.behaviors.disable(['drag']);
+        }
     }
 </script>
 </body>

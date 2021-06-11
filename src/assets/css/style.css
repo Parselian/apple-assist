@@ -1508,8 +1508,9 @@ body {
     max-width: 100%; }
   .contacts__map {
     width: 100%;
-    top: 95%;
-    right: 0; }
+    top: 85%;
+    right: 0;
+    height: 460px; }
   .faq {
     padding: 120px 0; }
     .faq__bg {
