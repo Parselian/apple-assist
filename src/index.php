@@ -385,8 +385,12 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		<div class="common__col common__filter">
 			<h2 class="section__title section__title_tail common__title">Типовые неисправности iPhone</h2>
 			<select name="common_problems_list" id="" class="common__select">
-				<option value="замена аккумулятора" selected>Замена аккумулятора</option>
-				<option value="замена экрана">Замена экрана</option>
+				<option value="1" selected>Замена аккумулятора</option>
+				<option value="2">Замена экрана</option>
+				<option value="3">Замена экрана</option>
+				<option value="4">Замена экрана</option>
+				<option value="5">Замена экрана</option>
+				<option value="6">Замена экрана</option>
 			</select>
 			<div class="common__blocks">
 				<div class="common__block common__block_active" data-problem-btn="1">

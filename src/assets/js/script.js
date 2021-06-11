@@ -218,6 +218,12 @@ $(window).on('load', function () {
         }
     })
 
+    $('.common__select').on('change', function () {
+            const curBtn = $(this).val();
+
+            $('.common__info-slider').slick('slickGoTo', curBtn - 1)
+    })
+
     $('.burger-btn').on('click', function (e) {
         $('html').toggleClass('freezed');
         $('.burger-btn').toggleClass('burger-btn_active');
