@@ -57,8 +57,29 @@
   &__slide {
     &r {
       margin-right: 120px;
-      margin-bottom: 75px;
+      margin-bottom: 110px;
+      &-arrow {
+        position: absolute;
+        bottom: -50px;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        fill: $inactive-text-color;
+        cursor: pointer;
+        transition: .2s;
+        &:hover {
+          fill: $accent-color;
+        }
+        &_prev {
+          right: 60px;
+        }
+        &_next {
+          transform: rotate(180deg);
+        }
+      }
     }
+
+    padding-top: 3px;
     &-row {
       margin-bottom: 20px;
       display: flex;
