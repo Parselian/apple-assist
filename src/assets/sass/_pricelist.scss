@@ -86,6 +86,7 @@
       justify-content: center;
       flex-wrap: wrap;
       &-button {
+        margin-bottom: 40px;
         padding: 10px 25px;
         display: block;
         margin-left: auto;
@@ -168,6 +169,7 @@
       display: none;
     }
     &-scroll {
+      padding-right: 3px;
       overflow-y: auto;
       transition: ease-in-out .3s;
       &_rolled {
@@ -175,6 +177,20 @@
       }
       &_unrolled {
         max-height: 100%;
+      }
+      &::-webkit-scrollbar, &::-webkit-scrollbar-track {
+        width: 8px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        background-color: $input-bg-color;
+      }
+      &::-webkit-scrollbar-thumb {
+        width: 8px;
+        background-color: $accent-color;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
       }
     }
     &-headings {

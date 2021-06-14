@@ -21,8 +21,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		  crossorigin="anonymous" referrerpolicy="no-referrer"/>
 	<title>Apple Assist | Ремонт iPhone в СПб</title>
 
-<!--	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">-->
-<!--	</script>-->
+	<!--	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">-->
+	<!--	</script>-->
 </head>
 <body>
 
@@ -253,70 +253,6 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<div class="prices__model-name">iPhone 11 Pro Max</div>
 				<button class="prices__model-button">Выбрать</button>
 			</div>
-			<div class="prices__model">
-				<picture>
-					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
-					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
-				</picture>
-				<div class="prices__model-name">iPhone 11 Pro Max</div>
-				<button class="prices__model-button">Выбрать</button>
-			</div>
-			<div class="prices__model">
-				<picture>
-					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
-					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
-				</picture>
-				<div class="prices__model-name">iPhone 11 Pro Max</div>
-				<button class="prices__model-button">Выбрать</button>
-			</div>
-			<div class="prices__model">
-				<picture>
-					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
-					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
-				</picture>
-				<div class="prices__model-name">iPhone 11 Pro Max</div>
-				<button class="prices__model-button">Выбрать</button>
-			</div>
-			<div class="prices__model">
-				<picture>
-					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
-					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
-				</picture>
-				<div class="prices__model-name">iPhone 11 Pro Max</div>
-				<button class="prices__model-button">Выбрать</button>
-			</div>
-			<div class="prices__model">
-				<picture>
-					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
-					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
-				</picture>
-				<div class="prices__model-name">iPhone 11 Pro Max</div>
-				<button class="prices__model-button">Выбрать</button>
-			</div>
-			<div class="prices__model">
-				<picture>
-					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
-					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
-				</picture>
-				<div class="prices__model-name">iPhone 11 Pro Max</div>
-				<button class="prices__model-button">Выбрать</button>
-			</div>
-			<div class="prices__model">
-				<picture>
-					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
-					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
-				</picture>
-				<div class="prices__model-name">iPhone 11 Pro Max</div>
-				<button class="prices__model-button">Выбрать</button>
-			</div>
-			<div class="prices__model">
-				<picture>
-					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
-					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
-				</picture>
-				<div class="prices__model-name">iPhone 11 Pro Max</div>
-				<button class="prices__model-button">Выбрать</button>
-			</div>
 		</div>
 
 		<button class="button prices__models-button">Показать все</button>
@@ -386,10 +322,10 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			<h2 class="section__title section__title_tail common__title">Типовые неисправности iPhone</h2>
 			<select name="common_problems_list" id="" class="common__select">
 				<option value="1" selected>Замена аккумулятора</option>
-				<option value="2">Замена экрана</option>
-				<option value="3">Замена экрана</option>
-				<option value="4">Замена экрана</option>
-				<option value="5">Замена экрана</option>
+				<option value="2">Замена стекла</option>
+				<option value="3">Ремонт после воды</option>
+				<option value="4">Замена дисплея</option>
+				<option value="5">Не включается</option>
 				<option value="6">Замена экрана</option>
 			</select>
 			<div class="common__blocks">
@@ -404,47 +340,47 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				</div>
 				<div class="common__block" data-problem-btn="2">
 					<svg class="common__block-icon">
-						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
+						<use xlink:href="./assets/stack/sprite.svg#broken-screen"></use>
 					</svg>
 					<div class="common__block-text">
-						<h4 class="common__block-title">Аккумулятор</h4>
-						Замена аккумулятора
+						<h4 class="common__block-title">Экран</h4>
+						Замена стекла
 					</div>
 				</div>
 				<div class="common__block" data-problem-btn="3">
 					<svg class="common__block-icon">
-						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
+						<use xlink:href="./assets/stack/sprite.svg#power-button"></use>
 					</svg>
 					<div class="common__block-text">
-						<h4 class="common__block-title">Аккумулятор</h4>
-						Замена аккумулятора
+						<h4 class="common__block-title">Питание</h4>
+						Не включается
 					</div>
 				</div>
 				<div class="common__block" data-problem-btn="4">
 					<svg class="common__block-icon">
-						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
+						<use xlink:href="./assets/stack/sprite.svg#drop"></use>
 					</svg>
 					<div class="common__block-text">
-						<h4 class="common__block-title">Аккумулятор</h4>
-						Замена аккумулятора
+						<h4 class="common__block-title">Залитие</h4>
+						Ремонт после воды
 					</div>
 				</div>
 				<div class="common__block" data-problem-btn="5">
 					<svg class="common__block-icon">
-						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
+						<use xlink:href="./assets/stack/sprite.svg#broken-screen"></use>
 					</svg>
 					<div class="common__block-text">
-						<h4 class="common__block-title">Аккумулятор</h4>
-						Замена аккумулятора
+						<h4 class="common__block-title">Экран</h4>
+						Замена дисплея
 					</div>
 				</div>
 				<div class="common__block" data-problem-btn="6">
 					<svg class="common__block-icon">
-						<use xlink:href="./assets/stack/sprite.svg#battery"></use>
+						<use xlink:href="./assets/stack/sprite.svg#broken-screen"></use>
 					</svg>
 					<div class="common__block-text">
-						<h4 class="common__block-title">Аккумулятор</h4>
-						Замена аккумулятора
+						<h4 class="common__block-title">Корпус</h4>
+						Замена корпуса
 					</div>
 				</div>
 			</div>
@@ -453,102 +389,108 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			<div class="common__info-slider">
 				<div class="common__info-slide" data-problem-info="Замена аккумулятора">
 					<p class="common__info-text">
-						1Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к
-						розетке?
-						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
-						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
-						должна
-						быть произведена ее замена.
+						Ваш iPhone не держит заряд как прежде и вы вынуждены заряжать его по несколько раз в день? Вероятно, ресурс вашей
+						аккумуляторной батареи подошел к концу. Срок службы аккумуляторы современных
+						телефонов, в среднем, составляет 2 года. По его истечении, а в случае активного использования гаджета
+						и раньше, должна быть произведена его замена на новый.
 					</p>
 
 					<div class="common__info-row">
 						<div class="common__info-price">
-							от <span class="text_accent text_bold">1 470 руб.</span>
+							<span class="text_accent text_bold">790 руб.</span>
 						</div>
 						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
 					</div>
 				</div>
 				<div class="common__info-slide" data-problem-info="Замена стекла">
-					<p class="common__info-text" data-problem-info="Замена стекла">
-						2Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к
-						розетке?
-						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
-						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
-						должна
-						быть произведена ее замена.
-					</p>
-
-					<div class="common__info-row">
-						<div class="common__info-price">
-							от <span class="text_accent text_bold">1 470 руб.</span>
-						</div>
-						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
-					</div>
-				</div>
-				<div class="common__info-slide" data-problem-info="Замена дисплея">
 					<p class="common__info-text">
-						3Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к
-						розетке?
-						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
-						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
-						должна
-						быть произведена ее замена.
+						Довольно распространенной поломкой iPhone является повреждение стекла. Причиной обычно является падение или удар.
+						Что бы ни послужило причиной поломки, надо как можно раньше обратиться в сервисный
+						центр.
+						<br>
+						<br>
+						Мастера сервисного центра <?= $company_name ?> произведут профессиональную замену дисплея вашего iPhone в кратчайшие
+						сроки с пожизненной гарантией
 					</p>
 
 					<div class="common__info-row">
 						<div class="common__info-price">
-							от <span class="text_accent text_bold">1 470 руб.</span>
-						</div>
-						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
-					</div>
-				</div>
-				<div class="common__info-slide" data-problem-info="Замена заднего стекла">
-					<p class="common__info-text">
-						4Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к
-						розетке?
-						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
-						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
-						должна
-						быть произведена ее замена.
-					</p>
-
-					<div class="common__info-row">
-						<div class="common__info-price">
-							от <span class="text_accent text_bold">1 470 руб.</span>
-						</div>
-						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
-					</div>
-				</div>
-				<div class="common__info-slide" data-problem-info="Ремонт после залития">
-					<p class="common__info-text">
-						5Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к
-						розетке?
-						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
-						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
-						должна
-						быть произведена ее замена.
-					</p>
-
-					<div class="common__info-row">
-						<div class="common__info-price">
-							от <span class="text_accent text_bold">1 470 руб.</span>
+							<span class="text_accent text_bold">790 руб.</span>
 						</div>
 						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
 					</div>
 				</div>
 				<div class="common__info-slide" data-problem-info="Не включается">
 					<p class="common__info-text">
-						6Из-за быстро разряжающегося аккумулятора приходится постоянно носись с собой PowerBank или бегать от розетки к
-						розетке?
-						Вероятно, ресурс вашей аккумуляторной батареи подошел к концу. Имейте в виду, что аккумуляторы современных телефонов
-						рассчитаны на максимальный срок службы 2 года. По истечении этого срока, а в случае активной эксплуатации и раньше,
-						должна
-						быть произведена ее замена.
+						Если iPhone выключился и не реагирует на нажатие кнопки включения, перед обращением в сервисный центр проверьте
+						заряд аккумулятора. Если вы уверены, что батарея заряжена, но iPhone не включается, выполните принудительную
+						перезагрузку.
+						<br>
+						<br>
+						Если iPhone не удалось включить, вызовите сервисного инженера <?= $company_name ?>. Он проведет диагностику,
+						определим точную причину поломки и при необходимости быстро починит ваш iPhone.
 					</p>
 
 					<div class="common__info-row">
 						<div class="common__info-price">
-							от <span class="text_accent text_bold">1 470 руб.</span>
+							<span class="text_accent text_bold">790 руб.</span>
+						</div>
+						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
+					</div>
+				</div>
+				<div class="common__info-slide" data-problem-info="Ремонт после залития">
+					<p class="common__info-text">
+						Случаются ситуации, когда в iPhone попадает вода. Возможно он упал в снег или ванную, был постиран вместе с вещами,
+						намок под дождем, был взят мокрыми руками или залит напитком. Любая жидкость, попавшая внутрь аппарата, несет
+						существенную угрозу его дальнейшей работоспособности. В любом случае необходимо незамедлительно обратиться в
+						сервисный центр дабы предотвратить непоправимый ущерб вашему гаджету.
+						<br>
+						<br>
+						Мастера сервисного центра <?= $company_name ?> произведут профессиональный ремонт вашего iPhone в кратчайшие сроки с
+						пожизненной гарантией
+					</p>
+
+					<div class="common__info-row">
+						<div class="common__info-price">
+							<span class="text_accent text_bold">790 руб.</span>
+						</div>
+						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
+					</div>
+				</div>
+				<div class="common__info-slide" data-problem-info="Замена дисплея">
+					<p class="common__info-text">
+						Довольно распространенной поломкой iPhone является повреждение дисплея. Причиной обычно является падение, удар,
+						попадание внутрь изделия влаги. Что бы ни послужило причиной поломки, надо как можно раньше обратиться в сервисный
+						центр.
+						<br>
+						<br>
+						Мастера сервисного центра <?= $company_name ?> произведут профессиональную замену дисплея вашего iPhone в кратчайшие
+						сроки с
+						пожизненной гарантией
+					</p>
+
+					<div class="common__info-row">
+						<div class="common__info-price">
+							<span class="text_accent text_bold">790 руб.</span>
+						</div>
+						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
+					</div>
+				</div>
+				<div class="common__info-slide" data-problem-info="Замена корпуса">
+					<p class="common__info-text">
+						На корпусе iPhone вмятины и сколы?
+						<br>
+						Каждый день мы носим iPhone в кармане, сумке с ключами, в следствии чего случаются неожиданные удары по корпусу
+						айфона — все эти события оставляют не только царапины, но и повреждения корпуса, вмятины и сколы.
+						<br>
+						<br>
+						Мастера сервисного центра <?= $company_name ?> произведут профессиональную замену корпуса вашего iPhone в кратчайшие сроки с
+						пожизненной гарантией
+					</p>
+
+					<div class="common__info-row">
+						<div class="common__info-price">
+							<span class="text_accent text_bold">790 руб.</span>
 						</div>
 						<button class="callback-button common__info-button open-popup-call-master">Вызвать мастера</button>
 					</div>
@@ -715,7 +657,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			<h2 class="section__title section__title_tail steps__title">Как происходит ремонт?</h2>
 
 			<ul class="steps__list">
-				<li class="steps__list-item" data-step="request">
+				<li class="steps__list-item steps__list-item_active" data-step="request">
 					<svg class="steps__list-item-icon">
 						<use xlink:href="./assets/stack/sprite.svg#call"></use>
 					</svg>
@@ -724,7 +666,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						Вы оставляете заявку на выезд мастера или выезд курьера для доставки техники к нам в сервис
 					</div>
 				</li>
-				<li class="steps__list-item steps__list-item_active" data-step="diagnostics">
+				<li class="steps__list-item" data-step="diagnostics">
 					<svg class="steps__list-item-icon">
 						<use xlink:href="./assets/stack/sprite.svg#search"></use>
 					</svg>
@@ -756,25 +698,22 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 		<div class="steps__col steps__img-wrap">
 			<picture>
-				<source srcset="./assets/images/webp/steps-img.webp" type="image/webp">
-				<img src="./assets/images/steps-img.png" alt="фото" class="steps__img">
+				<source srcset="./assets/images/webp/steps-img_request.webp" type="image/webp">
+				<img src="./assets/images/steps-img_request.png" alt="Заявка на ремонт" class="steps__img" data-step-img="request">
 			</picture>
 			<picture>
-				<source srcset="./assets/images/webp/steps-img.webp" type="image/webp">
-				<img src="./assets/images/steps-img.png" alt="Заявка на ремонт" class="steps__img steps__img_hidden"
-					 data-step-img="request">
+				<source srcset="./assets/images/webp/steps-img_diagnostics.webp" type="image/webp">
+				<img src="./assets/images/steps-img_diagnostics.png" alt="Диагностика" class="steps__img steps__img_hidden"
+					 data-step-img="diagnostics">
 			</picture>
 			<picture>
-				<source srcset="./assets/images/webp/steps-img.webp" type="image/webp">
-				<img src="./assets/images/steps-img.png" alt="Диагностика" class="steps__img" data-step-img="diagnostics">
+				<source srcset="./assets/images/webp/steps-img_repair.webp" type="image/webp">
+				<img src="./assets/images/steps-img_repair.png" alt="Ремонт" class="steps__img steps__img_hidden" data-step-img="repair">
 			</picture>
 			<picture>
-				<source srcset="./assets/images/webp/steps-img.webp" type="image/webp">
-				<img src="./assets/images/steps-img.png" alt="Ремонт" class="steps__img steps__img_hidden" data-step-img="repair">
-			</picture>
-			<picture>
-				<source srcset="./assets/images/webp/steps-img.webp" type="image/webp">
-				<img src="./assets/images/steps-img.png" alt="Гарантия" class="steps__img steps__img_hidden" data-step-img="warranty">
+				<source srcset="./assets/images/webp/steps-img_warranty.webp" type="image/webp">
+				<img src="./assets/images/steps-img_warranty.png" alt="Гарантия" class="steps__img steps__img_hidden"
+					 data-step-img="warranty">
 			</picture>
 		</div>
 	</div>
@@ -899,7 +838,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 					</div>
 					<div class="popup__form-input-wrap">
 						<label for="popup-call-master_phone" class="popup__form-input-label">Ваш телефон: <span class="text_alert">*</span></label>
-						<input id="popup-call-master_phone" type="text" name="user_phone" class="form__input popup__form-input" placeholder="+7 (999) 999-99-99" required>
+						<input id="popup-call-master_phone" type="text" name="user_phone" class="form__input popup__form-input"
+							   placeholder="+7 (999) 999-99-99" required>
 					</div>
 				</div>
 				<button class="popup__form-button">Отправить</button>
@@ -947,25 +887,25 @@ require_once(__DIR__ . '/assets/configs/config.php');
 <script defer>
     // ymaps.ready(init);
 
-	setTimeout(() => {
-      let elem = document.createElement('script');
+    setTimeout(() => {
+        let elem = document.createElement('script');
 
 
-      elem.src =
-        'https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init';
-      document.getElementsByTagName('body')[0].appendChild(elem);
+        elem.src =
+            'https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init';
+        document.getElementsByTagName('body')[0].appendChild(elem);
     }, 2000);
 
-	$('#map').on('click', function() {
+    $('#map').on('click', function () {
 
-	})
+    })
 
     function init() {
         let mainCoords = [59.924826, 30.487046];
 
         if ($(window).width() < 992) {
             mainCoords = [59.936726, 30.317046]
-		}
+        }
         // Создание карты.
         var myMap = new ymaps.Map("map", {
             // Координаты центра карты.
@@ -1021,10 +961,10 @@ require_once(__DIR__ . '/assets/configs/config.php');
         }, {
             // Задаем опции геообъекта.
             // Цвет заливки.
-            fillColor: '#B3FEBFA0',
+            fillColor: '#98989850',
             // Ширина обводки.
             strokeWidth: 1,
-            strokeColor: '#26CF41FF'
+            strokeColor: '#989898FF'
         });
 
         // Добавляем многоугольник на карту.

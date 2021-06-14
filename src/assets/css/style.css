@@ -468,6 +468,7 @@ body {
       justify-content: center;
       flex-wrap: wrap; }
       .prices__models-button {
+        margin-bottom: 40px;
         padding: 10px 25px;
         display: block;
         margin-left: auto;
@@ -522,12 +523,25 @@ body {
     .prices__pricelist-wrap {
       display: none; }
     .prices__pricelist-scroll {
+      padding-right: 3px;
       overflow-y: auto;
       transition: ease-in-out .3s; }
       .prices__pricelist-scroll_rolled {
         max-height: 320px; }
       .prices__pricelist-scroll_unrolled {
         max-height: 100%; }
+      .prices__pricelist-scroll::-webkit-scrollbar, .prices__pricelist-scroll::-webkit-scrollbar-track {
+        width: 8px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        background-color: #E5E5E5; }
+      .prices__pricelist-scroll::-webkit-scrollbar-thumb {
+        width: 8px;
+        background-color: #A4DF59;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px; }
     .prices__pricelist-headings {
       text-align: left;
       background-color: #E5E5E5; }

@@ -85,7 +85,7 @@ $(window).on('load', function () {
                             <div class="prices__model ${is_hidden}" data-device="${item[2]}">
                                 <picture>
                                     <source srcset="./assets/images/webp/${item[1]}.webp" type="image/webp">
-                                    <img src="./assets/images/${item[1]}.png" alt="iPhone 11 Pro Max" class="prices__model-img">
+                                    <img src="./assets/images/${item[1]}.png" alt="${item[2]}" class="prices__model-img">
                                 </picture>
                                 <div class="prices__model-name">${item[2]}</div>
                                 <button class="prices__model-button">Выбрать</button>
