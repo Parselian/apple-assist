@@ -10,10 +10,11 @@
     align-items: center;
   }
   &__col {
-      width: 60%;
-    &:last-child {
-      width: 40%;
-    }
+      //width: 60%;
+    width: 100%;
+    //&:last-child {
+    //  width: 40%;
+    //}
   }
   &__bg {
     position: absolute;
@@ -56,7 +57,7 @@
   }
   &__slide {
     &r {
-      margin-right: 120px;
+      //margin-right: 120px;
       margin-bottom: 110px;
       &-arrow {
         position: absolute;
@@ -71,14 +72,18 @@
           fill: $accent-color;
         }
         &_prev {
-          right: 60px;
+          left: 50%;
+          transform: translateX(calc(-50% - 30px))
+          //right: 60px;
         }
         &_next {
-          transform: rotate(180deg);
+          left: 50%;
+          transform: translateX(calc(-50% + 30px)) rotate(180deg);
         }
       }
     }
 
+    margin-right: 40px;
     padding-top: 3px;
     &-row {
       margin-bottom: 20px;
@@ -92,6 +97,7 @@
     }
     &-photo {
       margin-right: 20px;
+      width: 60px;
       -webkit-border-radius: 10000px;
       -moz-border-radius: 10000px;
       border-radius: 10000px;

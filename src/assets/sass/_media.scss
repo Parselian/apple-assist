@@ -208,7 +208,7 @@
       margin-top: 40px;
     }
     &__block {
-      width: fit-content;
+      width: 100%;
       max-width: 32%;
       &:not(:nth-child(2n)) {
         margin-right: unset;
@@ -252,6 +252,12 @@
     &__slide {
       &r {
         margin-right: 30px;
+      }
+
+      margin-right: 10px;
+      margin-left: 10px;
+      &-text {
+        text-align: center;
       }
     }
   }
@@ -529,7 +535,6 @@
       &s {
         justify-content: center;
       }
-      width: fit-content;
       max-width: 49%;
       &:not(:nth-child(3n)) {
         margin-right: unset;
@@ -580,9 +585,9 @@
     }
     &__col {
       width: 100%;
-      &:last-child {
-        display: none;
-      }
+      //&:last-child {
+      //  display: none;
+      //}
     }
     &__slide {
       &r {
@@ -717,7 +722,7 @@
       }
       &__list {
         top: 25%;
-        right: -40%;
+        right: -30%;
       }
     }
   }
@@ -946,6 +951,12 @@
       display: block;
     }
   }
+  .reviews {
+    &__slide {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
   .about-us {
     &__text {
       font-size: 14px;
@@ -1065,7 +1076,7 @@
         max-width: 200px;
       }
       &__list {
-        right: -30%;
+        right: -20%;
         &-link {
           font-size: 18px;
         }

@@ -13,6 +13,7 @@ $(window).on('load', function () {
                 user_name: $(this).find('input[name="user_name"]').val()
             },
             success() {
+                $('.popups').fadeIn().removeClass('popups_hidden');
                 $('.popup').fadeOut(0).addClass('popup_close');
                 $('.popup-thanks').fadeIn().removeClass('popup_close');
                 return;
@@ -23,13 +24,16 @@ $(window).on('load', function () {
     $('.common__info-slider').slick({
         arrows: false,
         dots: false,
+        adaptiveHeight: true,
         fade: true
     })
 
     $('.reviews__slider').slick({
         arrows: true,
         dots: false,
-        fade: true,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        // fade: true,
         adaptiveHeight: true,
         prevArrow: `
                 <svg class="reviews__slider-arrow reviews__slider-arrow_prev">
@@ -40,7 +44,22 @@ $(window).on('load', function () {
             <svg class="reviews__slider-arrow reviews__slider-arrow_next">
                 <use xlink:href="./assets/stack/sprite.svg#slider-arrow"></use>
             </svg>
-        `
+        `,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    fade: true
+                }
+            }
+        ]
     })
 
 
@@ -65,7 +84,7 @@ $(window).on('load', function () {
                         $(this).css('display', 'flex')
                     }
                 });
-                $(this).remove();
+                $(this).slideUp();
             })
         }
         const buildDeviceBlocks = () => {
@@ -133,10 +152,15 @@ $(window).on('load', function () {
                         </tr>
                     `);
                 })
+
+
             }, 400);
 
             setTimeout(() => {
                 $('.prices__pricelist-wrap').slideDown();
+                $('html, body').animate({
+                    scrollTop: $('#pricelist').offset().top -120
+                }, 400);
                 $('.prices__pricelist-scroll').css({'max-height': ``}).removeClass('prices__pricelist-scroll_rolled')
                 maxPricelistHeight = $('.prices__pricelist-scroll').height();
                 $('.prices__pricelist-scroll').addClass('prices__pricelist-scroll_rolled');
@@ -162,8 +186,8 @@ $(window).on('load', function () {
         $('.steps__list-item').removeClass('steps__list-item_active')
         $(target).addClass('steps__list-item_active')
 
-        $('.steps__img').fadeOut().addClass('steps__img_hidden');
-        $(`.steps__img[data-step-img="${$(target).data('step')}"]`).fadeIn().removeClass('steps__img_hidden');
+        $('.steps__img').addClass('steps__img_hidden');
+        $(`.steps__img[data-step-img="${$(target).data('step')}"]`).removeClass('steps__img_hidden');
     };
 
     const smoothScroll = () => {
@@ -214,7 +238,7 @@ $(window).on('load', function () {
             ' .popup-thanks__button')) {
             $('html').removeClass('freezed');
             $('.popups').fadeOut().addClass('popups_hidden');
-            $('.popup-call-master').fadeOut().addClass('popup_close');
+            $('.popup').fadeOut().addClass('popup_close');
         }
     })
 

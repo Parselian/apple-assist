@@ -153,7 +153,10 @@ require_once(__DIR__ . '/assets/configs/config.php');
 					</svg>
 					<div class="features__list-item-col">
 						<h3 class="features__list-item-title">Работаем без выходных</h3>
-						<div class="features__list-item-text"></div>
+						<div class="features__list-item-text">
+							Мастера сервисного центра <?= $company_name ?> работают 7 дней в неделю, чтобы оперативно оказывать Вам помощь с
+							Вашим iPhone
+						</div>
 					</div>
 				</li>
 				<li class="features__list-item">
@@ -169,13 +172,14 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				</li>
 			</ul>
 
-			<form action="#" method="POST" class="form features__form">
+			<form action="./assets/configs/mail.php" method="POST" class="form features__form">
 				<div class="form__inputs features__form-inputs">
 					<input type="text" class="form__input features__form-input" name="user_phone" placeholder="+7 (999) 999-99-99" required>
 					<button class="callback-button form__button features__form-button">Вызвать мастера</button>
 				</div>
 				<div class="form__footnote features__form-footnote">
-					Нажимая на кнопку “Вызвать мастера” я соглашаюсь с <a href="#" class="form__footnote-link">политикой обработки
+					Нажимая на кнопку “Вызвать мастера” я соглашаюсь с <a href="./politika.html" target="_blank"
+																		  class="form__footnote-link">политикой обработки
 						персональных данных</a>
 				</div>
 			</form>
@@ -257,7 +261,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 		<button class="button prices__models-button">Показать все</button>
 
-		<div class="prices__pricelist-wrap">
+		<div id="pricelist" class="prices__pricelist-wrap">
 			<table class="prices__pricelist" cellpadding="15">
 				<thead class="prices__pricelist-headings">
 				<th>Услуга</th>
@@ -299,7 +303,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			и наш менеджер свяжется с вами через 2 минуты
 		</div>
 
-		<form action="#" method="POST" class="form gift__form">
+		<form action="./assets/configs/mail.php" method="POST" class="form gift__form">
 			<div class="form__inputs gift__form-inputs">
 				<input type="text" class="form__input gift__form-input" name="user_phone" placeholder="+7 (999) 999-99-99" required>
 				<button class="callback-button form__button gift__form-button">Вызвать мастера</button>
@@ -323,10 +327,10 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			<select name="common_problems_list" id="" class="common__select">
 				<option value="1" selected>Замена аккумулятора</option>
 				<option value="2">Замена стекла</option>
-				<option value="3">Ремонт после воды</option>
-				<option value="4">Замена дисплея</option>
-				<option value="5">Не включается</option>
-				<option value="6">Замена экрана</option>
+				<option value="3">Не включается</option>
+				<option value="4">Ремонт после воды</option>
+				<option value="5">Замена дисплея</option>
+				<option value="6">Замена корпуса</option>
 			</select>
 			<div class="common__blocks">
 				<div class="common__block common__block_active" data-problem-btn="1">
@@ -484,7 +488,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						айфона — все эти события оставляют не только царапины, но и повреждения корпуса, вмятины и сколы.
 						<br>
 						<br>
-						Мастера сервисного центра <?= $company_name ?> произведут профессиональную замену корпуса вашего iPhone в кратчайшие сроки с
+						Мастера сервисного центра <?= $company_name ?> произведут профессиональную замену корпуса вашего iPhone в кратчайшие
+						сроки с
 						пожизненной гарантией
 					</p>
 
@@ -516,7 +521,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<h4 class="about-us__blob-title">Евгений Пригожин</h4>
 				<div class="about-us__blob-subtitle">Основатель <?= $company_name ?></div>
 				<div class="about-us__blob-text">
-					“кратко расписать самое главное преимущество”
+					Принцип работы <?= $company_name ?> — единая цена и честный расчёт.
 				</div>
 			</div>
 		</div>
@@ -524,20 +529,19 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			<h2 class="section__title_alt about-us__title">
 				Знаем <span class="text_accent text_bold">всё</span>
 				<span class="line-break"></span>
-				о ремонте <span class="text_accent text_bold">Apple</span>
+				о ремонте <span class="text_accent text_bold">iPhone</span>
 			</h2>
 			<p class="about-us__text">
-				Принимаем Macbook в любом виде: залитые, с трещинами на корпусе или разбитым экраном.
+				Принимаем iPhone в любом виде: залитые, с трещинами на корпусе или разбитым экраном.
 				<br>
 				<br>
-				Устраняем любые механические поломки: от залипшей кнопки до разбитой матрицы.
+				Устраняем любые механические поломки: от залипшей кнопки до разбитого дисплея.
 				<br>
 				<br>
-				Удаляем вирусы, ликвидируем программные неполадки.
+				Ликвидируем программные неполадки.
 				<br>
 				<br>
-				Устанавливаем все версии macOS и лицензионное ПО
-				Бесплатно проконсультируем, если Macbook у вас недавно.
+				Бесплатно проконсультируем, если iPhone у вас недавно.
 				<br>
 				<br>
 				Работаем 7 дней в неделю, без праздников и выходных.
@@ -569,83 +573,77 @@ require_once(__DIR__ . '/assets/configs/config.php');
 					<div class="reviews__slide-row">
 						<div class="reviews__slide-col">
 							<picture>
-								<source srcset="./assets/images/webp/reviewer.webp" type="image/webp">
-								<img src="./assets/images/reviewer.jpg" alt="фото клиента" class="reviews__slide-photo">
+								<source srcset="./assets/images/webp/reviewer_1.webp" type="image/webp">
+								<img src="./assets/images/reviewer_1.jpg" alt="фото клиента" class="reviews__slide-photo">
 							</picture>
 							<div class="reviews__slide-reviewer">
 								Евгения В.
 								<span class="reviews__slide-problem">
-									Замена стекла iPhone
+									Замена дисплея iPhone 11
 								</span>
 							</div>
 						</div>
 						<div class="reviews__slide-rating">4.8</div>
 					</div>
 					<div class="reviews__slide-text">
-						После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами
-						до
-						фин. результата), была приятно удивлена оперативностью и качеством работы - за 15 минут уверенно поменяли экран,
-						прямо
-						"не отходя от кассы", все перед тобой ) Спасибо!
+						Великолепное обслуживание! Пишу этот отзыв с только что отремонтированного телефона) Переживала по поводу
+						предстоящего обращения в сервис, т.к. совсем не разбираюсь в технике, но мастер Андрей очень подробно объяснил мне
+						по телефону все нюансы починки, после чего смогла решиться на ремонт своего айфона) Спасибо вам!
 					</div>
 				</div>
 				<div class="reviews__slide">
 					<div class="reviews__slide-row">
 						<div class="reviews__slide-col">
 							<picture>
-								<source srcset="./assets/images/webp/reviewer.webp" type="image/webp">
-								<img src="./assets/images/reviewer.jpg" alt="фото клиента" class="reviews__slide-photo">
+								<source srcset="./assets/images/webp/reviewer_2.webp" type="image/webp">
+								<img src="./assets/images/reviewer_2.jpg" alt="фото клиента" class="reviews__slide-photo">
 							</picture>
 							<div class="reviews__slide-reviewer">
-								Евгения В.
+								Наталия К.
 								<span class="reviews__slide-problem">
-									Замена стекла iPhone
+									Замена стекла iPhone X
 								</span>
 							</div>
 						</div>
 						<div class="reviews__slide-rating">4.8</div>
 					</div>
 					<div class="reviews__slide-text">
-						После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами
-						до
-						фин. результата), была приятно удивлена оперативностью и качеством работы - за 15 минут уверенно поменяли экран,
-						прямо
-						"не отходя от кассы", все перед тобой ) Спасибо!
+						Быстро заменили стекло на телефоне (ребёнок уронил телефон на кафельный пол). Мастер Никита был очень приятен в
+						общении. Теперь в случае чего буду обращаться только сюда. Рекомендую на все 100%
 					</div>
 				</div>
 				<div class="reviews__slide">
 					<div class="reviews__slide-row">
 						<div class="reviews__slide-col">
 							<picture>
-								<source srcset="./assets/images/webp/reviewer.webp" type="image/webp">
-								<img src="./assets/images/reviewer.jpg" alt="фото клиента" class="reviews__slide-photo">
+								<source srcset="./assets/images/webp/reviewer_3.webp" type="image/webp">
+								<img src="./assets/images/reviewer_3.jpg" alt="фото клиента" class="reviews__slide-photo">
 							</picture>
 							<div class="reviews__slide-reviewer">
-								Евгения В.
+								Татьяна А.
 								<span class="reviews__slide-problem">
-									Замена стекла iPhone
+									Замена дисплея iPhone 8
 								</span>
 							</div>
 						</div>
 						<div class="reviews__slide-rating">4.8</div>
 					</div>
 					<div class="reviews__slide-text">
-						После трех неудачных опытов ремонта Айфонов в других сервисах (где чинили одно, случайно ломая другое и так часами
-						до
-						фин. результата), была приятно удивлена оперативностью и качеством работы - за 15 минут уверенно поменяли экран,
-						прямо
-						"не отходя от кассы", все перед тобой ) Спасибо!
+						Подскользнулась и упала, извиняюсь, задом на сумочку, в которой лежал Айфон. В результате все стекло в трещинку и
+						погнулся корпус. Айфон на гарантии, но на официальном сайте цена замены корпуса 26 тысяч. Рискнула обратиться в этот
+						сервис, и корпус получилось даже выправить, а не поменять. Крышку и дисплей конечно пришлось поменять, но заплатила
+						в районе 10-ки. И сделали быстро! Хороший сервис, хорошие мастера.
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div class="reviews__col">
+		<!--<div class="reviews__col">
 			<picture>
 				<source srcset="./assets/images/webp/about-us-man.webp" type="image/webp">
 				<img src="./assets/images/about-us-man.png" alt="фото" class="reviews__img">
 			</picture>
-		</div>
+		</div>-->
 	</div>
 
 	<button class="callback-button reviews__button open-popup-call-master">Вызвать мастера</button>
@@ -735,7 +733,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			</p>
 
 			<div class="contacts__block-worktime">
-				12 сервисных центров в СПБ
+				Более 12 сервисных центров в СПБ
 				<span class="line-break"></span>
 				Работаем с 8:00 до 23:00 <span class="text_accent text_bold">Без выходных</span>
 			</div>
@@ -781,7 +779,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			<span class="line-break"></span>
 			Наш менеджер свяжется с вами через 2 минуты
 		</div>
-		<form action="#" method="POST" class="faq__form">
+		<form action="./assets/config/mail.php" method="POST" class="faq__form">
 			<div class="form__inputs faq__form-inputs">
 				<input type="text" class="form__input faq__form-input" name="user_phone" placeholder="+7 (999) 999-99-99" required>
 				<button class="callback-button form__button faq__form-button">Перезвоните мне</button>
@@ -794,12 +792,12 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	<div class="container footer__wrap">
 		<div class="footer__col">
 			<img src="./assets/svg/logo.svg" alt="logo" class="footer__logo">
-			<div class="footer__billings">
+			<!--<div class="footer__billings">
 				<img src="./assets/svg/visa.svg" alt="visa" class="footer__billing">
 				<img src="./assets/svg/mastercard.svg" alt="mastercard" class="footer__billing">
 				<img src="./assets/images/sber.png" alt="sberbank" class="footer__billing">
 				<img src="./assets/images/rub.png" alt="cash" class="footer__billing">
-			</div>
+			</div>-->
 		</div>
 		<nav class="footer__col footer__nav">
 			<a href="#about" class="footer__nav-link">О нас</a>
@@ -827,14 +825,14 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			</svg>
 		</div>
 		<div class="popup__wrap">
-			<form action="#" method="POST" class="popup__form">
+			<form action="./assets/configs/mail.php" method="POST" class="popup__form">
 				<h2 class="popup__form-title">Вызвать <span class="text_accent text_bold">мастера</span></h2>
 				<div class="popup__form-subtitle">Оставьте ваши контактные данные и мы свяжемся с вами через 2 минуты</div>
 				<div class="popup__form-inputs">
 					<div class="popup__form-input-wrap">
 						<label for="popup-call-master_name" class="popup__form-input-label">Ваше имя:</label>
 						<input id="popup-call-master_name" type="text" name="user_name" class="form__input popup__form-input"
-							   placeholder="+7 (999) 999-99-99">
+							   placeholder="Ваше имя:">
 					</div>
 					<div class="popup__form-input-wrap">
 						<label for="popup-call-master_phone" class="popup__form-input-label">Ваш телефон: <span class="text_alert">*</span></label>
@@ -845,7 +843,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<button class="popup__form-button">Отправить</button>
 				<div class="popup__form-footnote">
 					Нажимая на кнопку "Отправить" я соглашаюсь с
-					<a href="#" class="popup__form-link">политикой обработки персональных данных</a>
+					<a href="./politika.html" target="_blank" class="popup__form-link">политикой обработки персональных данных</a>
 				</div>
 				<picture>
 					<source srcset="./assets/images/webp/iphone_front.webp" type="image/webp">
@@ -862,12 +860,12 @@ require_once(__DIR__ . '/assets/configs/config.php');
 			</svg>
 		</div>
 		<div class="popup__wrap">
-			<form action="#" method="POST" class="popup__form">
+			<div class="popup__form">
 				<h2 class="popup__form-title">Спасибо!</h2>
 				<div class="popup__form-subtitle">Наш оператор скоро с вами свяжется</div>
 
 				<button class="popup__form-button popup-thanks__button">Закрыть</button>
-			</form>
+			</div>
 		</div>
 	</div>
 </div>
@@ -923,37 +921,61 @@ require_once(__DIR__ . '/assets/configs/config.php');
             // Указываем координаты вершин многоугольника.
             // Координаты вершин внешнего контура.
             [
-                [59.975078, 30.213659],
+                [60.014230, 29.719458],
 
-                [60.000106, 30.047842],
-                [60.014200, 29.966648],
-                [60.036775, 29.963400],
-                [60.056372, 30.143077],
+                [60.019462, 29.731581],
+                [60.021412, 29.777394],
+                [60.038908, 29.981690],
+                [60.058899, 30.143168],
+                [60.063141, 30.161210],
+                [60.079941, 30.190036],
+                [60.083940, 30.211899],
+                [60.086185, 30.229413],
+                [60.094913, 30.252472],
+                [60.099277, 30.276905],
+                [60.093453, 30.359157],
+                [60.085557, 30.377068],
+                [60.060120, 30.388632],
+                [60.054041, 30.399599],
+                [60.044086, 30.433701],
+                [60.019732, 30.456316],
+                [60.012286, 30.472262],
+                [59.990497, 30.482560],
+                [59.984083, 30.496820],
+                [59.980824, 30.519133],
+                [59.970582, 30.549419],
+                [59.960150, 30.553536],
+                [59.919811, 30.526517],
+                [59.887776, 30.524808],
+                [59.870427, 30.531515],
+                [59.864998, 30.527082],
+                [59.854307, 30.503237],
+                [59.853142, 30.479460],
+                [59.847328, 30.460049],
+                [59.826761, 30.436359],
+                [59.826761, 30.436359],
+                [59.810296, 30.328055],
+                [59.834848, 30.272369],
+                [59.809960, 30.184816],
+                [59.800801, 30.168586],
+                [59.800689, 30.150496],
+                [59.813667, 30.112565],
+                [59.816688, 30.012495],
+                [59.822003, 29.984765],
+                [59.821632, 29.961595],
+                [59.812371, 29.899640],
+                [59.815206, 29.847692],
+                [59.830591, 29.820214],
+                [59.860416, 29.800278],
+                [59.868349, 29.776269],
+                [59.870132, 29.745325],
+                [59.885111, 29.682254],
+                [59.897863, 29.662322],
+                [59.912875, 29.659408],
+                [59.981571, 29.689721],
+                [60.000950, 29.702796],
 
-                [60.081397, 30.194957],
-                [60.098313, 30.264708],
-                [60.096300, 30.315510],
-                [60.093280, 30.358650],
-                [60.061147, 30.388284],
-                [60.043755, 30.432434],
-                [60.006572, 30.477096],
-                [59.983363, 30.495044],
-                [59.964115, 30.554315],
-                [59.865345, 30.523754],
-                [59.818923, 30.389350],
-                [59.813037, 30.325070],
-                [59.833424, 30.276234],
-                [59.801127, 30.164747],
-                [59.815430, 30.094513],
-                [59.862060, 30.098249],
-                [59.868447, 30.155781],
-                [59.897364, 30.209577],
-                [59.926478, 30.209815],
-                [59.930095, 30.192667],
-                [59.941011, 30.181521],
-                [59.954137, 30.185927],
-                [59.960333, 30.211879],
-                [59.975078, 30.213659],
+                [60.014230, 29.719458]
             ]
         ], {
             // Описываем свойства геообъекта.

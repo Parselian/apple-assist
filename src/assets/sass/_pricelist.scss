@@ -210,6 +210,9 @@
       &:hover {
         .prices {
           &__pricelist {
+            &-servicename {
+              color: $accent-color;
+            }
             &-button {
               opacity: 1;
             }
@@ -232,6 +235,9 @@
 
         border-bottom: 1px solid $inactive-text-color;
       }
+    }
+    &-servicename {
+      transition: color .2s;
     }
     &-button {
       padding: 5px 15px;

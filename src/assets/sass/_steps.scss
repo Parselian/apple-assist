@@ -32,6 +32,17 @@
           }
         }
       }
+      &:hover {
+        .steps {
+          &__list {
+            &-item {
+              &-icon {
+                fill: $accent-color;
+              }
+            }
+          }
+        }
+      }
       &:not(:last-child) {
         margin-bottom: 15px;
       }
