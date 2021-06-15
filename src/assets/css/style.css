@@ -288,6 +288,16 @@ body {
         -webkit-border-radius: 9000px;
         -moz-border-radius: 9000px;
         border-radius: 9000px; }
+      .promo__collage_left-pattern {
+        position: absolute;
+        transform: translate(-60px, -540px); }
+        .promo__collage_left-pattern-line {
+          margin-bottom: 20px;
+          content: '';
+          width: 508px;
+          left: 0;
+          height: 5px;
+          background: url("../images/pattern.svg") center repeat-x; }
     .promo__collage_right {
       top: -160%;
       right: -35%;
@@ -301,6 +311,40 @@ body {
         -webkit-border-radius: 30px;
         -moz-border-radius: 30px;
         border-radius: 30px; }
+      .promo__collage_right-fatline, .promo__collage_right-thinline {
+        position: absolute;
+        content: '';
+        width: 110px;
+        height: 10px;
+        background: white;
+        border-radius: 10px;
+        transform: translate(-25px, -143px) rotate(90deg); }
+      .promo__collage_right-thinline {
+        width: 200px;
+        height: 5px;
+        transform: translate(-47px, -175px) rotate(90deg); }
+      .promo__collage_right-dot {
+        position: absolute;
+        content: '';
+        width: 10px;
+        height: 10px;
+        transform: translate(25px, -215px);
+        background: white;
+        border-radius: 10px; }
+      .promo__collage_right-circle {
+        position: absolute;
+        content: '';
+        width: 500px;
+        height: 250px;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        overflow: hidden;
+        background: white;
+        transform: translate(680px, -250px);
+        opacity: 0.2; }
+      .promo__collage_right-smallcircle {
+        width: 400px;
+        height: 200px;
+        transform: translate(780px, -200px); }
   .promo__wrap {
     margin-top: 180px;
     position: relative;
@@ -1319,7 +1363,15 @@ body {
       opacity: .2;
       z-index: -1; }
 
+@media (min-width: 1920px) {
+  .promo__collage_left-pattern {
+    display: none; } }
+
 @media (max-width: 1400px) {
+  .promo__collage_right-circle {
+    transform: translate(540px, -250px); }
+  .promo__collage_right-smallcircle {
+    transform: translate(630px, -200px); }
   .common__img {
     right: 0; } }
 
@@ -1332,6 +1384,10 @@ body {
     .promo__collage_right {
       top: -230%;
       right: -55%; }
+      .promo__collage_right-circle {
+        transform: translate(400px, -250px); }
+      .promo__collage_right-smallcircle {
+        transform: translate(480px, -200px); }
     .promo__wrap:after {
       bottom: 0; }
     .promo__col {
@@ -1369,6 +1425,10 @@ body {
     top: -250%;
     right: -85%;
     transform: rotate(342deg); }
+    .promo__collage_right-circle {
+      transform: translate(330px, -250px); }
+    .promo__collage_right-smallcircle {
+      transform: translate(430px, -200px); }
   .promo__col {
     margin-bottom: 80px; }
   .promo__man {

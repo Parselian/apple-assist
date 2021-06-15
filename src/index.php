@@ -71,9 +71,23 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	<div class="container promo__wrap">
 		<div class="promo__collage promo__collage_left">
 			<div class="promo__collage_left-circle"></div>
+			<div class="promo__collage_left-pattern">
+				<div class="promo__collage_left-pattern-line"></div>
+				<div class="promo__collage_left-pattern-line"></div>
+				<div class="promo__collage_left-pattern-line"></div>
+				<div class="promo__collage_left-pattern-line"></div>
+				<div class="promo__collage_left-pattern-line"></div>
+				<div class="promo__collage_left-pattern-line"></div>
+			</div>
 		</div>
 		<div class="promo__collage promo__collage_right">
-			<div class="promo__collage_right-square"></div>
+			<div class="promo__collage_right-square">
+			</div>
+				<div class="promo__collage_right-circle"></div>
+			<div class="promo__collage_right-circle promo__collage_right-smallcircle"></div>
+			<div class="promo__collage_right-fatline"></div>
+			<div class="promo__collage_right-thinline"></div>
+			<div class="promo__collage_right-dot"></div>
 		</div>
 		<div class="promo__col">
 			<h1 class="promo__title">
@@ -521,7 +535,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<h4 class="about-us__blob-title">Евгений Пригожин</h4>
 				<div class="about-us__blob-subtitle">Основатель <?= $company_name ?></div>
 				<div class="about-us__blob-text">
-					Принцип работы <?= $company_name ?> — единая цена и честный расчёт.
+					Принцип работы <?= $company_name ?> — фиксированная цена и честный расчёт.
 				</div>
 			</div>
 		</div>

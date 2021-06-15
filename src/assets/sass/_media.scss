@@ -1,4 +1,28 @@
+@media (min-width: 1920px) {
+  .promo {
+    &__collage {
+     &_left {
+       &-pattern {
+         display: none;
+       }
+     }
+    }
+  }
+}
+
 @media (max-width: 1400px) {
+  .promo {
+    &__collage {
+      &_right {
+        &-circle {
+          transform: translate(540px, -250px);
+        }
+        &-smallcircle {
+          transform: translate(630px, -200px);
+        }
+      }
+    }
+  }
   .common {
     &__img {
       right: 0;
@@ -17,6 +41,12 @@
       &_right {
         top: -230%;
         right: -55%;
+        &-circle {
+          transform: translate(400px, -250px);
+        }
+        &-smallcircle {
+          transform: translate(480px, -200px);
+        }
       }
     }
     &__wrap {
@@ -97,6 +127,12 @@
         top: -250%;
         right: -85%;
         transform: rotate(342deg);
+        &-circle {
+          transform: translate(330px, -250px);
+        }
+        &-smallcircle {
+          transform: translate(430px, -200px);
+        }
       }
     }
     &__col {
