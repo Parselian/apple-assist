@@ -107,7 +107,6 @@
     }
   }
   &__select {
-    display: none;
     width: 100%;
     padding: 10px 10px;
     background: transparent;
@@ -115,6 +114,21 @@
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
+    appearance: none;
+    &-wrap {
+      position: relative;
+      display: none;
+    }
+    &-arrow {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      z-index: -1;
+      width: 10px;
+      height: 10px;
+      fill: $inactive-text-color;
+      transform: translateY(-50%) rotate(-90deg);
+    }
   }
   &__img {
     position: absolute;

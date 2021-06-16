@@ -67,6 +67,11 @@
     }
     &__collage {
       width: 430px;
+      &-blob {
+        top: 0%;
+        left: 75px;
+        width: 170px;
+      }
     }
   }
   .common {
@@ -153,7 +158,7 @@
     }
     &__col {
       &:first-child {
-        margin-bottom: 30px;
+        margin-bottom: 70px;
         max-width: 100%;
       }
     }
@@ -773,6 +778,9 @@
           width: 50vw;
           height: 50vw;
         }
+        &-pattern {
+          display: none;
+        }
       }
       &_right {
         top: -65vw;
@@ -925,6 +933,13 @@
         width: 100%;
       }
     }
+    &__collage {
+      &-blob {
+        top: -4%;
+        left: 65px;
+        width: 160px;
+      }
+    }
   }
   .prices {
     &__model {
@@ -984,7 +999,9 @@
       }
     }
     &__select {
-      display: block;
+      &-wrap {
+        display: block;
+      }
     }
   }
   .reviews {
@@ -1026,6 +1043,15 @@
     &__list {
       &-item {
         font-size: 20px;
+      }
+    }
+  }
+  .features {
+    &__collage {
+      &-blob {
+        top: -7%;
+        left: 16%;
+        width: 150px;
       }
     }
   }
@@ -1123,6 +1149,15 @@
     &__title {
       &_alt {
         font-size: 39px;
+      }
+    }
+  }
+  .features {
+    &__collage {
+      &-blob {
+        top: -10%;
+        left: 10%;
+        width: 150px;
       }
     }
   }

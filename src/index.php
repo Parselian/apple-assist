@@ -200,9 +200,10 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		</div>
 
 		<div class="features__col features__collage-wrap">
+			<picture><img src="./assets/images/blob.png" alt="Ремонт за 15 минут!" class="features__collage-blob"></picture>
 			<picture>
-				<source srcset="./assets/images/webp/features-iphone.webp" type="image/webp">
 				<img src="./assets/images/features-iphone.png" alt="iPhone" class="features__iphone">
+				<source srcset="./assets/images/webp/features-iphone.webp" type="image/webp">
 			</picture>
 			<picture>
 				<source srcset="./assets/images/webp/features-collage.webp" type="image/webp">
@@ -338,14 +339,19 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		<div class="common__bg"></div>
 		<div class="common__col common__filter">
 			<h2 class="section__title section__title_tail common__title">Типовые неисправности iPhone</h2>
-			<select name="common_problems_list" id="" class="common__select">
-				<option value="1" selected>Замена аккумулятора</option>
-				<option value="2">Замена стекла</option>
-				<option value="3">Не включается</option>
-				<option value="4">Ремонт после воды</option>
-				<option value="5">Замена дисплея</option>
-				<option value="6">Замена корпуса</option>
-			</select>
+			<div class="common__select-wrap">
+				<svg class="common__select-arrow">
+					<use xlink:href="./assets/stack/sprite.svg#slider-arrow"></use>
+				</svg>
+				<select name="common_problems_list" id="" class="common__select">
+					<option value="1" selected>Замена аккумулятора</option>
+					<option value="2">Замена стекла</option>
+					<option value="3">Не включается</option>
+					<option value="4">Ремонт после воды</option>
+					<option value="5">Замена дисплея</option>
+					<option value="6">Замена корпуса</option>
+				</select>
+			</div>
 			<div class="common__blocks">
 				<div class="common__block common__block_active" data-problem-btn="1">
 					<svg class="common__block-icon">
@@ -906,10 +912,9 @@ require_once(__DIR__ . '/assets/configs/config.php');
         elem.src =
             'https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init';
         document.getElementsByTagName('body')[0].appendChild(elem);
-    }, 2000);
+    }, 2500);
 
-    $('#map').on('click', function () {
-
+    $('#map').on('mouseenter', function () {
     })
 
     function init() {

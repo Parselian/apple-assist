@@ -1,9 +1,25 @@
 @charset "UTF-8";
 @keyframes do-levitation {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg) skew(-4deg, 0); }
+    transform: translate(-50%, -50%) rotate(0deg) skew(-4deg, 0);
+    -webkit-transform: translate(-50%, -50%) rotate(0deg) skew(-4deg, 0);
+    /* Safari & Chrome */
+    -moz-transform: translate(-50%, -50%) rotate(0deg) skew(-4deg, 0);
+    /* Firefox */
+    -ms-transform: translate(-50%, -50%) rotate(0deg) skew(-4deg, 0);
+    /* Internet Explorer */
+    -o-transform: translate(-50%, -50%) rotate(0deg) skew(-4deg, 0);
+    /* Opera */ }
   100% {
-    transform: translate(-50%, calc(-50%  + 0.5em)) rotate(0deg) skew(-4deg, 3deg); } }
+    transform: translate(-50%, calc(-50%  + 20px)) rotate(0deg) skew(-4deg, 3deg);
+    -webkit-transform: translate(-50%, calc(-50%  + 20px)) rotate(0deg) skew(-4deg, 3deg);
+    /* Safari & Chrome */
+    -moz-transform: translate(-50%, calc(-50%  + 20px)) rotate(0deg) skew(-4deg, 3deg);
+    /* Firefox */
+    -ms-transform: translate(-50%, calc(-50%  + 20px)) rotate(0deg) skew(-4deg, 3deg);
+    /* Internet Explorer */
+    -o-transform: translate(-50%, calc(-50%  + 20px)) rotate(0deg) skew(-4deg, 3deg);
+    /* Opera */ } }
 
 body, html {
   overflow-x: hidden; }
@@ -427,7 +443,6 @@ body {
     max-width: 190px; }
   .features__iphone {
     position: absolute;
-    content: '';
     top: 50%;
     left: 50%;
     width: 430px;
@@ -440,6 +455,11 @@ body {
     .features__collage-wrap {
       right: 0;
       position: absolute; }
+    .features__collage-blob {
+      position: absolute;
+      top: -4%;
+      left: 30px;
+      width: 200px; }
 
 .prices {
   margin-bottom: 80px;
@@ -719,7 +739,7 @@ body {
       right: 0;
       bottom: 0;
       background: #f6f6f6;
-      background: linear-gradient(90deg, #f6f6f6 20%, rgba(244, 123, 97, 0) 100%); }
+      background: linear-gradient(90deg, #f6f6f6 20%, rgba(246, 246, 246, 0) 100%); }
   .gift__form-input {
     margin-right: 20px;
     width: 190px; }
@@ -1021,14 +1041,26 @@ body {
       font-size: 16px;
       font-weight: 700; }
   .common__select {
-    display: none;
     width: 100%;
     padding: 10px 10px;
     background: transparent;
     border: 2px solid #A4DF59;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
-    border-radius: 10px; }
+    border-radius: 10px;
+    appearance: none; }
+    .common__select-wrap {
+      position: relative;
+      display: none; }
+    .common__select-arrow {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      z-index: -1;
+      width: 10px;
+      height: 10px;
+      fill: #989898;
+      transform: translateY(-50%) rotate(-90deg); }
   .common__img {
     position: absolute;
     width: 380px;
@@ -1398,6 +1430,10 @@ body {
     width: 350px; }
   .features__collage {
     width: 430px; }
+    .features__collage-blob {
+      top: 0%;
+      left: 75px;
+      width: 170px; }
   .common__filter {
     width: 50%;
     margin-right: 40px; }
@@ -1442,7 +1478,7 @@ body {
     .features__wrap {
       flex-direction: column; }
     .features__col:first-child {
-      margin-bottom: 30px;
+      margin-bottom: 70px;
       max-width: 100%; }
     .features__collage-wrap {
       position: relative; }
@@ -1832,6 +1868,8 @@ body {
       .promo__collage_left-circle {
         width: 50vw;
         height: 50vw; }
+      .promo__collage_left-pattern {
+        display: none; }
     .promo__collage_right {
       top: -65vw;
       right: -250vw; }
@@ -1912,6 +1950,10 @@ body {
       flex-direction: column; }
   .features__form-button {
     width: 100%; }
+  .features__collage-blob {
+    top: -4%;
+    left: 65px;
+    width: 160px; }
   .prices__model {
     width: 31%; }
     .prices__model:not(:nth-child(4n)) {
@@ -1943,7 +1985,7 @@ body {
     width: 100%; }
   .common__blocks {
     display: none; }
-  .common__select {
+  .common__select-wrap {
     display: block; }
   .reviews__slide {
     margin-left: 0;
@@ -1965,6 +2007,10 @@ body {
     font-size: 38px; }
   .promo__list-item {
     font-size: 20px; }
+  .features__collage-blob {
+    top: -7%;
+    left: 16%;
+    width: 150px; }
   .prices__pricelist-unroll {
     padding: 15px 20px;
     justify-content: center;
@@ -2017,6 +2063,10 @@ body {
         font-size: 18px; }
   .section__title_alt {
     font-size: 39px; }
+  .features__collage-blob {
+    top: -10%;
+    left: 10%;
+    width: 150px; }
   .gift__title {
     font-size: 36px; }
   .about-us__blob {
