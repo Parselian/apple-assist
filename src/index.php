@@ -1,5 +1,8 @@
 <?php
 require_once(__DIR__ . '/assets/configs/config.php');
+require_once(__DIR__ . '/assets/configs/db-cfg.php');
+
+
 ?>
 
 <!doctype html>
@@ -19,7 +22,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
 		  integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
 		  crossorigin="anonymous" referrerpolicy="no-referrer"/>
-	<title>Apple Assist | Ремонт iPhone в СПб</title>
+	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+	<title><?= $company_name ?> | Ремонт iPhone в СПб</title>
 
 	<!--	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">-->
 	<!--	</script>-->
@@ -83,7 +87,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		<div class="promo__collage promo__collage_right">
 			<div class="promo__collage_right-square">
 			</div>
-				<div class="promo__collage_right-circle"></div>
+			<div class="promo__collage_right-circle"></div>
 			<div class="promo__collage_right-circle promo__collage_right-smallcircle"></div>
 			<div class="promo__collage_right-fatline"></div>
 			<div class="promo__collage_right-thinline"></div>
@@ -106,7 +110,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 					<svg class="promo__list-item-icon">
 						<use xlink:href="./assets/stack/sprite.svg#check"></use>
 					</svg>
-					Пожизненная гарантия
+					гарантия — 3 года
 				</li>
 				<li class="promo__list-item">
 					<svg class="promo__list-item-icon">
@@ -178,9 +182,9 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						<use xlink:href="./assets/stack/sprite.svg#guarantee"></use>
 					</svg>
 					<div class="features__list-item-col">
-						<h3 class="features__list-item-title">Пожизненная гарантия</h3>
+						<h3 class="features__list-item-title">Гарантия — 3 года</h3>
 						<div class="features__list-item-text">
-							Мы полностью уверены в качестве своей работы, и поэтому даем пожизненную гарантию на все виды работ.
+							Мы полностью уверены в качестве своей работы, и поэтому даем гарантию на все виды работ.
 						</div>
 					</div>
 				</li>
@@ -264,14 +268,27 @@ require_once(__DIR__ . '/assets/configs/config.php');
 		</div>-->
 
 		<div class="prices__models">
-			<div class="prices__model">
-				<picture>
-					<source srcset="./assets/images/webp/iphone-11-pro-max.webp" type="image/webp">
-					<img src="./assets/images/iphone-11-pro-max.png" alt="iPhone 11 Pro Max" class="prices__model-img">
-				</picture>
-				<div class="prices__model-name">iPhone 11 Pro Max</div>
-				<button class="prices__model-button">Выбрать</button>
-			</div>
+            <?
+            $get_devices_data = mysqli_query($connect, 'SELECT * FROM devices ORDER BY ID DESC')
+            or die('GET devices data Error! ' . mysqli_error($connect));
+            $devices_counter = 0;
+
+            while ($device = $get_devices_data->fetch_assoc()) {
+                $is_hidden = $devices_counter > 9 ? 'prices__model_hidden' : '';
+                ?>
+				<div class="prices__model <?= $is_hidden ?>" data-device="<?= $device['DEVICE_NAME'] ?>">
+					<picture>
+						<data-src srcset="./assets/images/webp/<?= $device['DEVICE_URL'] ?>.webp" type="image/webp"></data-src>
+						<data-img src="./assets/images/<?= $device['DEVICE_URL'] ?>.png" alt="<?= $device['DEVICE_NAME'] ?>"
+								  class="prices__model-img"></data-img>
+					</picture>
+					<div class="prices__model-name"><?= $device['DEVICE_NAME'] ?></div>
+					<button class="prices__model-button">Выбрать</button>
+				</div>
+                <?
+                $devices_counter += 1;
+            };
+            ?>
 		</div>
 
 		<button class="button prices__models-button">Показать все</button>
@@ -327,8 +344,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 		<div class="gift__img-wrap">
 			<picture>
-				<source srcset="./assets/images/webp/gift.webp" type="image/webp">
-				<img src="./assets/images/gift.png" alt="подарок" class="gift__img">
+				<data-src srcset="./assets/images/webp/gift.webp" type="image/webp"></data-src>
+				<data-img src="./assets/images/gift.png" alt="подарок" class="gift__img"></data-img>
 			</picture>
 		</div>
 	</div>
@@ -343,7 +360,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 				<svg class="common__select-arrow">
 					<use xlink:href="./assets/stack/sprite.svg#slider-arrow"></use>
 				</svg>
-				<select name="common_problems_list" id="" class="common__select">
+				<select name="common_problems_list" class="common__select">
 					<option value="1" selected>Замена аккумулятора</option>
 					<option value="2">Замена стекла</option>
 					<option value="3">Не включается</option>
@@ -434,7 +451,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						<br>
 						<br>
 						Мастера сервисного центра <?= $company_name ?> произведут профессиональную замену дисплея вашего iPhone в кратчайшие
-						сроки с пожизненной гарантией
+						сроки с гарантией 3 года
 					</p>
 
 					<div class="common__info-row">
@@ -471,7 +488,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						<br>
 						<br>
 						Мастера сервисного центра <?= $company_name ?> произведут профессиональный ремонт вашего iPhone в кратчайшие сроки с
-						пожизненной гарантией
+						гарантией 3 года
 					</p>
 
 					<div class="common__info-row">
@@ -490,7 +507,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						<br>
 						Мастера сервисного центра <?= $company_name ?> произведут профессиональную замену дисплея вашего iPhone в кратчайшие
 						сроки с
-						пожизненной гарантией
+						гарантией 3 года
 					</p>
 
 					<div class="common__info-row">
@@ -510,7 +527,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 						<br>
 						Мастера сервисного центра <?= $company_name ?> произведут профессиональную замену корпуса вашего iPhone в кратчайшие
 						сроки с
-						пожизненной гарантией
+						гарантией 3 года
 					</p>
 
 					<div class="common__info-row">
@@ -593,8 +610,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 					<div class="reviews__slide-row">
 						<div class="reviews__slide-col">
 							<picture>
-								<source srcset="./assets/images/webp/reviewer_1.webp" type="image/webp">
-								<img src="./assets/images/reviewer_1.jpg" alt="фото клиента" class="reviews__slide-photo">
+								<data-src srcset="./assets/images/webp/reviewer_1.webp" type="image/webp"></data-src>
+								<data-img src="./assets/images/reviewer_1.jpg" alt="фото клиента" class="reviews__slide-photo"></data-img>
 							</picture>
 							<div class="reviews__slide-reviewer">
 								Евгения В.
@@ -603,7 +620,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 								</span>
 							</div>
 						</div>
-						<div class="reviews__slide-rating">4.8</div>
+						<div class="reviews__slide-rating">4.7</div>
 					</div>
 					<div class="reviews__slide-text">
 						Великолепное обслуживание! Пишу этот отзыв с только что отремонтированного телефона) Переживала по поводу
@@ -615,8 +632,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 					<div class="reviews__slide-row">
 						<div class="reviews__slide-col">
 							<picture>
-								<source srcset="./assets/images/webp/reviewer_2.webp" type="image/webp">
-								<img src="./assets/images/reviewer_2.jpg" alt="фото клиента" class="reviews__slide-photo">
+								<data-src srcset="./assets/images/webp/reviewer_2.webp" type="image/webp"></data-src>
+								<data-img src="./assets/images/reviewer_2.jpg" alt="фото клиента" class="reviews__slide-photo"></data-img>
 							</picture>
 							<div class="reviews__slide-reviewer">
 								Наталия К.
@@ -636,8 +653,8 @@ require_once(__DIR__ . '/assets/configs/config.php');
 					<div class="reviews__slide-row">
 						<div class="reviews__slide-col">
 							<picture>
-								<source srcset="./assets/images/webp/reviewer_3.webp" type="image/webp">
-								<img src="./assets/images/reviewer_3.jpg" alt="фото клиента" class="reviews__slide-photo">
+								<data-src srcset="./assets/images/webp/reviewer_3.webp" type="image/webp"></data-src>
+								<data-img src="./assets/images/reviewer_3.jpg" alt="фото клиента" class="reviews__slide-photo"></data-img>
 							</picture>
 							<div class="reviews__slide-reviewer">
 								Татьяна А.
@@ -646,7 +663,7 @@ require_once(__DIR__ . '/assets/configs/config.php');
 								</span>
 							</div>
 						</div>
-						<div class="reviews__slide-rating">4.8</div>
+						<div class="reviews__slide-rating">4.3</div>
 					</div>
 					<div class="reviews__slide-text">
 						Подскользнулась и упала, извиняюсь, задом на сумочку, в которой лежал Айфон. В результате все стекло в трещинку и
@@ -716,22 +733,22 @@ require_once(__DIR__ . '/assets/configs/config.php');
 
 		<div class="steps__col steps__img-wrap">
 			<picture>
-				<source srcset="./assets/images/webp/steps-img_request.webp" type="image/webp">
-				<img src="./assets/images/steps-img_request.png" alt="Заявка на ремонт" class="steps__img" data-step-img="request">
+				<data-src srcset="./assets/images/webp/steps-img_request.webp" type="image/webp"></data-src>
+				<data-img src="./assets/images/steps-img_request.png" alt="Заявка на ремонт" class="steps__img" data-step-img="request"></data-img>
 			</picture>
 			<picture>
-				<source srcset="./assets/images/webp/steps-img_diagnostics.webp" type="image/webp">
-				<img src="./assets/images/steps-img_diagnostics.png" alt="Диагностика" class="steps__img steps__img_hidden"
-					 data-step-img="diagnostics">
+				<data-src srcset="./assets/images/webp/steps-img_diagnostics.webp" type="image/webp"></data-src>
+				<data-img src="./assets/images/steps-img_diagnostics.png" alt="Диагностика" class="steps__img steps__img_hidden"
+						  data-step-img="diagnostics"></data-img>
 			</picture>
 			<picture>
-				<source srcset="./assets/images/webp/steps-img_repair.webp" type="image/webp">
-				<img src="./assets/images/steps-img_repair.png" alt="Ремонт" class="steps__img steps__img_hidden" data-step-img="repair">
+				<data-src srcset="./assets/images/webp/steps-img_repair.webp" type="image/webp"></data-src>
+				<data-img src="./assets/images/steps-img_repair.png" alt="Ремонт" class="steps__img steps__img_hidden" data-step-img="repair"></data-img>
 			</picture>
 			<picture>
-				<source srcset="./assets/images/webp/steps-img_warranty.webp" type="image/webp">
-				<img src="./assets/images/steps-img_warranty.png" alt="Гарантия" class="steps__img steps__img_hidden"
-					 data-step-img="warranty">
+				<data-src srcset="./assets/images/webp/steps-img_warranty.webp" type="image/webp"></data-src>
+				<data-img src="./assets/images/steps-img_warranty.png" alt="Гарантия" class="steps__img steps__img_hidden"
+						  data-step-img="warranty"></data-img>
 			</picture>
 		</div>
 	</div>
@@ -895,6 +912,12 @@ require_once(__DIR__ . '/assets/configs/config.php');
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/jquery.lazy.min.js"
+		integrity="sha512-eviLb3jW7+OaVLz5N3B5F0hpluwkLb8wTXHOTy0CyNaZM5IlShxX1nEbODak/C0k9UdsrWjqIBKOFY0ELCCArw==" crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.11/plugins/jquery.lazy.picture.min.js"
+		integrity="sha512-O23kMRJZagQUmjuR4OA9m/yoyIGjB0bwzmIbCwnkXgKPQ9hRf+MgGeZu12vf+OUDqEGtUnTR9NsPjqEwmc3WtQ==" crossorigin="anonymous"
+		referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"
 		integrity="sha512-d4KkQohk+HswGs6A1d6Gak6Bb9rMWtxjOa0IiY49Q3TeFd5xAzjWXDCBW9RS7m86FQ4RzM2BdHmdJnnKRYknxw==" crossorigin="anonymous"
 		referrerpolicy="no-referrer"></script>
@@ -905,17 +928,32 @@ require_once(__DIR__ . '/assets/configs/config.php');
 <script defer>
     // ymaps.ready(init);
 
-    setTimeout(() => {
+    /*setTimeout(() => {
         let elem = document.createElement('script');
 
 
         elem.src =
             'https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init';
         document.getElementsByTagName('body')[0].appendChild(elem);
-    }, 2500);
+    }, 2500);*/
 
-    $('#map').on('mouseenter', function () {
-    })
+	let YaMapsShown = false;
+
+	$(window).scroll(function() {
+        if (!YaMapsShown){
+         if($(window).scrollTop() + $(window).height() > $(document).height() - 3000) {
+          showYaMaps();
+          YaMapsShown = true;
+         }
+        }
+     });
+
+	function showYaMaps(){
+	 let elem = document.createElement('script');
+
+        elem.src = 'https://api-maps.yandex.ru/2.1/?lang=ru_RU&onload=init';
+        document.getElementsByTagName('body')[0].appendChild(elem);
+	}
 
     function init() {
         let mainCoords = [59.924826, 30.487046];

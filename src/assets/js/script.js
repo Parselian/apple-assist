@@ -1,6 +1,96 @@
 'use-strict'
 
 $(window).on('load', function () {
+    $('picture').lazy();
+
+    const priceListInit = () => {
+        let maxPricelistHeight = null;
+
+        const rollPricelist = () => {
+            $('.prices__pricelist-scroll').css({'max-height': ``}).removeClass('prices__pricelist-scroll_unrolled')
+            $('.prices__pricelist-unroll').removeClass('prices__pricelist-unroll_active')
+        }
+        const unrollPricelist = () => {
+            $('.prices__pricelist-scroll').css({'max-height': `${maxPricelistHeight}px`}).addClass('prices__pricelist-scroll_unrolled')
+            $('.prices__pricelist-unroll').addClass('prices__pricelist-unroll_active')
+        }
+        const expandDevices = () => {
+            $('.prices__models-button').on('click', function() {
+                $('.prices__model').slideDown({
+                    progress() {
+                        $(this).css('display', 'flex')
+                    },
+                    complete() {
+                        $(this).css('display', 'flex')
+                    }
+                });
+                $(this).slideUp();
+            })
+        }
+        const getPricesData = (selectedDevice) => {
+            $.ajax({
+                url: './assets/configs/get_prices_data.php',
+                method: 'GET',
+                data: {
+                    'selected_device': selectedDevice
+                },
+                dataType: 'json',
+                success(data) {
+                    buildPriceListRows(data);
+                }
+            })
+        }
+        const buildPriceListRows = data => {
+            $('.prices__pricelist-wrap').slideUp();
+
+            setTimeout(() => {
+                $('.prices__pricelist-row').remove();
+
+                data.forEach((item, i) => {
+                    $('.prices__pricelist-scroll table').append(`
+                        <tr class="prices__pricelist-row open-popup-call-master" data-service="${item.DEVICE_PROBLEM}">
+                            <td class="prices__pricelist-servicename">${item.DEVICE_PROBLEM}</td>
+                            <td class="prices__pricelist-time">${item.PROBLEM_TIME}</td>
+                            <td class="prices__pricelist-price">${item.DEVICE_PRICE} руб.</td>
+                            <td>
+                                <button class="callback-button prices__pricelist-button">Вызвать мастера</button>
+                            </td>
+                        </tr>
+                    `);
+                })
+            }, 400);
+
+            setTimeout(() => {
+                $('.prices__pricelist-wrap').slideDown();
+                $('html, body').animate({
+                    scrollTop: $('#pricelist').offset().top -120
+                }, 400);
+                $('.prices__pricelist-scroll').css({'max-height': ``}).removeClass('prices__pricelist-scroll_rolled')
+                maxPricelistHeight = $('.prices__pricelist-scroll').height();
+                $('.prices__pricelist-scroll').addClass('prices__pricelist-scroll_rolled');
+                rollPricelist()
+            }, 400)
+
+            $('.prices__pricelist-unroll').unbind('click');
+
+            $('.prices__pricelist-unroll').on('click', function() {
+                if ($('.prices__pricelist-scroll').hasClass('prices__pricelist-scroll_unrolled')) {
+                    rollPricelist();
+                } else {
+                    unrollPricelist()
+                }
+            })
+        }
+
+        $('.prices__model').off('click');
+        $('.prices__model').on('click', function () {
+            getPricesData($(this).data('device'));
+        })
+
+        expandDevices()
+    }
+    priceListInit();
+    
     $('input[name="user_phone"]').mask('+7 (999) 999-99-99');
 
     $('form').on('submit', function(e) {
@@ -62,126 +152,6 @@ $(window).on('load', function () {
         ]
     })
 
-
-    const priceListInit = () => {
-        let maxPricelistHeight = null;
-
-        const rollPricelist = () => {
-            $('.prices__pricelist-scroll').css({'max-height': ``}).removeClass('prices__pricelist-scroll_unrolled')
-            $('.prices__pricelist-unroll').removeClass('prices__pricelist-unroll_active')
-        }
-        const unrollPricelist = () => {
-            $('.prices__pricelist-scroll').css({'max-height': `${maxPricelistHeight}px`}).addClass('prices__pricelist-scroll_unrolled')
-            $('.prices__pricelist-unroll').addClass('prices__pricelist-unroll_active')
-        }
-        const expandDevices = () => {
-            $('.prices__models-button').on('click', function() {
-                $('.prices__model').slideDown({
-                    progress() {
-                        $(this).css('display', 'flex')
-                    },
-                    complete() {
-                        $(this).css('display', 'flex')
-                    }
-                });
-                $(this).slideUp();
-            })
-        }
-        const buildDeviceBlocks = () => {
-            $.ajax({
-                url: './assets/configs/get_devices_data.php',
-                method: 'GET',
-                dataType: 'json',
-                success(data) {
-                    let is_hidden = 'null';
-
-                    $('.prices__model').remove();
-
-                    data.forEach((item, i) => {
-                        is_hidden = i > 9 ? 'prices__model_hidden' : 'null';
-
-                        $('.prices__models').append(`
-                            <div class="prices__model ${is_hidden}" data-device="${item[2]}">
-                                <picture>
-                                    <source srcset="./assets/images/webp/${item[1]}.webp" type="image/webp">
-                                    <img src="./assets/images/${item[1]}.png" alt="${item[2]}" class="prices__model-img">
-                                </picture>
-                                <div class="prices__model-name">${item[2]}</div>
-                                <button class="prices__model-button">Выбрать</button>
-                            </div>
-                       `)
-                    });
-
-                    $('.prices__model').off('click');
-                    $('.prices__model').on('click', function () {
-                        getPricesData($(this).data('device'));
-                    })
-
-                    expandDevices()
-                }
-            })
-        }
-        const getPricesData = (selectedDevice) => {
-            $.ajax({
-                url: './assets/configs/get_prices_data.php',
-                method: 'GET',
-                data: {
-                    'selected_device': selectedDevice
-                },
-                dataType: 'json',
-                success(data) {
-                    buildPriceListRows(data);
-                }
-            })
-        }
-        const buildPriceListRows = data => {
-            $('.prices__pricelist-wrap').slideUp();
-
-            setTimeout(() => {
-                $('.prices__pricelist-row').remove();
-
-                data.forEach((item, i) => {
-                    $('.prices__pricelist-scroll table').append(`
-                        <tr class="prices__pricelist-row open-popup-call-master" data-service="${item[2]}">
-                            <td class="prices__pricelist-servicename">${item[2]}</td>
-                            <td class="prices__pricelist-time">${item[3]}</td>
-                            <td class="prices__pricelist-price">${item[4]} руб.</td>
-                            <td>
-                                <button class="callback-button prices__pricelist-button">Вызвать мастера</button>
-                            </td>
-                        </tr>
-                    `);
-                })
-
-
-            }, 400);
-
-            setTimeout(() => {
-                $('.prices__pricelist-wrap').slideDown();
-                $('html, body').animate({
-                    scrollTop: $('#pricelist').offset().top -120
-                }, 400);
-                $('.prices__pricelist-scroll').css({'max-height': ``}).removeClass('prices__pricelist-scroll_rolled')
-                maxPricelistHeight = $('.prices__pricelist-scroll').height();
-                $('.prices__pricelist-scroll').addClass('prices__pricelist-scroll_rolled');
-                rollPricelist()
-            }, 400)
-
-            $('.prices__pricelist-unroll').unbind('click');
-
-            $('.prices__pricelist-unroll').on('click', function() {
-                if ($('.prices__pricelist-scroll').hasClass('prices__pricelist-scroll_unrolled')) {
-                    rollPricelist();
-                } else {
-                    unrollPricelist()
-                }
-            })
-        }
-        buildDeviceBlocks()
-    }
-    priceListInit();
-
-
     const toggleStepsCards = (target) => {
         $('.steps__list-item').removeClass('steps__list-item_active')
         $(target).addClass('steps__list-item_active')
@@ -190,9 +160,40 @@ $(window).on('load', function () {
         $(`.steps__img[data-step-img="${$(target).data('step')}"]`).removeClass('steps__img_hidden');
     };
 
+    const stepsSliderInit = () => {
+        const stepsAutoplay = () => {
+            let interval = setInterval(() => {
+                let activeSlideData = $('.steps__list-item_active').data('step');
+                if ($('.steps__list-item_active').next().length > 0) {
+                    $('.steps__list-item_active').removeClass('steps__list-item_active').next().addClass('steps__list-item_active')
+
+                    activeSlideData = $('.steps__list-item_active').data('step');
+
+                    $('.steps__img').addClass('steps__img_hidden');
+                    $(`.steps__img[data-step-img="${activeSlideData}"]`).removeClass('steps__img_hidden');
+                } else {
+                    $('.steps__list-item').removeClass('steps__list-item_active').first().addClass('steps__list-item_active')
+                    activeSlideData = $('.steps__list-item').data('step');
+
+                    $('.steps__img').addClass('steps__img_hidden');
+                    $(`.steps__img[data-step-img="${activeSlideData}"]`).removeClass('steps__img_hidden');
+                }
+
+            }, 3000)
+        };
+        stepsAutoplay();
+
+    }
+    stepsSliderInit();
+
     const smoothScroll = () => {
         $('a[href^="#"]').click(function() {
             let link = $(this).attr('href');
+            if($(this).is('.burger-menu__list-link')) {
+                $('html').toggleClass('freezed');
+                $('.burger-btn').toggleClass('burger-btn_active');
+                $('.burger-menu').toggleClass('burger-menu_active');
+            }
             $('html, body').animate({
                 scrollTop: $(link).offset().top -120
             }, 700);
